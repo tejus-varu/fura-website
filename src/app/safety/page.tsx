@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import { brand } from "@/config/brand";
-import { Shield, Users, Eye, Stethoscope, Phone } from "lucide-react";
+import { siteImages } from "@/config/images";
+import { Shield, Users, Eye, Stethoscope, Phone, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import SafetyChecklist from "@/components/ui/SafetyChecklist";
+import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import CtaBlock from "@/components/ui/CtaBlock";
 
 export const metadata: Metadata = {
@@ -19,7 +21,51 @@ export default function SafetyPage() {
         badgeVariant="sky"
         title="Planned with Responsibility"
         description="We understand that student safety is the highest priority for school management and parents. Our operational protocols are strictly designed to mitigate risk while allowing children to explore."
+        bgImage={siteImages.safety.heroBg.src}
+        bgPosition={siteImages.safety.heroBg.objectPosition}
       />
+
+      {/* Safety in Practice Photo Showcase */}
+      <section className="section-pad bg-white border-b border-sky-100">
+        <div className="container-xl">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="badge-pill inline-flex items-center gap-1.5 mb-3 bg-sky-50 text-sky-800 border-sky-200">
+              <CheckCircle2 size={14} /> Direct Protocols
+            </span>
+            <h2 className="text-h2 text-sky-950">Safety in Practice</h2>
+            <p className="text-sm sm:text-base text-sky-900/80 mt-2">
+              Every outdoor experience is safeguarded by strict mentor ratios, designated boundary zones, and supervised group transit.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <ImagePlaceholder
+              src={siteImages.safety.supervision.src}
+              alt={siteImages.safety.supervision.alt}
+              caption={siteImages.safety.supervision.caption}
+              badge={siteImages.safety.supervision.badge}
+              aspectRatio="4/3"
+              objectPosition={siteImages.safety.supervision.objectPosition}
+            />
+            <ImagePlaceholder
+              src={siteImages.safety.transport.src}
+              alt={siteImages.safety.transport.alt}
+              caption={siteImages.safety.transport.caption}
+              badge={siteImages.safety.transport.badge}
+              aspectRatio="4/3"
+              objectPosition={siteImages.safety.transport.objectPosition}
+            />
+            <ImagePlaceholder
+              src={siteImages.safety.costume.src}
+              alt={siteImages.safety.costume.alt}
+              caption={siteImages.safety.costume.caption}
+              badge={siteImages.safety.costume.badge}
+              aspectRatio="4/3"
+              objectPosition={siteImages.safety.costume.objectPosition}
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="section-pad bg-white">
         <div className="container-xl">
@@ -41,7 +87,7 @@ export default function SafetyPage() {
               {
                 icon: Eye,
                 title: "Child-Safe Zones",
-                description: "Activities are restricted to designated safe zones. Areas with heavy farm machinery or deep water (like farm ponds) are strictly off-limits.",
+                description: "Activities are restricted to designated safe zones. Areas with heavy farm machinery or active irrigation installations are strictly off-limits.",
               },
             ]}
           />
@@ -59,11 +105,11 @@ export default function SafetyPage() {
               },
               {
                 title: "Age-Appropriate Design",
-                description: "Activities are meticulously planned by age group. Junior students engage in light, sensory activities, while seniors handle structured tasks."
+                description: "Activities are meticulously planned by module band (Foundation, Exploration, Specialization) to ensure safety and developmental fit."
               },
               {
-                title: "Junior Student Controls",
-                description: "Classes 1-4 are kept in completely isolated, highly supervised environments with softer ground and lighter materials."
+                title: "Foundation Student Controls",
+                description: "Foundation learners (Classes 1–4) are kept in dedicated, highly supervised environments with soft ground and sensory-safe materials."
               }
             ]}
           />

@@ -7,6 +7,8 @@ interface PageHeroProps {
   title: string;
   description: string;
   children?: ReactNode;
+  bgImage?: string;
+  bgPosition?: string;
 }
 
 export default function PageHero({
@@ -15,12 +17,25 @@ export default function PageHero({
   title,
   description,
   children,
+  bgImage,
+  bgPosition = "center",
 }: PageHeroProps) {
   return (
     <section
       className="relative pt-32 pb-20 gradient-hero overflow-hidden"
       aria-label="Page Header"
     >
+      {/* Background image with high-contrast gradient overlay */}
+      {bgImage && (
+        <div
+          className="absolute inset-0 bg-cover pointer-events-none transform scale-105 motion-safe:transition-transform motion-safe:duration-1000"
+          style={{
+            backgroundImage: `linear-gradient(135deg, rgba(10, 24, 13, 0.88) 0%, rgba(10, 24, 13, 0.80) 50%, rgba(10, 24, 13, 0.94) 100%), url('${bgImage}')`,
+            backgroundPosition: bgPosition,
+          }}
+        />
+      )}
+
       <div
         className="absolute inset-0 opacity-[0.05]"
         style={{

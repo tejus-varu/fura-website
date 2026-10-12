@@ -4,7 +4,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "t1",
     quote:
-      "The Friday–Saturday model is exactly what we were looking for. Students come back on Monday with a completely different energy — more curious, more responsible. The farm sessions have become the highlight of the term.",
+      "The theory-to-practical learning model is exactly what we were looking for. Students return to class with a completely different energy — more curious, more responsible. The hands-on farm sessions have become the highlight of the term.",
     author: "School Principal",
     role: "International School, Pune",
     initials: "SP",
@@ -12,7 +12,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "t2",
     quote:
-      "We were initially hesitant about the logistics, but the FURA team handled everything — transport, supervision, safety protocols. Parents have been extremely positive. Several families asked if we could extend it to a full year.",
+      "We were initially hesitant about the logistics, but the FURAA team handled everything — transport, supervision, safety protocols. Parents have been extremely positive. Several families asked if we could extend it to a full year.",
     author: "Academic Coordinator",
     role: "State Board Institution, Nashik",
     initials: "AC",

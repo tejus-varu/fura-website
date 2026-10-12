@@ -5,16 +5,16 @@ import { brand } from "@/config/brand";
 const steps = [
   {
     id: "theory",
-    step: "Step 1",
-    day: "Friday in School",
+    step: "Phase 1",
+    day: "Classroom Learning",
     icon: BookOpen,
     title: "Learn in the Classroom",
     description:
-      `Every Friday, a trained ${brand.shortName} educator visits the school and delivers a structured theory session. Students are introduced to concepts in agriculture, ecology, folk culture, and nutrition — priming their curiosity before the outdoor experience.`,
+      `A trained ${brand.shortName} educator visits the school and delivers a structured theory session. Students are introduced to concepts in agriculture, ecology, folk culture, and nutrition — priming their curiosity before the outdoor experience. Sessions are scheduled in coordination with the school's academic calendar.`,
     points: [
-      "Curriculum-linked content for Class 1 to Class 10",
+      "Curriculum-linked content for Classes 1–10",
       "Interactive worksheets, storytelling, and visual aids",
-      "Concept introduction aligned to next day's farm activity",
+      "Concept introduction aligned to the upcoming practical session",
       "Activity briefing and field preparation guidance",
     ],
     color: "var(--color-sky-500)",
@@ -23,12 +23,12 @@ const steps = [
   },
   {
     id: "farm",
-    step: "Step 2",
-    day: "Saturday at the Farm",
+    step: "Phase 2",
+    day: "Practical Experience",
     icon: Leaf,
     title: "Experience on the Farm",
     description:
-      "The very next day, students visit the farm and apply what they learned in the classroom. Sessions are structured, supervised, and designed to make abstract concepts feel real — through farming, folk art, rural games, and healthy food experiences.",
+      "Students visit the farm and apply what they learned in the classroom. Sessions are structured, supervised, and designed to make abstract concepts feel real — through farming, folk art, rural games, and healthy food experiences. Practical sessions are scheduled in coordination with each school.",
     points: [
       "Hands-on farm activities: sowing, watering, harvesting",
       "Folk art, pottery, rural games, and cultural immersion",
@@ -41,12 +41,12 @@ const steps = [
   },
   {
     id: "reflect",
-    step: "Step 3",
-    day: "Reflection & Output",
+    step: "Phase 3",
+    day: "Reflection & Application",
     icon: Lightbulb,
     title: "Reflect, Create & Apply",
     description:
-      "After the farm experience, students consolidate their learning through creative output — journaling, artwork, group discussions, or waste-to-art projects. This closes the learning loop and builds lasting connection with what they experienced.",
+      "After the practical experience, students consolidate their learning through creative output — journaling, artwork, group discussions, or waste-to-art projects. This closes the learning loop and builds a lasting connection with what they experienced.",
     points: [
       "Reflection worksheets and guided group discussion",
       "Waste-to-art projects from farm materials",
@@ -72,7 +72,7 @@ export default function HowItWorksSection() {
           badge={`The ${brand.shortName} Model`}
           badgeVariant="green"
           title="Learn. Experience. Create."
-          subtitle="Our three-step model ensures students arrive at the farm prepared, leave with a real experience, and carry the learning forward through creative reflection."
+          subtitle="Our three-phase model ensures students arrive at the farm prepared, leave with a real experience, and carry the learning forward through creative reflection."
         />
 
         {/* Steps grid */}
@@ -151,11 +151,10 @@ export default function HowItWorksSection() {
 
         {/* Connector note */}
         <p
-          className="text-center text-sm font-medium opacity-60"
+          className="text-center text-sm font-medium opacity-75 max-w-2xl mx-auto leading-relaxed"
           style={{ color: "var(--color-green-700)" }}
         >
-          The Friday → Saturday → Reflection cycle repeats throughout the academic term,
-          building cumulative knowledge and a genuine relationship with nature.
+          FURAA follows a progressive learning approach that connects classroom concepts with practical experiences and reflective activities, helping students build a deeper understanding of agriculture, nature and culture.
         </p>
       </div>
     </section>

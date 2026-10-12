@@ -1,14 +1,21 @@
 import type { Program, ClassBand } from "@/types";
 
+/**
+ * Core programs data.
+ * Class bands now use the canonical three-band system:
+ *   "1-4"  → Foundation Module
+ *   "5-8"  → Exploration Module
+ *   "9-10" → Specialization Module
+ */
 export const programs: Program[] = [
   {
     id: "classroom-theory",
     title: "Classroom Theory Sessions",
     description:
-      "Structured pre-farm theory sessions conducted in school every Friday. Concepts in agriculture, nutrition, and ecology are introduced before the hands-on outdoor experience.",
+      "Structured theory sessions conducted in school. Concepts in agriculture, nutrition, and ecology are introduced before the hands-on outdoor experience. Scheduling is coordinated with each school's academic calendar.",
     icon: "BookOpen",
     category: "Core Learning",
-    classBands: ["1-5", "6-8", "9-10"],
+    classBands: ["1-4", "5-8", "9-10"],
     highlights: [
       "Curriculum-linked content",
       "Interactive worksheets",
@@ -20,10 +27,10 @@ export const programs: Program[] = [
     id: "farm-hands-on",
     title: "Hands-On Farm Learning",
     description:
-      "Saturday farm sessions where students apply classroom concepts in real agricultural settings. Soil preparation, sowing, watering, and crop observation under trained mentors.",
+      "Practical farm sessions where students apply classroom concepts in real agricultural settings. Soil preparation, sowing, watering, and crop observation under trained mentors.",
     icon: "Sprout",
     category: "Agriculture",
-    classBands: ["1-5", "6-8", "9-10"],
+    classBands: ["1-4", "5-8", "9-10"],
     highlights: [
       "Seasonal crop cycles",
       "Soil health understanding",
@@ -38,7 +45,7 @@ export const programs: Program[] = [
       "Students learn and experiment with modern growing methods — hydroponics, aquaponics, and soilless media. Bridges traditional farming with future food technology.",
     icon: "Droplets",
     category: "Modern Farming",
-    classBands: ["6-8", "9-10"],
+    classBands: ["5-8", "9-10"],
     highlights: [
       "Hydroponic system demonstration",
       "Nutrient solution experiments",
@@ -53,7 +60,7 @@ export const programs: Program[] = [
       "Children experience traditional Indian rural culture through folk art, pottery, weaving, and village games. Builds cultural pride, creativity, and community connection.",
     icon: "Palette",
     category: "Art & Culture",
-    classBands: ["1-5", "6-8", "9-10"],
+    classBands: ["1-4", "5-8", "9-10"],
     highlights: [
       "Folk art workshops",
       "Rural games (Lagori, Kabaddi, Gilli-Danda)",
@@ -68,7 +75,7 @@ export const programs: Program[] = [
       "Sessions on millet-based food traditions, diet awareness, and understanding the journey from seed to plate. Includes tasting of traditional healthy foods and discussion of junk food impact.",
     icon: "Wheat",
     category: "Nutrition",
-    classBands: ["1-5", "6-8", "9-10"],
+    classBands: ["1-4", "5-8", "9-10"],
     highlights: [
       "Millet variety tasting",
       "Junk food vs. traditional food",
@@ -83,7 +90,7 @@ export const programs: Program[] = [
       "Demonstrates how productive farming can happen in urban spaces. Students design and build small terrace garden setups — practical, empowering, and directly applicable at home.",
     icon: "Building2",
     category: "Modern Farming",
-    classBands: ["6-8", "9-10"],
+    classBands: ["5-8", "9-10"],
     highlights: [
       "Container and grow-bag farming",
       "Composting basics",
@@ -98,7 +105,7 @@ export const programs: Program[] = [
       "Students participate in real harvesting — picking vegetables and fruits from organically grown plots. The connection between effort, patience, and reward is deeply experiential.",
     icon: "Apple",
     category: "Agriculture",
-    classBands: ["1-5", "6-8", "9-10"],
+    classBands: ["1-4", "5-8", "9-10"],
     highlights: [
       "Seasonal organic produce",
       "Harvesting techniques",
@@ -113,12 +120,42 @@ export const programs: Program[] = [
       "Children convert agricultural and natural waste into creative art and functional objects. Develops environmental thinking, creativity, and the joy of making something from nothing.",
     icon: "Recycle",
     category: "Art & Culture",
-    classBands: ["1-5", "6-8", "9-10"],
+    classBands: ["1-4", "5-8", "9-10"],
     highlights: [
       "Leaf print and natural dye art",
       "Upcycled craft projects",
       "Compost storytelling",
       "Creative environmental thinking",
+    ],
+  },
+  {
+    id: "agri-tech",
+    title: "Agricultural Innovation & Technology",
+    description:
+      "Explores precision irrigation, automated soil sensors, micro-climate monitoring, and smart farming practices — connecting modern STEM concepts to real-world agrarian challenges.",
+    icon: "Cpu",
+    category: "Modern Farming",
+    classBands: ["5-8", "9-10"],
+    highlights: [
+      "Precision drip irrigation demo",
+      "Automated sensor observation",
+      "Micro-climate management",
+      "STEM-to-farm problem solving",
+    ],
+  },
+  {
+    id: "biodiversity-conservation",
+    title: "Biodiversity & Environmental Conservation",
+    description:
+      "Students map pollinator corridors, investigate beneficial farm insects, study native tree species, and understand watershed stewardship — developing genuine ecological responsibility.",
+    icon: "Trees",
+    category: "Core Learning",
+    classBands: ["1-4", "5-8", "9-10"],
+    highlights: [
+      "Pollinator corridor mapping",
+      "Beneficial insect observation",
+      "Native flora identification",
+      "Conservation and soil ethics",
     ],
   },
 ];
@@ -131,19 +168,59 @@ export const programCategories = [
   "Nutrition",
 ] as const;
 
-export const CLASS_BANDS: ClassBand[] = ["1-5", "6-8", "9-10"];
+/** Canonical class bands — single source of truth */
+export const CLASS_BANDS: ClassBand[] = ["1-4", "5-8", "9-10"];
 
+/** Human-readable labels for each band */
 export const classBandLabels: Record<ClassBand, string> = {
-  "1-5": "Class 1 – 5",
-  "6-8": "Class 6 – 8",
-  "9-10": "Class 9 – 10",
+  "1-4": "Foundation (Classes 1–4)",
+  "5-8": "Exploration (Classes 5–8)",
+  "9-10": "Specialization (Classes 9–10)",
+};
+
+/** Short labels for tab selectors */
+export const classBandShortLabels: Record<ClassBand, string> = {
+  "1-4": "Foundation",
+  "5-8": "Exploration",
+  "9-10": "Specialization",
 };
 
 export const classBandDescriptions: Record<ClassBand, string> = {
-  "1-5":
+  "1-4":
     "Foundational sensory learning — storytelling, play, tactile farm activities, and simple nature observation for young explorers.",
-  "6-8":
+  "5-8":
     "Inquiry-led discovery — connecting science concepts with farming, arts with ecology, and culture with community.",
   "9-10":
     "Applied and reflective learning — food systems, sustainable farming, entrepreneurship, and social responsibility.",
 };
+
+/** Module metadata — single source of truth for module names and routes */
+export const modules = [
+  {
+    band: "1-4" as ClassBand,
+    name: "Foundation Module",
+    shortName: "Foundation",
+    href: "/modules/foundation",
+    classRange: "Classes 1–4",
+    description:
+      "Early sensory learning, playful discovery, and safe supervised farm experiences for young learners.",
+  },
+  {
+    band: "5-8" as ClassBand,
+    name: "Exploration Module",
+    shortName: "Exploration",
+    href: "/modules/exploration",
+    classRange: "Classes 5–8",
+    description:
+      "Guided experimentation, ecosystem understanding, and collaborative practical activities.",
+  },
+  {
+    band: "9-10" as ClassBand,
+    name: "Specialization Module",
+    shortName: "Specialization",
+    href: "/modules/specialization",
+    classRange: "Classes 9–10",
+    description:
+      "Applied agricultural science, innovation, research-oriented projects, and deeper problem-solving.",
+  },
+] as const;

@@ -13,7 +13,7 @@ function getIcon(name: string): LucideIcon {
 }
 
 export default function ClassBandSection() {
-  const [active, setActive] = useState<ClassBand>("1-5");
+  const [active, setActive] = useState<ClassBand>("1-4");
 
   const filtered = programs.filter((p) => p.classBands.includes(active));
 
@@ -31,7 +31,7 @@ export default function ClassBandSection() {
           badge="Age-Appropriate Learning"
           badgeVariant="green"
           title="Programs Designed for Every Age Group"
-          subtitle="Activity depth and content complexity scale with student maturity — from sensory play for Class 1–5 to applied farm science for Class 9–10."
+          subtitle="Activity depth and content complexity scale with student maturity — from sensory discovery for Foundation (Classes 1–4) to applied agricultural science for Specialization (Classes 9–10)."
         />
 
         {/* Tab switcher */}

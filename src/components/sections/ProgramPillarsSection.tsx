@@ -1,4 +1,4 @@
-import { Sprout, Palette, TreePine, Droplets, Wheat, Recycle, Home, Sun } from "lucide-react";
+import { Sprout, Palette, TreePine, Droplets, Wheat, Recycle, Home, Sun, Cpu, Trees } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Badge from "@/components/ui/Badge";
 import { brand } from "@/config/brand";
@@ -75,7 +75,7 @@ const pillars = [
     icon: Home,
     title: "Terrace Gardening in Schools",
     description:
-      "FURA helps schools set up productive terrace gardens on campus — giving students a living lab for urban farming, composting, and ecology right within school premises.",
+      `${brand.shortName} helps schools set up productive terrace gardens on campus — giving students a living lab for urban farming, composting, and ecology right within school premises.`,
     badge: "School Campus",
     badgeVariant: "sky" as const,
     color: "var(--color-sky-700)",
@@ -91,6 +91,28 @@ const pillars = [
     badgeVariant: "gold" as const,
     color: "var(--color-gold-500)",
     bgColor: "var(--color-gold-100)",
+  },
+  {
+    id: "agri-tech",
+    icon: Cpu,
+    title: "Agricultural Innovation & Technology",
+    description:
+      "Explores precision irrigation, automated soil sensors, micro-climate monitoring, and smart farming practices — connecting modern STEM concepts to real-world agrarian challenges.",
+    badge: "Innovation",
+    badgeVariant: "sky" as const,
+    color: "var(--color-sky-600)",
+    bgColor: "var(--color-sky-100)",
+  },
+  {
+    id: "biodiversity-conservation",
+    icon: Trees,
+    title: "Biodiversity & Environmental Conservation",
+    description:
+      "Students map pollinator corridors, investigate beneficial farm insects, study native tree species, and understand watershed stewardship — developing genuine ecological responsibility.",
+    badge: "Conservation",
+    badgeVariant: "green" as const,
+    color: "var(--color-green-700)",
+    bgColor: "var(--color-green-100)",
   },
 ];
 
@@ -108,19 +130,19 @@ export default function ProgramPillarsSection() {
         <SectionHeader
           badge="What We Offer"
           badgeVariant="gold"
-          title="Eight Pillars of Experiential Learning"
+          title="Ten Pillars of Experiential Learning"
           subtitle={`${brand.name} is not just a farm visit. Our programs weave together agriculture, folk arts, rural culture, ecology, and nutrition — giving schools a genuinely holistic outdoor education partnership.`}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="card-base p-6 flex flex-col gap-4"
+              className="card-base p-6 flex flex-col gap-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
             >
               {/* Icon */}
               <div
-                className="w-11 h-11 rounded-2xl flex items-center justify-center"
+                className="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0"
                 style={{ background: pillar.bgColor }}
               >
                 <pillar.icon size={20} style={{ color: pillar.color }} />
@@ -138,7 +160,7 @@ export default function ProgramPillarsSection() {
                   {pillar.title}
                 </h3>
                 <p
-                  className="text-sm leading-relaxed"
+                  className="text-xs leading-relaxed"
                   style={{ color: "var(--color-green-700)" }}
                 >
                   {pillar.description}

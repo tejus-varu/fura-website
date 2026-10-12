@@ -77,14 +77,6 @@ export default function Footer() {
                   Specialization (Classes 9–10)
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/junior-module"
-                  className="text-xs opacity-50 hover:opacity-90 hover:text-white transition-all"
-                >
-                  Junior Module (Early Years)
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -121,11 +113,21 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-2 text-sm opacity-75">
                 <Mail size={15} className="mt-0.5 shrink-0" />
-                <span>{brand.contact.email}</span>
+                <a
+                  href={brand.contact.emailLink}
+                  className="hover:text-white transition-colors underline-offset-2 hover:underline"
+                >
+                  {brand.contact.email}
+                </a>
               </li>
               <li className="flex items-start gap-2 text-sm opacity-75">
                 <Phone size={15} className="mt-0.5 shrink-0" />
-                <span>{brand.contact.phone}</span>
+                <a
+                  href={brand.contact.phoneLink}
+                  className="hover:text-white transition-colors underline-offset-2 hover:underline"
+                >
+                  {brand.contact.phone}
+                </a>
               </li>
               <li className="flex items-start gap-2 text-sm opacity-75">
                 <MapPin size={15} className="mt-0.5 shrink-0" />

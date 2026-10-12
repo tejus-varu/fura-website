@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import { brand } from "@/config/brand";
+import { siteImages } from "@/config/images";
 import { Apple, LeafyGreen, Coffee, ShoppingBasket, Salad, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import FeatureGrid from "@/components/ui/FeatureGrid";
+import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import CtaBlock from "@/components/ui/CtaBlock";
 
 export const metadata: Metadata = {
@@ -18,6 +20,8 @@ export default function NutritionPage() {
         badgeVariant="orange"
         title="Connecting Farming to Food"
         description="Children rarely understand where their food comes from. We bridge the gap between agriculture and the plate, promoting awareness around healthy dietary choices without medicalizing the conversation."
+        bgImage={siteImages.nutrition.heroBg.src}
+        bgPosition={siteImages.nutrition.heroBg.objectPosition}
       />
 
       <section className="section-pad bg-white">
@@ -43,6 +47,30 @@ export default function NutritionPage() {
                 description: "Encouraging an appreciation for fresh vegetables and traditional recipes through tasting sessions and fireless cooking.",
               },
             ]}
+          />
+        </div>
+      </section>
+
+      {/* Farm to Plate Photography */}
+      <section className="section-pad bg-orange-50/50 border-t border-b border-orange-100">
+        <div className="container-xl max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="badge-pill inline-flex items-center gap-1.5 mb-2 bg-orange-100 text-orange-800 border-orange-200">
+              Farm-to-Plate Experience
+            </span>
+            <h2 className="text-h2 text-emerald-950">Tasting Food at its Source</h2>
+            <p className="text-sm sm:text-base text-emerald-800/80 mt-2 max-w-xl mx-auto">
+              Students harvest and taste wholesome produce directly in the field, discovering the authentic sweetness of unadulterated crops.
+            </p>
+          </div>
+          <ImagePlaceholder
+            src={siteImages.nutrition.farmToPlate.src}
+            alt={siteImages.nutrition.farmToPlate.alt}
+            caption={siteImages.nutrition.farmToPlate.caption}
+            badge={siteImages.nutrition.farmToPlate.badge}
+            aspectRatio="16/9"
+            objectPosition={siteImages.nutrition.farmToPlate.objectPosition}
+            className="max-w-3xl mx-auto shadow-md"
           />
         </div>
       </section>

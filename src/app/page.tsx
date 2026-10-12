@@ -5,7 +5,7 @@ import ProgramPillarsSection from "@/components/sections/ProgramPillarsSection";
 import WeeklyModelSection from "@/components/sections/WeeklyModelSection";
 import ClassBandSection from "@/components/sections/ClassBandSection";
 import SunburstSection from "@/components/sections/SunburstSection";
-import JuniorModuleCallout from "@/components/sections/JuniorModuleCallout";
+import LearningModulesSection from "@/components/sections/LearningModulesSection";
 import SafetySection from "@/components/sections/SafetySection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CtaSection from "@/components/sections/CtaSection";
@@ -20,7 +20,7 @@ export default function HomePage() {
       <WeeklyModelSection />
       <ClassBandSection />
       <SunburstSection />
-      <JuniorModuleCallout />
+      <LearningModulesSection />
       <SafetySection />
       <TestimonialsSection />
       <CtaSection />

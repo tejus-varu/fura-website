@@ -69,7 +69,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-sm mb-1" style={{ color: "var(--color-green-900)" }}>Email Us</p>
-                    <a href={`mailto:${brand.contact.email}`} className="text-sm hover:underline" style={{ color: "var(--color-green-700)" }}>
+                    <a href={brand.contact.emailLink} className="text-sm hover:underline" style={{ color: "var(--color-green-700)" }}>
                       {brand.contact.email}
                     </a>
                   </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-sm mb-1" style={{ color: "var(--color-green-900)" }}>Call Us</p>
-                    <a href={`tel:${brand.contact.phone}`} className="text-sm hover:underline" style={{ color: "var(--color-green-700)" }}>
+                    <a href={brand.contact.phoneLink} className="text-sm hover:underline" style={{ color: "var(--color-green-700)" }}>
                       {brand.contact.phone}
                     </a>
                   </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                     <MapPin size={18} style={{ color: "var(--color-green-700)" }} />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm mb-1" style={{ color: "var(--color-green-900)" }}>Farm Center</p>
+                    <p className="font-semibold text-sm mb-1" style={{ color: "var(--color-green-900)" }}>Academy Address</p>
                     <p className="text-sm leading-relaxed" style={{ color: "var(--color-green-700)" }}>
                       {brand.contact.address}
                     </p>

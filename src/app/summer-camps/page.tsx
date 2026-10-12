@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 import { brand } from "@/config/brand";
-import { Sun, Trees, Palette, Utensils, MessageCircle, ShieldCheck } from "lucide-react";
+import { siteImages } from "@/config/images";
+import { Sun, Trees, Palette, Utensils, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import SafetyChecklist from "@/components/ui/SafetyChecklist";
+import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import CtaBlock from "@/components/ui/CtaBlock";
 
 export const metadata: Metadata = {
@@ -19,7 +21,51 @@ export default function SummerCampsPage() {
         badge="Vacation Programs"
         title="Experiential Summer Camps"
         description="Transform school holidays into periods of active discovery. Our summer camps offer an immersive blend of agriculture, rural arts, and ecology away from digital screens."
+        bgImage={siteImages.summerCamps.heroBg.src}
+        bgPosition={siteImages.summerCamps.heroBg.objectPosition}
       />
+
+      {/* Real Camp Photo Moments */}
+      <section className="section-pad bg-white border-b border-green-100">
+        <div className="container-xl">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="badge-pill inline-flex items-center gap-1.5 mb-3 bg-amber-100 text-amber-900 border-amber-300">
+              <Sparkles size={14} /> Screen-Free Immersion
+            </span>
+            <h2 className="text-h2 text-emerald-950">Camp Life in Action</h2>
+            <p className="text-sm sm:text-base text-emerald-800/80 mt-2">
+              Unfiltered, joyful outdoor experiences where young campers build stamina, connect with animals, and create lifelong memories.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <ImagePlaceholder
+              src={siteImages.summerCamps.running.src}
+              alt={siteImages.summerCamps.running.alt}
+              caption={siteImages.summerCamps.running.caption}
+              badge={siteImages.summerCamps.running.badge}
+              aspectRatio="4/3"
+              objectPosition={siteImages.summerCamps.running.objectPosition}
+            />
+            <ImagePlaceholder
+              src={siteImages.summerCamps.jumping.src}
+              alt={siteImages.summerCamps.jumping.alt}
+              caption={siteImages.summerCamps.jumping.caption}
+              badge={siteImages.summerCamps.jumping.badge}
+              aspectRatio="4/3"
+              objectPosition={siteImages.summerCamps.jumping.objectPosition}
+            />
+            <ImagePlaceholder
+              src={siteImages.summerCamps.bullocks.src}
+              alt={siteImages.summerCamps.bullocks.alt}
+              caption={siteImages.summerCamps.bullocks.caption}
+              badge={siteImages.summerCamps.bullocks.badge}
+              aspectRatio="4/3"
+              objectPosition={siteImages.summerCamps.bullocks.objectPosition}
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="section-pad bg-white">
         <div className="container-xl">

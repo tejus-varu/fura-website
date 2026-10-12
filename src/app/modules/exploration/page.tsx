@@ -6,6 +6,7 @@ import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import SafetyChecklist from "@/components/ui/SafetyChecklist";
 import CtaBlock from "@/components/ui/CtaBlock";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import { siteImages } from "@/config/images";
 import { Sprout, Droplets, Palette, Wheat, Users, FlaskConical, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -22,6 +23,8 @@ export default function ExplorationModulePage() {
         badgeVariant="gold"
         title="Exploration Module: Inquiry & Ecosystems"
         description="Bridging theoretical science with living agrarian systems. Students in Classes 5–8 engage in guided experimentation, hands-on cultivation, hydroponics demonstrations, and collaborative ecological inquiry."
+        bgImage={siteImages.modules.exploration.heroBg.src}
+        bgPosition={siteImages.modules.exploration.heroBg.objectPosition}
       />
 
       {/* 1. Module Introduction */}
@@ -243,7 +246,7 @@ export default function ExplorationModulePage() {
               {
                 title: "Controlled Chemical-Free Environment",
                 description:
-                  "All farming zones used by FURA are strictly chemical-free and organic. No synthetic pesticides or chemical fertilizers are present.",
+                  "All farming zones used by FURAA are strictly chemical-free and organic. No synthetic pesticides or chemical fertilizers are present.",
               },
               {
                 title: "First-Aid Ready Mentors",
@@ -269,19 +272,28 @@ export default function ExplorationModulePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ImagePlaceholder
-              alt="Middle school students examining soil samples and measuring bed moisture"
-              caption="Soil testing and hands-on bed preparation"
-              badge="Classes 5–8"
+              src={siteImages.modules.exploration.cultivation.src}
+              alt={siteImages.modules.exploration.cultivation.alt}
+              caption={siteImages.modules.exploration.cultivation.caption}
+              badge={siteImages.modules.exploration.cultivation.badge}
+              objectPosition={siteImages.modules.exploration.cultivation.objectPosition}
+              aspectRatio="4/3"
             />
             <ImagePlaceholder
-              alt="Students observing a miniature hydroponic nutrient-film demonstration kit"
-              caption="Hydroponics and soilless cultivation introduction"
-              badge="Modern Tech"
+              src={siteImages.modules.exploration.tools.src}
+              alt={siteImages.modules.exploration.tools.alt}
+              caption={siteImages.modules.exploration.tools.caption}
+              badge={siteImages.modules.exploration.tools.badge}
+              objectPosition={siteImages.modules.exploration.tools.objectPosition}
+              aspectRatio="4/3"
             />
             <ImagePlaceholder
-              alt="Group pottery workshop with regional artisan demonstrating wheel techniques"
-              caption="Hands-on cultural craftsmanship and pottery"
-              badge="Folk Heritage"
+              src={siteImages.modules.exploration.ecology.src}
+              alt={siteImages.modules.exploration.ecology.alt}
+              caption={siteImages.modules.exploration.ecology.caption}
+              badge={siteImages.modules.exploration.ecology.badge}
+              objectPosition={siteImages.modules.exploration.ecology.objectPosition}
+              aspectRatio="4/3"
             />
           </div>
         </div>

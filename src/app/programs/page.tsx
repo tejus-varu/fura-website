@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { brand } from "@/config/brand";
-import { Sprout, Palette, TreePine, Droplets, Wheat, Recycle, Home, Sun } from "lucide-react";
+import { siteImages } from "@/config/images";
+import { Sprout, Palette, TreePine, Droplets, Wheat, Recycle, Home, Sun, Cpu, Trees, Camera } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import ProgramDetailCard from "@/components/ui/ProgramDetailCard";
+import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import CtaBlock from "@/components/ui/CtaBlock";
-import JuniorModuleCallout from "@/components/sections/JuniorModuleCallout";
+import LearningModulesSection from "@/components/sections/LearningModulesSection";
 
 export const metadata: Metadata = {
   title: `Our Programs | ${brand.name}`,
@@ -83,6 +85,25 @@ const programs = [
     do: "Multi-day outdoor programs during school vacations with intensive workshops and rural games.",
     outcome: "A productive, screen-free summer break that builds independence and new friendships.",
   },
+  {
+    icon: Cpu,
+    title: "Agricultural Innovation & Technology",
+    badge: "Tech & Science",
+    classBands: "Classes 5–10 (Exploration & Specialization)",
+    learn: "Principles of precision drip irrigation, sensor telemetry, soil monitoring, and climate-controlled greenhouse techniques.",
+    do: "Operating modular sensor setups, observing drip emitters, and recording micro-climate environmental variables.",
+    outcome: "Equips students with modern agtech awareness and inspires scientific problem-solving.",
+    safetyNote: "Low-voltage sensory equipment handled under mentor guidance. Standard electrical safety observed.",
+  },
+  {
+    icon: Trees,
+    title: "Biodiversity & Environmental Conservation",
+    badge: "Ecology",
+    classBands: "Classes 1–10 (Foundation, Exploration, Specialization)",
+    learn: "Ecological balance, native flora conservation, beneficial insect habitats, and watershed management.",
+    do: "Mapping pollinator pathways, building insect hotels, observing native tree groves, and composting.",
+    outcome: "Instills environmental empathy, conservation ethics, and a tangible sense of ecological responsibility.",
+  },
 ];
 
 export default function ProgramsPage() {
@@ -93,6 +114,8 @@ export default function ProgramsPage() {
         badgeVariant="green"
         title="Modules Built for Discovery"
         description={`From organic farming to folk arts and hydroponics, every ${brand.shortName} module is designed to be age-appropriate, hands-on, and curriculum-linked.`}
+        bgImage={siteImages.programs.heroBg.src}
+        bgPosition={siteImages.programs.heroBg.objectPosition}
       />
 
       {/* Module Overview Quick Nav */}
@@ -136,7 +159,40 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <JuniorModuleCallout />
+      {/* Real Field Activity Showcase */}
+      <section className="section-pad bg-emerald-950/5 border-t border-b border-emerald-900/10">
+        <div className="container-xl">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="badge-pill inline-flex items-center gap-1.5 mb-3 bg-emerald-100 text-emerald-800 border-emerald-200">
+              <Camera size={14} /> Field Moments
+            </span>
+            <h2 className="text-h2 text-emerald-950">Learning in Action</h2>
+            <p className="text-sm sm:text-base text-emerald-800/80 mt-2">
+              Authentic snapshots of {brand.shortName} students actively engaging with soil, crops, and traditional agrarian heritage.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <ImagePlaceholder
+              src={siteImages.programs.highlight1.src}
+              alt={siteImages.programs.highlight1.alt}
+              caption={siteImages.programs.highlight1.caption}
+              badge={siteImages.programs.highlight1.badge}
+              aspectRatio="16/9"
+              objectPosition={siteImages.programs.highlight1.objectPosition}
+            />
+            <ImagePlaceholder
+              src={siteImages.programs.highlight2.src}
+              alt={siteImages.programs.highlight2.alt}
+              caption={siteImages.programs.highlight2.caption}
+              badge={siteImages.programs.highlight2.badge}
+              aspectRatio="16/9"
+              objectPosition={siteImages.programs.highlight2.objectPosition}
+            />
+          </div>
+        </div>
+      </section>
+
+      <LearningModulesSection />
 
       <section className="section-pad bg-white">
         <div className="container-xl">

@@ -6,6 +6,7 @@ import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import SafetyChecklist from "@/components/ui/SafetyChecklist";
 import CtaBlock from "@/components/ui/CtaBlock";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import { siteImages } from "@/config/images";
 import { Sprout, Eye, Compass, Palette, Heart, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -22,6 +23,8 @@ export default function FoundationModulePage() {
         badgeVariant="green"
         title="Foundation Module: Sensory Discovery"
         description="Designed specifically for young explorers in Classes 1–4. We introduce the wonders of soil, seeds, folk storytelling, and natural food habits through gentle, joyful, and highly supervised experiences."
+        bgImage={siteImages.modules.foundation.heroBg.src}
+        bgPosition={siteImages.modules.foundation.heroBg.objectPosition}
       />
 
       {/* 1. Concise Module Introduction */}
@@ -270,19 +273,28 @@ export default function FoundationModulePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ImagePlaceholder
-              alt="Young students in farm aprons gently sowing seeds in nursery soil"
-              caption="Sensory seed sowing and plant observation"
-              badge="Classes 1–4"
+              src={siteImages.modules.foundation.sowing.src}
+              alt={siteImages.modules.foundation.sowing.alt}
+              caption={siteImages.modules.foundation.sowing.caption}
+              badge={siteImages.modules.foundation.sowing.badge}
+              objectPosition={siteImages.modules.foundation.sowing.objectPosition}
+              aspectRatio="4/3"
             />
             <ImagePlaceholder
-              alt="Children participating in supervised nature walk exploring garden insects"
-              caption="Guided nature trail in dedicated safe zone"
-              badge="Nature Trail"
+              src={siteImages.modules.foundation.natureArt.src}
+              alt={siteImages.modules.foundation.natureArt.alt}
+              caption={siteImages.modules.foundation.natureArt.caption}
+              badge={siteImages.modules.foundation.natureArt.badge}
+              objectPosition={siteImages.modules.foundation.natureArt.objectPosition}
+              aspectRatio="4/3"
             />
             <ImagePlaceholder
-              alt="Folk art and clay modeling workshop under sheltered pavilion"
-              caption="Folk storytelling and natural craft session"
-              badge="Creative Folk Art"
+              src={siteImages.modules.foundation.storytelling.src}
+              alt={siteImages.modules.foundation.storytelling.alt}
+              caption={siteImages.modules.foundation.storytelling.caption}
+              badge={siteImages.modules.foundation.storytelling.badge}
+              objectPosition={siteImages.modules.foundation.storytelling.objectPosition}
+              aspectRatio="4/3"
             />
           </div>
         </div>

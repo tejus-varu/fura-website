@@ -1,4 +1,4 @@
-// ─── Shared TypeScript types for the FURA website ───────────────────────────
+// ─── Shared TypeScript types for the FURAA website ───────────────────────────
 
 /** Three standardized module bands used throughout the entire site */
 export type ClassBand = "1-4" | "5-8" | "9-10";

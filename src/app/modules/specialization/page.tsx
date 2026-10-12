@@ -6,6 +6,7 @@ import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import SafetyChecklist from "@/components/ui/SafetyChecklist";
 import CtaBlock from "@/components/ui/CtaBlock";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import { siteImages } from "@/config/images";
 import { Cpu, Droplets, LineChart, Building2, Trees, Sparkles, Lightbulb } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -22,6 +23,8 @@ export default function SpecializationModulePage() {
         badgeVariant="brown"
         title="Specialization Module: Applied Agri-Science"
         description="For secondary students ready for serious scientific inquiry and real-world problem solving. We delve into modern hydroponics, precision irrigation, environmental analytics, and sustainable agricultural systems."
+        bgImage={siteImages.modules.specialization.heroBg.src}
+        bgPosition={siteImages.modules.specialization.heroBg.objectPosition}
       />
 
       {/* 1. Module Introduction */}
@@ -269,19 +272,28 @@ export default function SpecializationModulePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ImagePlaceholder
-              alt="High school students measuring pH and EC in vertical hydroponic systems"
-              caption="Hydroponics laboratory and nutrient chemistry testing"
-              badge="Classes 9–10"
+              src={siteImages.modules.specialization.soilScience.src}
+              alt={siteImages.modules.specialization.soilScience.alt}
+              caption={siteImages.modules.specialization.soilScience.caption}
+              badge={siteImages.modules.specialization.soilScience.badge}
+              objectPosition={siteImages.modules.specialization.soilScience.objectPosition}
+              aspectRatio="4/3"
             />
             <ImagePlaceholder
-              alt="Students charting ecological transect data and plant growth indicators"
-              caption="Field biodiversity and soil ecosystem analysis"
-              badge="Research"
+              src={siteImages.modules.specialization.smartAgri.src}
+              alt={siteImages.modules.specialization.smartAgri.alt}
+              caption={siteImages.modules.specialization.smartAgri.caption}
+              badge={siteImages.modules.specialization.smartAgri.badge}
+              objectPosition={siteImages.modules.specialization.smartAgri.objectPosition}
+              aspectRatio="4/3"
             />
             <ImagePlaceholder
-              alt="Senior students reviewing urban terrace garden models and drip layouts"
-              caption="Urban agriculture prototyping and presentation"
-              badge="Innovation"
+              src={siteImages.modules.specialization.farmEconomics.src}
+              alt={siteImages.modules.specialization.farmEconomics.alt}
+              caption={siteImages.modules.specialization.farmEconomics.caption}
+              badge={siteImages.modules.specialization.farmEconomics.badge}
+              objectPosition={siteImages.modules.specialization.farmEconomics.objectPosition}
+              aspectRatio="4/3"
             />
           </div>
         </div>

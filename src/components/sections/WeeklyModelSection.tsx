@@ -42,7 +42,7 @@ export default function WeeklyModelSection() {
     <section
       id="weekly-model"
       className="section-pad bg-white"
-      aria-label="The FURA learning model"
+      aria-label="The FURAA learning model"
     >
       <div className="container-xl">
         <SectionHeader

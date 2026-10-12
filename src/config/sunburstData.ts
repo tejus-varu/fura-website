@@ -48,7 +48,7 @@ export const bandSummaries: Record<ClassBand, BandSummary> = {
 };
 
 export const sunburstData: SunburstNode = {
-  name: "FURA Programs",
+  name: "FURAA Programs",
   children: [
     // ─── FOUNDATION MODULE — Classes 1–4 ─────────────────────────────────────
     {

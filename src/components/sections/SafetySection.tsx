@@ -14,7 +14,7 @@ const safetyItems = [
     icon: UserCheck,
     title: "Trained & Certified Mentors",
     description:
-      "All FURA volunteers are trained in child supervision, first aid, and age-appropriate facilitation. Mentor-to-student ratios are strictly maintained.",
+      "All FURAA volunteers are trained in child supervision, first aid, and age-appropriate facilitation. Mentor-to-student ratios are strictly maintained.",
     color: "var(--color-sky-700)",
     bgColor: "var(--color-sky-100)",
   },
@@ -22,7 +22,7 @@ const safetyItems = [
     icon: Bus,
     title: "End-to-End Transport Responsibility",
     description:
-      "Where transport is opted, FURA takes full responsibility from school gate to farm and back — with verified drivers and accompanying mentors.",
+      "Where transport is opted, FURAA takes full responsibility from school gate to farm and back — with verified drivers and accompanying mentors.",
     color: "var(--color-gold-700)",
     bgColor: "var(--color-gold-100)",
   },
@@ -38,7 +38,7 @@ const safetyItems = [
     icon: Shirt,
     title: "Mandatory Farm Costume",
     description:
-      "All students wear a FURA farm costume before entering the farmland — creating safety awareness, farm identity, and a clear visual boundary between learning zones.",
+      "All students wear a FURAA farm costume before entering the farmland — creating safety awareness, farm identity, and a clear visual boundary between learning zones.",
     color: "var(--color-brown-500)",
     bgColor: "var(--color-brown-100)",
   },
@@ -67,7 +67,7 @@ export default function SafetySection() {
           badge="Safety & Trust"
           badgeVariant="sky"
           title="Your Students Are Our Responsibility"
-          subtitle="School management trusts us with their students. We take that seriously. Every FURA session is planned, supervised, and transparent."
+          subtitle="School management trusts us with their students. We take that seriously. Every FURAA session is planned, supervised, and transparent."
           titleClassName="!text-white"
         />
 
@@ -124,7 +124,7 @@ export default function SafetySection() {
             className="text-sm max-w-xl mx-auto"
             style={{ color: "var(--color-green-300)" }}
           >
-            FURA operates on a transparent school-partnership model. Principals and coordinators
+            FURAA operates on a transparent school-partnership model. Principals and coordinators
             receive full activity reports, parent communication templates, and consent documentation.
           </p>
         </div>

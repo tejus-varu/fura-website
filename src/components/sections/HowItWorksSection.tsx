@@ -151,12 +151,10 @@ export default function HowItWorksSection() {
 
         {/* Connector note */}
         <p
-          className="text-center text-sm font-medium opacity-60"
+          className="text-center text-sm font-medium opacity-75 max-w-2xl mx-auto leading-relaxed"
           style={{ color: "var(--color-green-700)" }}
         >
-          The Classroom → Practical → Reflection cycle repeats throughout the
-          academic term, building cumulative knowledge and a genuine relationship
-          with nature. Scheduling is flexible and coordinated with each school.
+          FURAA follows a progressive learning approach that connects classroom concepts with practical experiences and reflective activities, helping students build a deeper understanding of agriculture, nature and culture.
         </p>
       </div>
     </section>

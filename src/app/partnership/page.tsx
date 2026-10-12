@@ -26,11 +26,12 @@ import SafetyChecklist from "@/components/ui/SafetyChecklist";
 import CtaBlock from "@/components/ui/CtaBlock";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
+import { siteImages } from "@/config/images";
 
 export const metadata: Metadata = {
   title: `Partnership Ecosystem | ${brand.name}`,
   description:
-    "Explore FURA's collaborative ecosystem spanning school curriculum partnerships, farm learning centers like Neralu Farms, proposed agricultural university knowledge sharing, and corporate employee engagement.",
+    "Explore FURAA's collaborative ecosystem spanning school curriculum partnerships, farm learning centers like Neralu Farms, proposed agricultural university knowledge sharing, and corporate employee engagement.",
 };
 
 const partnershipPillars = [
@@ -67,6 +68,8 @@ export default function PartnershipPage() {
         badge="Collaboration Ecosystem"
         title="Partnership: Learning in Synergy"
         description={`${brand.name} collaborates across four vital sectors — schools, working farms, agricultural institutions, and corporate organizations — to nurture practical ecological knowledge and sustainable community awareness.`}
+        bgImage={siteImages.partnerships.heroBg.src}
+        bgPosition={siteImages.partnerships.heroBg.objectPosition}
       />
 
       {/* 4-Sector Quick Overview Strip */}
@@ -119,7 +122,7 @@ export default function PartnershipPage() {
                 Integrating Experiential Agri-Education Into School Life
               </h2>
               <p className="text-base text-[var(--color-green-800)] leading-relaxed">
-                FURA collaborates directly with school management, academic coordinators, and trustees to embed agriculture, nature learning, folk art, and nutrition awareness into existing CBSE, ICSE, and State Board curricula or structured extracurricular clubs.
+                FURAA collaborates directly with school management, academic coordinators, and trustees to embed agriculture, nature learning, folk art, and nutrition awareness into existing CBSE, ICSE, and State Board curricula or structured extracurricular clubs.
               </p>
               <p className="text-sm text-[var(--color-green-700)] leading-relaxed">
                 We handle the entire instructional delivery and operational logistics — bringing trained educators into your classrooms for theory, and providing fully supervised, turnkey practical farm experiences on agreed dates.
@@ -137,10 +140,12 @@ export default function PartnershipPage() {
 
             <div className="lg:w-1/2 w-full">
               <ImagePlaceholder
-                alt="Students collaborating on hands-on garden project in school campus"
-                caption="Seamless integration with school academic calendar and campus activities"
-                badge="School Partnership"
+                src={siteImages.partnerships.schools.src}
+                alt={siteImages.partnerships.schools.alt}
+                caption={siteImages.partnerships.schools.caption}
+                badge={siteImages.partnerships.schools.badge}
                 aspectRatio="4/3"
+                objectPosition={siteImages.partnerships.schools.objectPosition}
               />
             </div>
           </div>
@@ -214,7 +219,7 @@ export default function PartnershipPage() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <SafetyChecklist
-                title="With FURA Transport (Turnkey)"
+                title="With FURAA Transport (Turnkey)"
                 items={[
                   {
                     title: "School Gate-to-Gate Oversight",
@@ -229,7 +234,7 @@ export default function PartnershipPage() {
                   {
                     title: "En-Route Mentor Supervision",
                     description:
-                      "FURA mentors accompany students on the bus during the journey to maintain discipline and safety.",
+                      "FURAA mentors accompany students on the bus during the journey to maintain discipline and safety.",
                   },
                 ]}
               />
@@ -284,7 +289,7 @@ export default function PartnershipPage() {
               Verified Outdoor Learning Centers
             </h2>
             <p className="text-sm text-[var(--color-green-700)] mt-2">
-              FURA partners with established working farms to host our educational sessions. Farms are vetted for child safety, agricultural diversity, and accessibility.
+              FURAA partners with established working farms to host our educational sessions. Farms are vetted for child safety, agricultural diversity, and accessibility.
             </p>
           </div>
 
@@ -348,12 +353,14 @@ export default function PartnershipPage() {
                   {/* Dual Image Slots */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <ImagePlaceholder
+                      src={farm.images[0]?.src}
                       alt={farm.images[0]?.alt || `${farm.name} educational activities`}
                       caption={farm.images[0]?.caption}
                       badge="Plot View"
                       aspectRatio="4/3"
                     />
                     <ImagePlaceholder
+                      src={farm.images[1]?.src}
                       alt={farm.images[1]?.alt || `${farm.name} learning zones`}
                       caption={farm.images[1]?.caption}
                       badge="Activity Zone"
@@ -406,7 +413,7 @@ export default function PartnershipPage() {
               Scientific Grounding & Institutional Guidance
             </h2>
             <p className="text-sm text-[var(--color-green-700)] mt-2">
-              FURA seeks to anchor our school curriculum in authentic agricultural science by collaborating with respected educational and research institutions.
+              FURAA seeks to anchor our school curriculum in authentic agricultural science by collaborating with respected educational and research institutions.
             </p>
           </div>
 
@@ -459,6 +466,7 @@ export default function PartnershipPage() {
                 {/* Image Placeholder */}
                 <div className="md:w-1/3 w-full">
                   <ImagePlaceholder
+                    src={inst.image?.src}
                     alt={inst.image?.alt || `${inst.name} campus reference`}
                     caption="Academic guidance & curriculum grounding reference"
                     badge="Research Institution"
@@ -498,10 +506,12 @@ export default function PartnershipPage() {
 
             <div className="lg:w-1/2 w-full">
               <ImagePlaceholder
-                alt="Corporate employee team participating in tree plantation and organic farm experience"
-                caption="Corporate sustainability and team-building at our partner farm"
-                badge="Corporate Engagement"
+                src={siteImages.partnerships.corporate.src}
+                alt={siteImages.partnerships.corporate.alt}
+                caption={siteImages.partnerships.corporate.caption}
+                badge={siteImages.partnerships.corporate.badge}
                 aspectRatio="16/9"
+                objectPosition={siteImages.partnerships.corporate.objectPosition}
               />
             </div>
           </div>
@@ -533,7 +543,7 @@ export default function PartnershipPage() {
         <div className="container-xl">
           <FeatureGrid
             title="The Educational Value Proposition"
-            subtitle="Why schools, students, and parents consistently rate FURA modules highly."
+            subtitle="Why schools, students, and parents consistently rate FURAA modules highly."
             cols={3}
             features={[
               {
@@ -563,7 +573,7 @@ export default function PartnershipPage() {
       <section className="section-pad pt-0 bg-white">
         <div className="container-xl">
           <CtaBlock
-            title="Ready to Partner with FURA?"
+            title="Ready to Partner with FURAA?"
             description="Whether you represent a school, an agricultural landowner, an academic institution, or a corporate organization, let's discuss how we can collaborate."
             buttonText="Initiate Partnership Dialogue"
             href="/contact"

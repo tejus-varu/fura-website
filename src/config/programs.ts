@@ -128,6 +128,36 @@ export const programs: Program[] = [
       "Creative environmental thinking",
     ],
   },
+  {
+    id: "agri-tech",
+    title: "Agricultural Innovation & Technology",
+    description:
+      "Explores precision irrigation, automated soil sensors, micro-climate monitoring, and smart farming practices — connecting modern STEM concepts to real-world agrarian challenges.",
+    icon: "Cpu",
+    category: "Modern Farming",
+    classBands: ["5-8", "9-10"],
+    highlights: [
+      "Precision drip irrigation demo",
+      "Automated sensor observation",
+      "Micro-climate management",
+      "STEM-to-farm problem solving",
+    ],
+  },
+  {
+    id: "biodiversity-conservation",
+    title: "Biodiversity & Environmental Conservation",
+    description:
+      "Students map pollinator corridors, investigate beneficial farm insects, study native tree species, and understand watershed stewardship — developing genuine ecological responsibility.",
+    icon: "Trees",
+    category: "Core Learning",
+    classBands: ["1-4", "5-8", "9-10"],
+    highlights: [
+      "Pollinator corridor mapping",
+      "Beneficial insect observation",
+      "Native flora identification",
+      "Conservation and soil ethics",
+    ],
+  },
 ];
 
 export const programCategories = [

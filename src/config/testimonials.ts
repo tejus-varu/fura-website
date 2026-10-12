@@ -12,7 +12,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "t2",
     quote:
-      "We were initially hesitant about the logistics, but the FURA team handled everything — transport, supervision, safety protocols. Parents have been extremely positive. Several families asked if we could extend it to a full year.",
+      "We were initially hesitant about the logistics, but the FURAA team handled everything — transport, supervision, safety protocols. Parents have been extremely positive. Several families asked if we could extend it to a full year.",
     author: "Academic Coordinator",
     role: "State Board Institution, Nashik",
     initials: "AC",

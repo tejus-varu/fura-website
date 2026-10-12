@@ -24,6 +24,12 @@ export interface HeroSlide {
 }
 
 export const siteImages = {
+  logo: {
+    src: "/images/logo/furaa-logo.png",
+    light: "/images/logo/furaa-logo-light.png",
+    original: "/images/logo/furaa-logo-original.jpg",
+    alt: "FURAA — Future Ready Agriculture Academy",
+  },
   hero: {
     main: {
       src: "/images/hero/NAD06309.JPG",

@@ -13,6 +13,13 @@ export const brand = {
   description:
     "FURAA partners with schools to deliver experiential education programs that combine agriculture, folk arts, rural culture, nature science, and healthy food awareness — for students from Class 1 to Class 10.",
 
+  logo: {
+    src: "/images/logo/furaa-logo.png",
+    lightSrc: "/images/logo/furaa-logo-light.png",
+    originalSrc: "/images/logo/furaa-logo-original.jpg",
+    alt: "Future Ready Agriculture Academy (FURAA) Logo",
+  },
+
   contact: {
     email: "admin@furaa.com",
     emailLink: "mailto:admin@furaa.com",

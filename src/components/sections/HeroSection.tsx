@@ -88,7 +88,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-6 text-sm" style={{ color: "var(--color-green-300)" }}>
               <span className="flex items-center gap-2">
                 <CalendarCheck size={14} style={{ color: "var(--color-gold-500)" }} />
-                Friday theory + Saturday farm model
+                Classroom theory + Hands-on farm practice
               </span>
               <span className="flex items-center gap-2">
                 <Users size={14} style={{ color: "var(--color-gold-500)" }} />

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { brand } from "@/config/brand";
 import { Sprout, Palette, TreePine, Droplets, Wheat, Recycle, Home, Sun } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
@@ -16,7 +17,7 @@ const programs = [
     icon: Sprout,
     title: "Agriculture & Organic Farming",
     badge: "Core Module",
-    classBands: "Class 1 to 10",
+    classBands: "Classes 1–10 (Foundation, Exploration, Specialization)",
     learn: "Soil preparation, seasonal cycles, natural pest control, and the journey of food from seed to harvest.",
     do: "Students engage in active sowing, watering, weeding, and organic harvesting under mentor guidance.",
     outcome: "Instills discipline, patience, and a profound respect for the labor behind food production.",
@@ -26,7 +27,7 @@ const programs = [
     icon: Palette,
     title: "Folk Arts & Rural Culture",
     badge: "Creative",
-    classBands: "Class 1 to 10",
+    classBands: "Classes 1–10 (Foundation, Exploration, Specialization)",
     learn: "India's rural heritage, Warli art, natural dyes, and traditional storytelling.",
     do: "Hands-on pottery making, painting with natural colors, and participating in traditional rural games.",
     outcome: "Builds creative expression rooted in living tradition and improves fine motor skills.",
@@ -34,7 +35,7 @@ const programs = [
   {
     icon: TreePine,
     title: "Nature & Ecology Learning",
-    classBands: "Class 1 to 8",
+    classBands: "Classes 1–8 (Foundation & Exploration)",
     learn: "Local flora and fauna identification, the water cycle, and the importance of biodiversity.",
     do: "Guided bird walks, leaf-rubbing, soil sampling, and insect observation.",
     outcome: "Develops an innate connection to the environment and practical knowledge of biology.",
@@ -44,7 +45,7 @@ const programs = [
     icon: Droplets,
     title: "Hydroponics & Soilless Culture",
     badge: "Tech & Science",
-    classBands: "Class 6 to 10",
+    classBands: "Classes 5–10 (Exploration & Specialization)",
     learn: "Modern agricultural technology, water conservation, pH balancing, and nutrient solutions.",
     do: "Setting up small hydroponic kits, measuring water pH, and observing fast-growth crops.",
     outcome: "Bridges traditional wisdom with future tech, inspiring interest in agricultural science.",
@@ -52,7 +53,7 @@ const programs = [
   {
     icon: Wheat,
     title: "Healthy Millet Food Awareness",
-    classBands: "Class 1 to 10",
+    classBands: "Classes 1–10 (Foundation, Exploration, Specialization)",
     learn: "The nutritional value of indigenous millets, the impact of junk food, and traditional diet structures.",
     do: "Millet tasting sessions, identifying different grains, and simple fireless cooking activities.",
     outcome: "Encourages students to make conscious, healthier food choices in their daily lives.",
@@ -60,7 +61,7 @@ const programs = [
   {
     icon: Recycle,
     title: "Waste-to-Art & Sustainability",
-    classBands: "Class 1 to 10",
+    classBands: "Classes 1–10 (Foundation, Exploration, Specialization)",
     learn: "Environmental responsibility, composting, and upcycling farm waste.",
     do: "Creating art pieces from dried leaves and twigs, and building layered compost bins.",
     outcome: "Teaches the concept of a circular economy in a highly tangible, creative way.",
@@ -69,7 +70,7 @@ const programs = [
     icon: Home,
     title: "Terrace Gardening in Schools",
     badge: "In-School Setup",
-    classBands: "School Campus",
+    classBands: "School Campus (All Classes)",
     learn: "Urban farming feasibility, space management, and continuous care.",
     do: "Students help set up and maintain a living lab right on the school terrace or grounds.",
     outcome: "Provides year-round environmental engagement without needing to leave the campus.",
@@ -77,7 +78,7 @@ const programs = [
   {
     icon: Sun,
     title: "Experiential Summer Camps",
-    classBands: "Class 1 to 8",
+    classBands: "Classes 1–8 (Foundation & Exploration)",
     learn: "A condensed, immersive mix of agriculture, folk arts, and nature.",
     do: "Multi-day outdoor programs during school vacations with intensive workshops and rural games.",
     outcome: "A productive, screen-free summer break that builds independence and new friendships.",
@@ -93,6 +94,37 @@ export default function ProgramsPage() {
         title="Modules Built for Discovery"
         description={`From organic farming to folk arts and hydroponics, every ${brand.shortName} module is designed to be age-appropriate, hands-on, and curriculum-linked.`}
       />
+
+      {/* Module Overview Quick Nav */}
+      <section className="py-8 bg-emerald-950/10 border-b border-emerald-900/10">
+        <div className="container-xl">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-xs uppercase font-bold tracking-wider text-[var(--color-green-900)]">
+              Curriculum Modules by Class Band:
+            </span>
+            <div className="flex flex-wrap gap-2">
+              <Link
+                href="/modules/foundation"
+                className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white border border-green-200 text-emerald-800 hover:bg-emerald-50 transition-colors"
+              >
+                Foundation (Classes 1–4) →
+              </Link>
+              <Link
+                href="/modules/exploration"
+                className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white border border-green-200 text-emerald-800 hover:bg-emerald-50 transition-colors"
+              >
+                Exploration (Classes 5–8) →
+              </Link>
+              <Link
+                href="/modules/specialization"
+                className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white border border-green-200 text-emerald-800 hover:bg-emerald-50 transition-colors"
+              >
+                Specialization (Classes 9–10) →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-pad bg-white">
         <div className="container-xl">
@@ -110,7 +142,7 @@ export default function ProgramsPage() {
         <div className="container-xl">
           <CtaBlock 
             title="Want to customize these modules for your school?"
-            description="We can tailor the module mix based on your students' age groups and the academic term. Let's discuss your requirements."
+            description="We tailor the module mix based on your students' age groups and academic calendar. Let's discuss your requirements."
             buttonText="Discuss Partnership"
             href="/partnership"
           />

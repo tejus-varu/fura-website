@@ -1,24 +1,24 @@
 import SectionHeader from "@/components/ui/SectionHeader";
 import { brand } from "@/config/brand";
 
-const schedule = [
+const phases = [
   {
-    day: "Friday",
-    label: "Theory in School",
-    tagline: "Educator visits the classroom",
+    label: "Phase 1",
+    title: "Classroom Learning",
+    tagline: "Theory and concept introduction at school",
     color: "var(--color-sky-500)",
     bgColor: "var(--color-sky-100)",
     items: [
       "Agriculture & ecology concept session",
       "Visual aids, worksheets, discussion",
-      "Introduction to next day's farm activity",
+      "Introduction to the upcoming practical activity",
       "Student preparation and Q&A",
     ],
   },
   {
-    day: "Saturday",
-    label: "Farm Learning Day",
-    tagline: "Students travel to the farm",
+    label: "Phase 2",
+    title: "Farm Practical Session",
+    tagline: "Hands-on learning at the farm",
     color: "var(--color-green-700)",
     bgColor: "var(--color-green-100)",
     items: [
@@ -33,7 +33,7 @@ const schedule = [
 const logistics = [
   { label: "Pickup & Drop", detail: "Transport arranged where opted, responsibility from school gate" },
   { label: "Farm Costume", detail: "Mandatory entry dress for all students — builds farm identity" },
-  { label: "Trained Mentors", detail: `Certified ${brand.shortName} volunteers supervise all activity zones` },
+  { label: "Trained Mentors", detail: `Trained ${brand.shortName} volunteers supervise all activity zones` },
   { label: "Class Groups", detail: "Small, age-appropriate batches for focused engagement" },
 ];
 
@@ -42,50 +42,50 @@ export default function WeeklyModelSection() {
     <section
       id="weekly-model"
       className="section-pad bg-white"
-      aria-label="The weekly academic model"
+      aria-label="The FURA learning model"
     >
       <div className="container-xl">
         <SectionHeader
           badge="Seamless Integration"
           badgeVariant="gold"
           title="Designed for the School Calendar"
-          subtitle={`The ${brand.shortName} schedule is designed to fit seamlessly into a school's weekly calendar — minimal disruption, maximum impact.`}
+          subtitle={`The ${brand.shortName} schedule is designed to fit seamlessly into each school's academic calendar — theory sessions followed by practical sessions, with scheduling coordinated to minimise disruption.`}
         />
 
-        {/* Day cards */}
+        {/* Phase cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {schedule.map((day) => (
+          {phases.map((phase) => (
             <div
-              key={day.day}
+              key={phase.label}
               className="card-base overflow-hidden"
             >
               <div
                 className="px-8 py-5 flex items-center justify-between"
-                style={{ background: day.bgColor }}
+                style={{ background: phase.bgColor }}
               >
                 <div>
                   <p
                     className="text-xs font-semibold uppercase tracking-widest mb-1"
-                    style={{ color: day.color }}
+                    style={{ color: phase.color }}
                   >
-                    {day.day}
+                    {phase.label}
                   </p>
                   <h3 className="text-h3" style={{ color: "var(--color-green-900)" }}>
-                    {day.label}
+                    {phase.title}
                   </h3>
                   <p className="text-sm mt-1 opacity-70" style={{ color: "var(--color-green-800)" }}>
-                    {day.tagline}
+                    {phase.tagline}
                   </p>
                 </div>
                 <div
                   className="text-4xl font-display font-bold opacity-15"
-                  style={{ color: day.color }}
+                  style={{ color: phase.color }}
                 >
-                  {day.day.charAt(0)}
+                  {phase.label.replace("Phase ", "")}
                 </div>
               </div>
               <ul className="p-8 flex flex-col gap-3">
-                {day.items.map((item) => (
+                {phase.items.map((item) => (
                   <li
                     key={item}
                     className="flex items-center gap-3 text-sm"
@@ -93,7 +93,7 @@ export default function WeeklyModelSection() {
                   >
                     <span
                       className="w-2 h-2 rounded-full shrink-0"
-                      style={{ background: day.color }}
+                      style={{ background: phase.color }}
                     />
                     {item}
                   </li>

@@ -28,7 +28,7 @@ export const brand = {
     siteName: "FURA — Future Ready Agriculture Academy",
     defaultTitle: "FURA | Future-Ready Agriculture & Nature Education for Schools",
     defaultDescription:
-      "FURA partners with schools to deliver a structured Friday Theory + Saturday Farm module. Hands-on agriculture, folk art, and nature-based learning for a sustainable future.",
+      "FURA partners with schools to deliver structured experiential learning — classroom theory followed by hands-on farm practice. Agriculture, folk art, and nature-based education for Classes 1–10.",
   },
 
   /** Stats shown in the homepage stats bar — update when real data is available */

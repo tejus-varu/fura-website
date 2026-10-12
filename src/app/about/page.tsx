@@ -54,19 +54,19 @@ export default function AboutPage() {
             title="Our Theory-to-Practical Model"
             steps={[
               {
-                step: "Friday",
+                step: "Phase 1",
                 title: "Learn in School",
-                description: "Our trained educator visits your school. Students learn the core concepts (e.g., photosynthesis, soil layers) through structured curriculum-linked modules.",
+                description: "Our trained educator visits your school. Students learn core concepts (e.g., soil science, ecology, plant biology) through interactive, curriculum-linked classroom sessions.",
               },
               {
-                step: "Saturday",
+                step: "Phase 2",
                 title: "Experience at Farm",
-                description: "Students travel to our dedicated farm centers. They put their hands in the soil, applying exactly what they learned the previous day.",
+                description: "Students travel to our dedicated farm learning center. They get their hands in the soil, applying classroom concepts through structured, supervised outdoor practice.",
               },
               {
-                step: "Next Week",
+                step: "Phase 3",
                 title: "Reflect & Create",
-                description: "Through journaling, waste-to-art projects, or group discussions, students internalize the experience and present their findings.",
+                description: "Through journaling, waste-to-art projects, or group discussions, students internalize the experience and connect practical learning back to academic subjects.",
               },
               {
                 step: "Term-End",
@@ -124,7 +124,7 @@ export default function AboutPage() {
           faqs={[
             {
               question: "Does this disrupt our academic schedule?",
-              answer: "No. The Friday classroom sessions are designed to fit into standard 40-minute periods, replacing or supplementing existing EVS/Science slots. Saturday sessions happen outside regular school hours."
+              answer: "No. Classroom theory sessions are structured to fit within standard school periods (such as EVS or Science). Practical farm sessions are scheduled in flexible coordination with your school's annual timetable."
             },
             {
               question: "Who conducts the classroom theory?",

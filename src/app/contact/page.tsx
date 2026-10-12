@@ -182,9 +182,10 @@ export default function ContactPage() {
                         <label htmlFor="classRange" className="text-sm font-semibold" style={{ color: "var(--color-green-900)" }}>Class Range</label>
                         <select id="classRange" name="classRange" className="input-field">
                           <option value="">Select range</option>
-                          <option value="1-3">Classes 1 to 3 (Junior)</option>
-                          <option value="4-10">Classes 4 to 10 (Main)</option>
-                          <option value="all">All Classes (1 to 10)</option>
+                          <option value="1-4">Foundation Module (Classes 1–4)</option>
+                          <option value="5-8">Exploration Module (Classes 5–8)</option>
+                          <option value="9-10">Specialization Module (Classes 9–10)</option>
+                          <option value="all">All Modules (Classes 1–10)</option>
                         </select>
                       </div>
                       <div className="flex flex-col gap-2">

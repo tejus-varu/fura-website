@@ -1,4 +1,4 @@
-import { ShieldCheck, UserCheck, Bus, HardHat, Waves, Shirt } from "lucide-react";
+import { ShieldCheck, UserCheck, Bus, HardHat, HeartPulse, Shirt } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 const safetyItems = [
@@ -27,10 +27,10 @@ const safetyItems = [
     bgColor: "var(--color-gold-100)",
   },
   {
-    icon: Waves,
-    title: "Supervised Farm Pond (Under 2 Feet)",
+    icon: HeartPulse,
+    title: "First-Aid Readiness & Protocols",
     description:
-      "For younger students, any water-based activity is conducted in a controlled farm pond maintained at a maximum of 2 feet depth, under direct mentor supervision at all times.",
+      "All mentors carry fully equipped first-aid kits on-site. Clear emergency response protocols and designated medical escalation routes are in place.",
     color: "var(--color-sky-500)",
     bgColor: "var(--color-sky-100)",
   },

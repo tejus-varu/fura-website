@@ -13,7 +13,7 @@ export default function Footer() {
       aria-label="Site footer"
     >
       <div className="container-xl py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Logo light={true} className="mb-6 scale-110 origin-left" />
@@ -24,14 +24,18 @@ export default function Footer() {
             {/* Social links */}
             <div className="flex items-center gap-3">
               <a
-                href={brand.social.instagram}
+                href={`https://instagram.com/${brand.social.instagram}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={`${brand.shortName} on Instagram`}
                 className="p-2 rounded-lg opacity-60 hover:opacity-100 hover:bg-white/10 transition-all"
               >
                 <Share2 size={18} />
               </a>
               <a
-                href={brand.social.linkedin}
+                href={`https://linkedin.com/company/${brand.social.linkedin}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={`${brand.shortName} on LinkedIn`}
                 className="p-2 rounded-lg opacity-60 hover:opacity-100 hover:bg-white/10 transition-all"
               >
@@ -40,15 +44,59 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Modules column */}
+          <div>
+            <h3
+              className="text-sm font-semibold uppercase tracking-widest mb-5"
+              style={{ color: "var(--color-gold-300)" }}
+            >
+              Modules
+            </h3>
+            <ul className="flex flex-col gap-2.5">
+              <li>
+                <Link
+                  href="/modules/foundation"
+                  className="text-sm opacity-70 hover:opacity-100 hover:text-white transition-all"
+                >
+                  Foundation (Classes 1–4)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/modules/exploration"
+                  className="text-sm opacity-70 hover:opacity-100 hover:text-white transition-all"
+                >
+                  Exploration (Classes 5–8)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/modules/specialization"
+                  className="text-sm opacity-70 hover:opacity-100 hover:text-white transition-all"
+                >
+                  Specialization (Classes 9–10)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/junior-module"
+                  className="text-xs opacity-50 hover:opacity-90 hover:text-white transition-all"
+                >
+                  Junior Module (Early Years)
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Navigation column */}
           <div>
             <h3
               className="text-sm font-semibold uppercase tracking-widest mb-5"
               style={{ color: "var(--color-gold-300)" }}
             >
-              Pages
+              Navigation
             </h3>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -95,7 +143,7 @@ export default function Footer() {
           <p>
             &copy; {currentYear} {brand.name}. All rights reserved.
           </p>
-          <p>Experiential education for schools across India.</p>
+          <p>Experiential agriculture & nature education for schools across India.</p>
         </div>
       </div>
     </footer>

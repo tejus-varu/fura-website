@@ -44,11 +44,11 @@ export default function ProgramDetailCard({
       
       <div className="p-6 flex flex-col gap-5 flex-1">
         <div>
-          <p className="text-xs font-bold uppercase mb-1" style={{ color: "var(--color-gold-600)" }}>Friday Theory (In School)</p>
+          <p className="text-xs font-bold uppercase mb-1" style={{ color: "var(--color-gold-600)" }}>Classroom Learning (Theory)</p>
           <p className="text-sm leading-relaxed" style={{ color: "var(--color-green-800)" }}>{learn}</p>
         </div>
         <div>
-          <p className="text-xs font-bold uppercase mb-1" style={{ color: "var(--color-gold-600)" }}>Saturday Practical (At Farm)</p>
+          <p className="text-xs font-bold uppercase mb-1" style={{ color: "var(--color-gold-600)" }}>Practical Experience (Farm)</p>
           <p className="text-sm leading-relaxed" style={{ color: "var(--color-green-800)" }}>{actionStr}</p>
         </div>
         <div className="mt-auto pt-2">

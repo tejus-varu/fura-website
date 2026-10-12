@@ -41,7 +41,7 @@ export default function SafetyPage() {
               {
                 icon: Eye,
                 title: "Child-Safe Zones",
-                description: "Activities are restricted to designated safe zones. Areas with heavy farm machinery or deep water (like farm ponds) are strictly off-limits.",
+                description: "Activities are restricted to designated safe zones. Areas with heavy farm machinery or active irrigation installations are strictly off-limits.",
               },
             ]}
           />
@@ -59,11 +59,11 @@ export default function SafetyPage() {
               },
               {
                 title: "Age-Appropriate Design",
-                description: "Activities are meticulously planned by age group. Junior students engage in light, sensory activities, while seniors handle structured tasks."
+                description: "Activities are meticulously planned by module band (Foundation, Exploration, Specialization) to ensure safety and developmental fit."
               },
               {
-                title: "Junior Student Controls",
-                description: "Classes 1-4 are kept in completely isolated, highly supervised environments with softer ground and lighter materials."
+                title: "Foundation Student Controls",
+                description: "Foundation learners (Classes 1–4) are kept in dedicated, highly supervised environments with soft ground and sensory-safe materials."
               }
             ]}
           />

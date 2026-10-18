@@ -9,6 +9,7 @@ import { navLinks } from "@/config/navigation";
 import type { NavLink } from "@/types";
 import Button from "@/components/ui/Button";
 import Logo from "@/components/ui/Logo";
+import SocialLinks from "@/components/ui/SocialLinks";
 
 /** Desktop dropdown for nav items with children */
 function NavDropdown({ link }: { link: NavLink }) {
@@ -32,12 +33,9 @@ function NavDropdown({ link }: { link: NavLink }) {
   }, []);
 
   // Close on Escape
-  const onKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    },
-    []
-  );
+  const onKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "Escape") setOpen(false);
+  }, []);
 
   return (
     <div
@@ -48,7 +46,7 @@ function NavDropdown({ link }: { link: NavLink }) {
       onKeyDown={onKeyDown}
     >
       <button
-        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-150 ${
+        className={`flex items-center gap-1 px-2.5 xl:px-3 py-1.5 xl:py-2 text-[13px] xl:text-sm font-medium rounded-lg transition-colors duration-150 whitespace-nowrap ${
           isActive
             ? "text-white bg-white/15"
             : "text-[var(--color-green-200)] hover:text-white hover:bg-white/10"
@@ -59,19 +57,23 @@ function NavDropdown({ link }: { link: NavLink }) {
       >
         {link.label}
         <ChevronDown
-          size={14}
+          size={13}
           className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
 
       {/* Dropdown panel */}
       <div
-        className={`absolute left-0 top-full mt-1 z-50 min-w-[240px] rounded-2xl shadow-2xl overflow-hidden transition-all duration-200 ${
+        className={`absolute left-0 top-full mt-1.5 z-50 min-w-[240px] rounded-2xl shadow-2xl overflow-hidden transition-all duration-200 ${
           open
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
-        style={{ background: "var(--color-green-950)", border: "1px solid rgba(255,255,255,0.1)" }}
+        style={{
+          background: "var(--color-green-950)",
+          border: "1px solid rgba(255,255,255,0.12)",
+          backdropFilter: "blur(12px)",
+        }}
         role="menu"
       >
         {link.children?.map((child) => {
@@ -82,7 +84,7 @@ function NavDropdown({ link }: { link: NavLink }) {
               href={child.href}
               role="menuitem"
               onClick={() => setOpen(false)}
-              className={`block px-5 py-3.5 text-sm transition-colors duration-150 ${
+              className={`block px-4 py-3 text-sm transition-colors duration-150 ${
                 isChildActive
                   ? "text-white bg-white/15 font-semibold"
                   : "text-[var(--color-green-200)] hover:text-white hover:bg-white/10"
@@ -97,7 +99,7 @@ function NavDropdown({ link }: { link: NavLink }) {
   );
 }
 
-/** Mobile accordion for nav items with children */
+/** Mobile accordion item for nav items with children */
 function MobileNavItem({
   link,
   onClose,
@@ -139,13 +141,13 @@ function MobileNavItem({
       </button>
 
       {open && (
-        <div className="ml-4 mt-1 flex flex-col gap-1">
+        <div className="ml-4 mt-1 flex flex-col gap-1 border-l border-white/10 pl-2">
           {link.children.map((child) => (
             <Link
               key={child.href}
               href={child.href}
               onClick={onClose}
-              className={`block px-4 py-2.5 text-sm rounded-xl transition-colors ${
+              className={`block px-3 py-2 text-sm rounded-xl transition-colors ${
                 pathname === child.href
                   ? "text-white bg-white/15 font-semibold"
                   : "text-[var(--color-green-300)] hover:text-white hover:bg-white/10"
@@ -165,7 +167,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 40);
+    const onScroll = () => setIsScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -173,80 +175,109 @@ export default function Navbar() {
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[var(--color-green-950)] shadow-lg"
-          : "bg-transparent"
+          ? "bg-[var(--color-green-950)]/95 backdrop-blur-md shadow-lg py-2"
+          : "bg-transparent py-3 md:py-4"
       }`}
     >
       <div className="container-xl">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between gap-2 xl:gap-4 h-14 md:h-16">
           {/* Logo / Brand */}
           <Link
             href="/"
-            className="focus-visible:outline-none"
+            className="focus-visible:outline-none shrink-0"
             aria-label={`${brand.name} — Home`}
           >
-            <Logo light={true} />
+            {/* Desktop: Horizontal lockup with circular emblem & wordmark */}
+            <div className="hidden sm:block">
+              <Logo light={true} variant="horizontal" size="sm" />
+            </div>
+            {/* Mobile: Compact lockup */}
+            <div className="sm:hidden">
+              <Logo light={true} variant="compact" size="sm" />
+            </div>
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Primary navigation">
-            {navLinks.slice(0, 7).map((link) =>
+          {/* Desktop Navigation Links */}
+          <nav
+            className="hidden lg:flex items-center gap-0.5 xl:gap-1"
+            aria-label="Primary navigation"
+          >
+            {navLinks.map((link) =>
               link.children ? (
-                <NavDropdown key={link.href} link={link} />
+                <NavDropdown key={link.label} link={link} />
               ) : (
-                <DesktopNavLink key={link.href} link={link} />
+                <DesktopNavLink key={link.label} link={link} />
               )
             )}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <Button href="/contact" variant="primary" size="sm">
+          {/* Right Header Area: Social Links + Book a Demo CTA */}
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
+            {/* Configurable Social Links */}
+            <SocialLinks light={true} iconClassName="w-4 h-4" />
+
+            {/* Book a Demo CTA */}
+            <Button href="/contact" variant="primary" size="sm" className="whitespace-nowrap">
               Book a Demo
             </Button>
           </div>
 
-          {/* Mobile hamburger */}
-          <button
-            id="mobile-menu-toggle"
-            onClick={() => setMenuOpen((v) => !v)}
-            className="lg:hidden p-2 rounded-lg text-[var(--color-green-200)] hover:bg-white/10 transition-colors"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-          >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Right Controls: Social Links (if configured) + Hamburger */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <SocialLinks light={true} iconClassName="w-3.5 h-3.5" />
+            <button
+              id="mobile-menu-toggle"
+              onClick={() => setMenuOpen((v) => !v)}
+              className="p-2 rounded-lg text-[var(--color-green-200)] hover:bg-white/10 transition-colors focus-visible:outline-none"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+            >
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile menu overlay */}
+      {/* Mobile Menu Drawer */}
       {menuOpen && (
         <div
-          className="lg:hidden fixed inset-0 top-16 z-40 overflow-y-auto"
+          className="lg:hidden fixed inset-0 top-14 md:top-16 z-40 overflow-y-auto"
           style={{ background: "var(--color-green-950)" }}
         >
-          <nav
-            className="flex flex-col p-6 gap-1"
-            aria-label="Mobile navigation"
-          >
+          <nav className="flex flex-col p-6 gap-1.5" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <MobileNavItem
-                key={link.href}
+                key={link.label}
                 link={link}
                 onClose={() => setMenuOpen(false)}
               />
             ))}
-            <div className="mt-6">
-              <Button href="/contact" variant="primary" size="md" className="w-full" onClick={() => setMenuOpen(false)}>
+
+            <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-4">
+              <Button
+                href="/contact"
+                variant="primary"
+                size="md"
+                className="w-full justify-center"
+                onClick={() => setMenuOpen(false)}
+              >
                 Book a Demo
               </Button>
+
+              {/* Mobile Social Links Footer */}
+              <div className="flex items-center justify-between text-xs text-[var(--color-green-300)] pt-2">
+                <span>Connect with FURAA:</span>
+                <SocialLinks light={true} iconClassName="w-4 h-4" />
+              </div>
             </div>
           </nav>
         </div>
@@ -262,7 +293,7 @@ function DesktopNavLink({ link }: { link: NavLink }) {
   return (
     <Link
       href={link.href}
-      className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-150 ${
+      className={`px-2.5 xl:px-3 py-1.5 xl:py-2 text-[13px] xl:text-sm font-medium rounded-lg transition-colors duration-150 whitespace-nowrap ${
         isActive
           ? "text-white bg-white/15"
           : "text-[var(--color-green-200)] hover:text-white hover:bg-white/10"

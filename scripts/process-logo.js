@@ -2,8 +2,8 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const inputPath = 'C:/Users/hp/.gemini/antigravity/brain/d7a06844-a1c6-476c-b083-82d918f771c7/.user_uploaded/media_1791819687156_994d6908.jpg';
 const outDir = path.join(__dirname, '..', 'public', 'images', 'logo');
+const inputPath = path.join(outDir, 'FURAA_logo.jpeg');
 
 if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir, { recursive: true });

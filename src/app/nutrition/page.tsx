@@ -8,7 +8,7 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import CtaBlock from "@/components/ui/CtaBlock";
 
 export const metadata: Metadata = {
-  title: `Nutrition & Food Awareness | ${brand.name}`,
+  title: `Nutrition and Food Awareness | ${brand.name}`,
   description: `Promoting healthy eating habits, millet awareness, and basic food literacy for school children.`,
 };
 

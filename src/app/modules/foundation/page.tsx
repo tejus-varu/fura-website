@@ -50,7 +50,7 @@ export default function FoundationModulePage() {
             features={[
               {
                 icon: Sprout,
-                title: "Tactile Sowing & Growth",
+                title: "Tactile Sowing and Growth",
                 description: "Experience the wonder of sowing a seed and observing seedling germination with patience and care.",
               },
               {
@@ -60,7 +60,7 @@ export default function FoundationModulePage() {
               },
               {
                 icon: Palette,
-                title: "Nature & Folk Expression",
+                title: "Nature and Folk Expression",
                 description: "Create leaf-print artwork, listen to seasonal folk stories, and play cooperative traditional rural games.",
               },
             ]}
@@ -86,7 +86,7 @@ export default function FoundationModulePage() {
                 <Sprout size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Seed & Soil Basics
+                Seed and Soil Basics
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
                 Gentle seed sowing in nursery trays, watering techniques using child-safe cans, and soil tactile exploration.
@@ -192,7 +192,7 @@ export default function FoundationModulePage() {
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="font-bold text-[var(--color-green-700)] shrink-0">W4:</span>
-                <span>Harvest & Feast: Gentle vegetable picking + traditional herbal welcome drink.</span>
+                <span>Harvest and Feast: Gentle vegetable picking + traditional herbal welcome drink.</span>
               </li>
             </ul>
           </div>
@@ -220,7 +220,7 @@ export default function FoundationModulePage() {
               <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
                 <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
                 <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Gross & Fine Motor Coordination:</strong> Practiced through seed handling, clay manipulation, and traditional rural play.
+                  <strong>Gross and Fine Motor Coordination:</strong> Practiced through seed handling, clay manipulation, and traditional rural play.
                 </p>
               </div>
             </div>
@@ -232,7 +232,7 @@ export default function FoundationModulePage() {
       <section className="section-pad bg-white">
         <div className="container-xl max-w-4xl mx-auto">
           <SafetyChecklist
-            title="Safety & Care for Classes 1–4"
+            title="Safety and Care for Classes 1–4"
             items={[
               {
                 title: "Enhanced Mentor Ratio",
@@ -250,7 +250,7 @@ export default function FoundationModulePage() {
                   "No sharp farming tools are used. Children handle lightweight plastic scoops, miniature wooden trowels, or work with bare hands.",
               },
               {
-                title: "Hydration & Shaded Rest",
+                title: "Hydration and Shaded Rest",
                 description:
                   "Mandatory water and snack intervals in covered pavilions every 30 minutes to prevent sun fatigue.",
               },

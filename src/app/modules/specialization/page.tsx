@@ -35,7 +35,7 @@ export default function SpecializationModulePage() {
               Educational Purpose
             </span>
             <h2 className="text-h2 mt-2 mb-4 text-[var(--color-green-900)]">
-              Preparing Tomorrow&apos;s Ecological & Scientific Leaders
+              Preparing Tomorrow&apos;s Ecological and Scientific Leaders
             </h2>
             <p className="text-base text-[var(--color-green-800)] leading-relaxed">
               Classes 9 and 10 are pivotal academic years where students prepare for board examinations and begin contemplating higher education paths in STEM, economics, and environmental sciences. The Specialization Module offers high-rigor, research-oriented experiential learning that elevates classroom biology and chemistry into applied ecological innovation.
@@ -85,7 +85,7 @@ export default function SpecializationModulePage() {
                 <Cpu size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Hydroponics & Automation
+                Hydroponics and Automation
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
                 NFT and Dutch bucket system mechanics, nutrient chemistry, automated timers, and soilless media analysis.
@@ -97,7 +97,7 @@ export default function SpecializationModulePage() {
                 <Trees size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Ecology & Biodiversity
+                Ecology and Biodiversity
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
                 Macro-invertebrate soil sampling, pollinator count transects, and comparative biodiversity audits between plot types.
@@ -139,19 +139,19 @@ export default function SpecializationModulePage() {
             steps={[
               {
                 step: "Phase 1",
-                title: "Advanced Theory & Hypothesis",
+                title: "Advanced Theory and Hypothesis",
                 description:
                   "Classroom sessions examining complex agro-ecological systems, biochemical processes, and project research questions.",
               },
               {
                 step: "Phase 2",
-                title: "Laboratory & Field Execution",
+                title: "Laboratory and Field Execution",
                 description:
                   "Field trials on the farm — measuring nutrient kinetics, conducting biodiversity surveys, and managing advanced plots.",
               },
               {
                 step: "Phase 3",
-                title: "Documentation & Analysis",
+                title: "Documentation and Analysis",
                 description:
                   "Compiling qualitative and quantitative field logs, graphing comparative data, and synthesizing project portfolios.",
               },
@@ -183,7 +183,7 @@ export default function SpecializationModulePage() {
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="font-bold text-[var(--color-green-700)] shrink-0">W2:</span>
-                <span>Precision Agronomy: Formulating hydroponic solutions & checking EC/pH balances.</span>
+                <span>Precision Agronomy: Formulating hydroponic solutions and checking EC/pH balances.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="font-bold text-[var(--color-green-700)] shrink-0">W3:</span>
@@ -231,20 +231,20 @@ export default function SpecializationModulePage() {
       <section className="section-pad bg-white">
         <div className="container-xl max-w-4xl mx-auto">
           <SafetyChecklist
-            title="Safety & Professional Protocols for Classes 9–10"
+            title="Safety and Professional Protocols for Classes 9–10"
             items={[
               {
-                title: "Laboratory & Chemical Safety",
+                title: "Laboratory and Chemical Safety",
                 description:
                   "Handling of pH testing reagents and nutrient salts is strictly conducted under instructor oversight with protective eyewear and gloves.",
               },
               {
-                title: "Electrical & Water Separation",
+                title: "Electrical and Water Separation",
                 description:
                   "Hydroponic submersible pumps and aeration equipment adhere to strict IP-rated safety enclosures and GFCI circuit protection.",
               },
               {
-                title: "Field Sun & Heat Management",
+                title: "Field Sun and Heat Management",
                 description:
                   "Outdoor agricultural fieldwork is scheduled during optimal morning hours to prevent dehydration and excessive heat exposure.",
               },

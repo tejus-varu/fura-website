@@ -63,7 +63,7 @@ export default function JuniorModulePage() {
                 <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center mb-4">
                   <span className="text-xl">🌱</span>
                 </div>
-                <h3 className="font-semibold text-sm mb-2" style={{ color: "var(--color-green-900)" }}>Touch & Grow</h3>
+                <h3 className="font-semibold text-sm mb-2" style={{ color: "var(--color-green-900)" }}>Touch and Grow</h3>
                 <p className="text-xs" style={{ color: "var(--color-green-700)" }}>Feeling different soil textures, handling soft seeds, and watering young saplings.</p>
               </div>
               <div className="p-6 rounded-2xl border" style={{ borderColor: "var(--color-green-100)" }}>

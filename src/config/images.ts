@@ -47,7 +47,7 @@ export const siteImages = {
       {
         src: "/images/hero/NAD06309.JPG",
         alt: "FURAA students jumping joyfully in red soil farm bed wearing academy uniforms",
-        title: "Where Agriculture, Art & Nature Shape Young Minds",
+        title: "Where Agriculture, Art And Nature Shape Young Minds",
         caption: "Supervised hands-on farming and soil discovery in session",
         badge: "Joyful Discovery",
         objectPosition: "center 38%",
@@ -55,7 +55,7 @@ export const siteImages = {
       {
         src: "/images/hero/NAD06335.JPG",
         alt: "Elder farmer guiding traditional draught ox plough with FURAA students walking alongside",
-        title: "Living Agrarian Heritage & Soil Cultivation",
+        title: "Living Agrarian Heritage and Soil Cultivation",
         caption: "Learning traditional soil preparation and draught animal stewardship",
         badge: "Traditional Agronomy",
         objectPosition: "center 45%",
@@ -63,7 +63,7 @@ export const siteImages = {
       {
         src: "/images/hero/NAD06383.JPG",
         alt: "FURAA students walking single-file through tall sugarcane canopy on a guided nature trail",
-        title: "Curriculum-Linked Nature Trails & Crop Science",
+        title: "Curriculum-Linked Nature Trails and Crop Science",
         caption: "Observing crop cycles and biodiversity in outdoor learning corridors",
         badge: "Agro-Ecology Trail",
         objectPosition: "center 35%",
@@ -87,7 +87,7 @@ export const siteImages = {
       src: "/images/modules/NAD06129.JPG",
       alt: "FURAA mentor demonstrating sunflower anatomy and pollination to students",
       caption: "Certified mentors and agrarian educators guiding practical inquiry",
-      badge: "Educators & Mentors",
+      badge: "Educators and Mentors",
       objectPosition: "center 30%",
     },
   },

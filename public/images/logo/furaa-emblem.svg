@@ -1,0 +1,26 @@
+
+  <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#B58320" />
+        <stop offset="50%" stop-color="#8F6310" />
+        <stop offset="100%" stop-color="#6E4C0C" />
+      </linearGradient>
+      <path id="textCircleTop" d="M 80,256 A 176,176 0 1,1 432,256" fill="none" />
+      <path id="textCircleBottom" d="M 432,256 A 176,176 0 0,1 80,256" fill="none" />
+    </defs>
+    <!-- Transparent outer ring for light bg -->
+    <circle cx="256" cy="256" r="250" fill="none" stroke="#143419" stroke-width="6" />
+    <circle cx="256" cy="256" r="236" fill="none" stroke="rgba(20,52,25,0.3)" stroke-width="1.5" stroke-dasharray="4,4" />
+    <circle cx="256" cy="256" r="150" fill="none" stroke="url(#gold)" stroke-width="2" />
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#143419" letter-spacing="3.8">
+      <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+        FUTURE READY AGRICULTURE ACADEMY
+      </textPath>
+    </text>
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#8F6310" letter-spacing="5">
+      <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+        • FURAA •
+      </textPath>
+    </text>
+  </svg>

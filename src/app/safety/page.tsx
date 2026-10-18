@@ -9,7 +9,7 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import CtaBlock from "@/components/ui/CtaBlock";
 
 export const metadata: Metadata = {
-  title: `Safety & Operations | ${brand.name}`,
+  title: `Safety and Operations | ${brand.name}`,
   description: `Discover ${brand.name}'s rigorous safety protocols, child-safe zones, and structured operational supervision for school modules.`,
 };
 
@@ -116,7 +116,7 @@ export default function SafetyPage() {
           <div className="card-base p-8 bg-white flex flex-col justify-center">
             <h3 className="text-h3 mb-6 flex items-center gap-3" style={{ color: "var(--color-sky-900)" }}>
               <Stethoscope size={24} style={{ color: "var(--color-sky-600)" }} />
-              Health & Emergency Readiness
+              Health and Emergency Readiness
             </h3>
             <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--color-green-800)" }}>
               While activities are designed to be safe, we are prepared for standard outdoor eventualities (like minor scrapes).
@@ -144,13 +144,13 @@ export default function SafetyPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6" style={{ background: "var(--color-green-100)" }}>
             <Phone size={28} style={{ color: "var(--color-green-700)" }} />
           </div>
-          <h2 className="text-h2 mb-4" style={{ color: "var(--color-green-900)" }}>Parent & School Communication</h2>
+          <h2 className="text-h2 mb-4" style={{ color: "var(--color-green-900)" }}>Parent and School Communication</h2>
           <p className="text-base leading-relaxed mb-6" style={{ color: "var(--color-green-800)" }}>
             We believe in complete transparency. We proactively communicate our safety expectations to the school prior to any farm visit.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             <div className="p-5 card-base bg-white shadow-sm border border-green-100">
-              <h4 className="font-semibold text-sm mb-2" style={{ color: "var(--color-green-900)" }}>Consent & Briefing</h4>
+              <h4 className="font-semibold text-sm mb-2" style={{ color: "var(--color-green-900)" }}>Consent and Briefing</h4>
               <p className="text-xs text-green-700">Detailed briefing documents are provided to parents detailing what to wear, sun protection, and hydration needs.</p>
             </div>
             <div className="p-5 card-base bg-white shadow-sm border border-green-100">

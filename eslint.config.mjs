@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "screenshot.cjs",
     "scripts/**",
+    "functions/**",
   ]),
 ]);
 

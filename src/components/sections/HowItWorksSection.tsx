@@ -42,9 +42,9 @@ const steps = [
   {
     id: "reflect",
     step: "Phase 3",
-    day: "Reflection & Application",
+    day: "Reflection and Application",
     icon: Lightbulb,
-    title: "Reflect, Create & Apply",
+    title: "Reflect, Create and Apply",
     description:
       "After the practical experience, students consolidate their learning through creative output — journaling, artwork, group discussions, or waste-to-art projects. This closes the learning loop and builds a lasting connection with what they experienced.",
     points: [

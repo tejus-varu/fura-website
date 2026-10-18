@@ -52,6 +52,28 @@ export interface NavLink {
   children?: { label: string; href: string }[];
 }
 
+export type PartnerCategory =
+  | "Schools"
+  | "Farms"
+  | "Farm Universities"
+  | "Corporates";
+
+export type PartnerStatus = "active" | "confirmed" | "proposed";
+
+/** Standardized partner entry for logo-first presentation */
+export interface PartnerEntry {
+  id: string;
+  name: string;
+  category: PartnerCategory;
+  logo?: string;
+  website?: string;
+  location?: string;
+  status: PartnerStatus;
+  description?: string;
+  highlights?: string[];
+  image?: { src: string; alt: string; caption?: string };
+}
+
 /** Farm partner entry — data-driven for easy extension */
 export interface FarmPartner {
   id: string;
@@ -75,3 +97,4 @@ export interface InstitutionPartner {
   image?: { src: string; alt: string };
   statusNote: string; // e.g. "proposed collaboration"
 }
+

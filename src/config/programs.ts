@@ -40,7 +40,7 @@ export const programs: Program[] = [
   },
   {
     id: "hydroponics",
-    title: "Hydroponics & Soilless Culture",
+    title: "Hydroponics and Soilless Culture",
     description:
       "Students learn and experiment with modern growing methods — hydroponics, aquaponics, and soilless media. Bridges traditional farming with future food technology.",
     icon: "Droplets",
@@ -55,7 +55,7 @@ export const programs: Program[] = [
   },
   {
     id: "folk-art",
-    title: "Folk Art & Cultural Activities",
+    title: "Folk Art and Cultural Activities",
     description:
       "Children experience traditional Indian rural culture through folk art, pottery, weaving, and village games. Builds cultural pride, creativity, and community connection.",
     icon: "Palette",
@@ -70,7 +70,7 @@ export const programs: Program[] = [
   },
   {
     id: "nutrition",
-    title: "Nutrition & Healthy Food Education",
+    title: "Nutrition and Healthy Food Education",
     description:
       "Sessions on millet-based food traditions, diet awareness, and understanding the journey from seed to plate. Includes tasting of traditional healthy foods and discussion of junk food impact.",
     icon: "Wheat",
@@ -85,7 +85,7 @@ export const programs: Program[] = [
   },
   {
     id: "terrace-urban",
-    title: "Terrace & Urban Farming",
+    title: "Terrace and Urban Farming",
     description:
       "Demonstrates how productive farming can happen in urban spaces. Students design and build small terrace garden setups — practical, empowering, and directly applicable at home.",
     icon: "Building2",
@@ -130,7 +130,7 @@ export const programs: Program[] = [
   },
   {
     id: "agri-tech",
-    title: "Agricultural Innovation & Technology",
+    title: "Agricultural Innovation and Technology",
     description:
       "Explores precision irrigation, automated soil sensors, micro-climate monitoring, and smart farming practices — connecting modern STEM concepts to real-world agrarian challenges.",
     icon: "Cpu",
@@ -145,7 +145,7 @@ export const programs: Program[] = [
   },
   {
     id: "biodiversity-conservation",
-    title: "Biodiversity & Environmental Conservation",
+    title: "Biodiversity and Environmental Conservation",
     description:
       "Students map pollinator corridors, investigate beneficial farm insects, study native tree species, and understand watershed stewardship — developing genuine ecological responsibility.",
     icon: "Trees",

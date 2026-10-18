@@ -275,7 +275,7 @@ export default function SunburstSection() {
           badge="Activity Mix Dashboard"
           badgeVariant="gold"
           title="Balanced Learning Across Core Domains"
-          subtitle="Explore the proposed activity distribution across Agriculture, Folk Arts, Nature & Ecology, and Nutrition. Each module scales with student maturity."
+          subtitle="Explore the proposed activity distribution across Agriculture, Folk Arts, Nature and Ecology, and Nutrition. Each module scales with student maturity."
         />
 
         {/* Band tab switcher */}
@@ -390,7 +390,7 @@ export default function SunburstSection() {
             )}
           </div>
 
-          {/* Dynamic Inspector & Domain Breakdown */}
+          {/* Dynamic Inspector and Domain Breakdown */}
           <div className="flex flex-col gap-6 w-full max-w-lg">
             {/* Selected Activity Details Inspector */}
             {selectedNode ? (

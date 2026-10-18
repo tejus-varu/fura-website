@@ -12,7 +12,7 @@ const safetyItems = [
   },
   {
     icon: UserCheck,
-    title: "Trained & Certified Mentors",
+    title: "Trained and Certified Mentors",
     description:
       "All FURAA volunteers are trained in child supervision, first aid, and age-appropriate facilitation. Mentor-to-student ratios are strictly maintained.",
     color: "var(--color-sky-700)",
@@ -28,7 +28,7 @@ const safetyItems = [
   },
   {
     icon: HeartPulse,
-    title: "First-Aid Readiness & Protocols",
+    title: "First-Aid Readiness and Protocols",
     description:
       "All mentors carry fully equipped first-aid kits on-site. Clear emergency response protocols and designated medical escalation routes are in place.",
     color: "var(--color-sky-500)",
@@ -44,7 +44,7 @@ const safetyItems = [
   },
   {
     icon: HardHat,
-    title: "School Communication & Consent",
+    title: "School Communication and Consent",
     description:
       "Parents and school management receive a full safety briefing, activity schedule, and consent process before each session. Nothing is unplanned.",
     color: "var(--color-orange-500)",
@@ -64,7 +64,7 @@ export default function SafetySection() {
     >
       <div className="container-xl">
         <SectionHeader
-          badge="Safety & Trust"
+          badge="Safety and Trust"
           badgeVariant="sky"
           title="Your Students Are Our Responsibility"
           subtitle="School management trusts us with their students. We take that seriously. Every FURAA session is planned, supervised, and transparent."

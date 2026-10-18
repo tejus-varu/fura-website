@@ -69,7 +69,7 @@ export default function AboutPage() {
               },
               {
                 step: "Phase 3",
-                title: "Reflect & Create",
+                title: "Reflect and Create",
                 description: "Through journaling, waste-to-art projects, or group discussions, students internalize the experience and connect practical learning back to academic subjects.",
               },
               {

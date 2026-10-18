@@ -21,7 +21,7 @@ export default function ExplorationModulePage() {
       <PageHero
         badge="Classes 5–8 · Middle Years"
         badgeVariant="gold"
-        title="Exploration Module: Inquiry & Ecosystems"
+        title="Exploration Module: Inquiry and Ecosystems"
         description="Bridging theoretical science with living agrarian systems. Students in Classes 5–8 engage in guided experimentation, hands-on cultivation, hydroponics demonstrations, and collaborative ecological inquiry."
         bgImage={siteImages.modules.exploration.heroBg.src}
         bgPosition={siteImages.modules.exploration.heroBg.objectPosition}
@@ -85,7 +85,7 @@ export default function ExplorationModulePage() {
                 <Sprout size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Cultivation & Harvesting
+                Cultivation and Harvesting
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
                 Bed preparation, companion planting, natural pest deterrents, mulching, and harvesting seasonal vegetables.
@@ -97,7 +97,7 @@ export default function ExplorationModulePage() {
                 <Droplets size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Hydroponics & Modern Tech
+                Hydroponics and Modern Tech
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
                 Demonstration of nutrient solutions, pH measurement, vertical growing towers, and water conservation principles.
@@ -109,7 +109,7 @@ export default function ExplorationModulePage() {
                 <Palette size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Folk Arts & Upcycling
+                Folk Arts and Upcycling
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
                 Warli geometric art, pottery wheel introduction, and creating functional art from agricultural byproducts.
@@ -121,7 +121,7 @@ export default function ExplorationModulePage() {
                 <Wheat size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Millet & Food Literacy
+                Millet and Food Literacy
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
                 Nutritional profiling of traditional millets (Ragi, Jowar), exploring gut health, and discussing processed food realities.
@@ -187,7 +187,7 @@ export default function ExplorationModulePage() {
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="font-bold text-[var(--color-green-700)] shrink-0">W3:</span>
-                <span>Heritage & Culture: Warli wall canvas workshop + team strategy in rural Lagori.</span>
+                <span>Heritage and Culture: Warli wall canvas workshop + team strategy in rural Lagori.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="font-bold text-[var(--color-green-700)] shrink-0">W4:</span>
@@ -231,7 +231,7 @@ export default function ExplorationModulePage() {
       <section className="section-pad bg-white">
         <div className="container-xl max-w-4xl mx-auto">
           <SafetyChecklist
-            title="Safety & Supervision for Classes 5–8"
+            title="Safety and Supervision for Classes 5–8"
             items={[
               {
                 title: "Guided Tool Protocol",
@@ -239,7 +239,7 @@ export default function ExplorationModulePage() {
                   "Students receive safety briefings before handling hand tools. Tool counts and mentor supervision are mandatory at all times.",
               },
               {
-                title: "Footwear & Farm Attire",
+                title: "Footwear and Farm Attire",
                 description:
                   "Mandatory closed-toe footwear and protective farm over-shirts to shield from dust, vegetation prickles, and direct sun.",
               },

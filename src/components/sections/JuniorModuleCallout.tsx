@@ -12,7 +12,7 @@ const juniorFeatures = [
   },
   {
     icon: Palette,
-    title: "Play & Creativity",
+    title: "Play and Creativity",
     description: "Nature storytelling, basic folk games, and simple clay or leaf-print art projects without sharp tools.",
   },
   {
@@ -51,7 +51,7 @@ export default function JuniorModuleCallout() {
             <div className="lg:w-1/2 flex flex-col items-start gap-5">
               <Badge variant="green">Foundation Module · Classes 1–4</Badge>
               <h2 className="text-h2" style={{ color: "var(--color-green-900)" }}>
-                Early Nature & Sensory Discovery
+                Early Nature and Sensory Discovery
               </h2>
               <p
                 className="text-base leading-relaxed"

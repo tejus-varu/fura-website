@@ -9,7 +9,7 @@ const phases = [
     color: "var(--color-sky-500)",
     bgColor: "var(--color-sky-100)",
     items: [
-      "Agriculture & ecology concept session",
+      "Agriculture and ecology concept session",
       "Visual aids, worksheets, discussion",
       "Introduction to the upcoming practical activity",
       "Student preparation and Q&A",
@@ -31,7 +31,7 @@ const phases = [
 ];
 
 const logistics = [
-  { label: "Pickup & Drop", detail: "Transport arranged where opted, responsibility from school gate" },
+  { label: "Pickup and Drop", detail: "Transport arranged where opted, responsibility from school gate" },
   { label: "Farm Costume", detail: "Mandatory entry dress for all students — builds farm identity" },
   { label: "Trained Mentors", detail: `Trained ${brand.shortName} volunteers supervise all activity zones` },
   { label: "Class Groups", detail: "Small, age-appropriate batches for focused engagement" },

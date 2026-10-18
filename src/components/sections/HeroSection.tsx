@@ -8,9 +8,9 @@ import Button from "@/components/ui/Button";
 import HeroSlideshow from "@/components/ui/HeroSlideshow";
 
 const pillars = [
-  { icon: Sprout, label: "Agriculture & Organic Farming" },
-  { icon: Palette, label: "Folk Arts & Rural Culture" },
-  { icon: TreePine, label: "Nature & Ecology" },
+  { icon: Sprout, label: "Agriculture and Organic Farming" },
+  { icon: Palette, label: "Folk Arts and Rural Culture" },
+  { icon: TreePine, label: "Nature and Ecology" },
 ];
 
 export default function HeroSection() {
@@ -97,11 +97,7 @@ export default function HeroSection() {
 
             {/* Headline */}
             <h1 className="text-display text-white">
-              Where{" "}
-              <span style={{ color: "var(--color-gold-500)" }}>
-                Agriculture, Art
-              </span>{" "}
-              &amp; Nature Shape Young Minds
+              Where Agriculture, Art and Nature Shape Young Minds
             </h1>
 
             {/* Sub-headline */}

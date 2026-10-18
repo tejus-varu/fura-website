@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Share2, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { brand } from "@/config/brand";
-import { navLinks } from "@/config/navigation";
+import { navLinks, footerSecondaryLinks } from "@/config/navigation";
 import Logo from "@/components/ui/Logo";
+import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,31 +17,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Logo light={true} className="mb-6 scale-110 origin-left" />
+            <Logo light={true} variant="horizontal" className="mb-6 origin-left" />
             <p className="text-sm leading-relaxed opacity-75 max-w-sm mb-6">
-              {brand.tagline} — {brand.name} partners with schools to nurture students
+              {brand.tagline} — {brand.fullName} partners with schools to nurture students
               through agriculture, art, folk culture, and nature-based learning.
             </p>
             {/* Social links */}
             <div className="flex items-center gap-3">
-              <a
-                href={`https://instagram.com/${brand.social.instagram}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${brand.shortName} on Instagram`}
-                className="p-2 rounded-lg opacity-60 hover:opacity-100 hover:bg-white/10 transition-all"
-              >
-                <Share2 size={18} />
-              </a>
-              <a
-                href={`https://linkedin.com/company/${brand.social.linkedin}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${brand.shortName} on LinkedIn`}
-                className="p-2 rounded-lg opacity-60 hover:opacity-100 hover:bg-white/10 transition-all"
-              >
-                <ExternalLink size={18} />
-              </a>
+              <SocialLinks light={true} iconClassName="w-4 h-4" />
             </div>
           </div>
 
@@ -77,25 +61,43 @@ export default function Footer() {
                   Specialization (Classes 9–10)
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/summer-camps"
+                  className="text-sm opacity-70 hover:opacity-100 hover:text-white transition-all"
+                >
+                  Special Camps
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Navigation column */}
+          {/* Quick Links column */}
           <div>
             <h3
               className="text-sm font-semibold uppercase tracking-widest mb-5"
               style={{ color: "var(--color-gold-300)" }}
             >
-              Navigation
+              Explore
             </h3>
             <ul className="flex flex-col gap-2.5">
               {navLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-sm opacity-70 hover:opacity-100 hover:text-white transition-all"
                   >
                     {link.label}
+                  </Link>
+                </li>
+              ))}
+              {footerSecondaryLinks.map((sec) => (
+                <li key={sec.href}>
+                  <Link
+                    href={sec.href}
+                    className="text-sm opacity-70 hover:opacity-100 hover:text-white transition-all"
+                  >
+                    {sec.label}
                   </Link>
                 </li>
               ))}
@@ -139,13 +141,15 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs opacity-50"
+          className="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs opacity-60"
           style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
         >
           <p>
-            &copy; {currentYear} {brand.name}. All rights reserved.
+            &copy; {currentYear} {brand.legal.officialLegalName}. All rights reserved.
           </p>
-          <p>Experiential agriculture & nature education for schools across India.</p>
+          <p>
+            Future Ready Agriculture Academy — Hands-On Agricultural and Ecological Education for Schools.
+          </p>
         </div>
       </div>
     </footer>

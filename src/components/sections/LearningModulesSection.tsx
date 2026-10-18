@@ -27,9 +27,9 @@ const moduleCards: ModuleCardData[] = [
     overview:
       "Early nature discovery, sensory experiences, basic farming, storytelling, rural games and creative learning.",
     highlights: [
-      "Tactile seed sowing & gentle plant care",
-      "Guided nature trails & sensory exploration",
-      "Folk storytelling, clay play & leaf art",
+      "Tactile seed sowing and gentle plant care",
+      "Guided nature trails and sensory exploration",
+      "Folk storytelling, clay play and leaf art",
     ],
     href: "/modules/foundation",
     imageBg: "linear-gradient(135deg, rgba(46,125,50,0.12) 0%, rgba(127,191,63,0.18) 100%)",
@@ -43,9 +43,9 @@ const moduleCards: ModuleCardData[] = [
     overview:
       "Agricultural experimentation, cultivation, biodiversity, horticulture, sustainability and collaborative learning.",
     highlights: [
-      "Soil science, composting & raised-bed cultivation",
-      "Introduction to hydroponics & resource cycles",
-      "Collaborative team plots & Warli folk art",
+      "Soil science, composting and raised-bed cultivation",
+      "Introduction to hydroponics and resource cycles",
+      "Collaborative team plots and Warli folk art",
     ],
     href: "/modules/exploration",
     imageBg: "linear-gradient(135deg, rgba(201,149,42,0.12) 0%, rgba(240,168,112,0.18) 100%)",
@@ -59,9 +59,9 @@ const moduleCards: ModuleCardData[] = [
     overview:
       "Applied agricultural science, hydroponics, innovation, ecological analysis and research-oriented projects.",
     highlights: [
-      "Advanced hydroponic labs & nutrient chemistry",
+      "Advanced hydroponic labs and nutrient chemistry",
       "Urban terrace micro-farm engineering",
-      "Data-driven biodiversity transects & research",
+      "Data-driven biodiversity transects and research",
     ],
     href: "/modules/specialization",
     imageBg: "linear-gradient(135deg, rgba(26,61,31,0.15) 0%, rgba(91,157,184,0.18) 100%)",

@@ -7,7 +7,7 @@ const pillars = [
   {
     id: "agriculture",
     icon: Sprout,
-    title: "Agriculture & Organic Farming",
+    title: "Agriculture and Organic Farming",
     description:
       "From soil preparation to organic harvesting — students engage with real crops, understand seasonal cycles, and experience the discipline and joy of growing food from seed to table.",
     badge: "Agriculture",
@@ -18,10 +18,10 @@ const pillars = [
   {
     id: "folk-art",
     icon: Palette,
-    title: "Folk Arts & Rural Culture",
+    title: "Folk Arts and Rural Culture",
     description:
       "Pottery, weaving, natural dyeing, Warli art, and folk storytelling. Students discover India's rich rural heritage and build creative expression rooted in living tradition.",
-    badge: "Art & Culture",
+    badge: "Art and Culture",
     badgeVariant: "gold" as const,
     color: "var(--color-gold-700)",
     bgColor: "var(--color-gold-100)",
@@ -29,7 +29,7 @@ const pillars = [
   {
     id: "nature",
     icon: TreePine,
-    title: "Nature & Ecology Learning",
+    title: "Nature and Ecology Learning",
     description:
       "Bird walks, soil science, composting, plant identification, and water cycle understanding. Students develop a genuine connection with the natural world around them.",
     badge: "Nature Science",
@@ -40,7 +40,7 @@ const pillars = [
   {
     id: "hydroponics",
     icon: Droplets,
-    title: "Hydroponics & Soilless Culture",
+    title: "Hydroponics and Soilless Culture",
     description:
       "Students learn and experiment with modern growing methods — hydroponics, aquaponics, and soilless media. Bridges traditional farming wisdom with future food technology.",
     badge: "Modern Farming",
@@ -62,7 +62,7 @@ const pillars = [
   {
     id: "waste-to-art",
     icon: Recycle,
-    title: "Waste-to-Art & Creative Sustainability",
+    title: "Waste-to-Art and Creative Sustainability",
     description:
       "Agricultural waste becomes artwork, craft, and story. Students learn environmental responsibility through creativity — turning discarded materials into something meaningful and beautiful.",
     badge: "Sustainability",
@@ -95,7 +95,7 @@ const pillars = [
   {
     id: "agri-tech",
     icon: Cpu,
-    title: "Agricultural Innovation & Technology",
+    title: "Agricultural Innovation and Technology",
     description:
       "Explores precision irrigation, automated soil sensors, micro-climate monitoring, and smart farming practices — connecting modern STEM concepts to real-world agrarian challenges.",
     badge: "Innovation",
@@ -106,7 +106,7 @@ const pillars = [
   {
     id: "biodiversity-conservation",
     icon: Trees,
-    title: "Biodiversity & Environmental Conservation",
+    title: "Biodiversity and Environmental Conservation",
     description:
       "Students map pollinator corridors, investigate beneficial farm insects, study native tree species, and understand watershed stewardship — developing genuine ecological responsibility.",
     badge: "Conservation",

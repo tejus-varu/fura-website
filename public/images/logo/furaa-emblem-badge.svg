@@ -1,0 +1,34 @@
+
+  <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F2D179" />
+        <stop offset="50%" stop-color="#C9952A" />
+        <stop offset="100%" stop-color="#946917" />
+      </linearGradient>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#143419" />
+        <stop offset="100%" stop-color="#0A180D" />
+      </linearGradient>
+      <path id="textCircleTop" d="M 80,256 A 176,176 0 1,1 432,256" fill="none" />
+      <path id="textCircleBottom" d="M 432,256 A 176,176 0 0,1 80,256" fill="none" />
+    </defs>
+    <!-- Solid dark green disc -->
+    <circle cx="256" cy="256" r="250" fill="url(#bg)" stroke="url(#gold)" stroke-width="7" />
+    <!-- Fine inner gold accent ring -->
+    <circle cx="256" cy="256" r="236" fill="none" stroke="rgba(201,149,42,0.4)" stroke-width="1.5" stroke-dasharray="4,4" />
+    <!-- Core medallion ring -->
+    <circle cx="256" cy="256" r="150" fill="none" stroke="url(#gold)" stroke-width="2" />
+    <!-- Arch text top -->
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#F4EDE0" letter-spacing="3.8">
+      <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+        FUTURE READY AGRICULTURE ACADEMY
+      </textPath>
+    </text>
+    <!-- Arch text bottom -->
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="url(#gold)" letter-spacing="5">
+      <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+        • FURAA •
+      </textPath>
+    </text>
+  </svg>

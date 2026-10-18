@@ -6,7 +6,7 @@ import WeeklyModelSection from "@/components/sections/WeeklyModelSection";
 import ClassBandSection from "@/components/sections/ClassBandSection";
 import SunburstSection from "@/components/sections/SunburstSection";
 import LearningModulesSection from "@/components/sections/LearningModulesSection";
-import SafetySection from "@/components/sections/SafetySection";
+import GalleryPreviewSection from "@/components/sections/GalleryPreviewSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CtaSection from "@/components/sections/CtaSection";
 
@@ -21,7 +21,7 @@ export default function HomePage() {
       <ClassBandSection />
       <SunburstSection />
       <LearningModulesSection />
-      <SafetySection />
+      <GalleryPreviewSection />
       <TestimonialsSection />
       <CtaSection />
     </>

@@ -1,0 +1,14 @@
+name = "furaa-website"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "out"
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "furaa-db"
+database_id = "furaa-db"
+
+# Cloudflare R2 Media Storage Binding
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "furaa-media"

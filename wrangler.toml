@@ -1,4 +1,4 @@
-name = "furaa-website"
+name = "fura-website"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "out"
 
@@ -6,9 +6,9 @@ pages_build_output_dir = "out"
 [[d1_databases]]
 binding = "DB"
 database_name = "furaa-db"
-database_id = "furaa-db"
+database_id = "d64388bb-31dc-4858-9de5-3c8369d4f40e"
 
-# Cloudflare R2 Media Storage Binding
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "furaa-media"
+# Cloudflare R2 Media Storage Binding (Uncomment once R2 is enabled in Cloudflare Dashboard)
+# [[r2_buckets]]
+# binding = "BUCKET"
+# bucket_name = "furaa-media"

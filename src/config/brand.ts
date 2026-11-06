@@ -25,6 +25,9 @@ export const brand = {
     get officialLegalName(): string {
       return this.isIncorporated ? `${this.legalEntityName} ${this.suffix}` : this.legalEntityName;
     },
+    get copyrightName(): string {
+      return this.isIncorporated ? "FURAA Pvt. Ltd." : "FURAA";
+    },
   },
 
   logo: {

@@ -3,9 +3,9 @@ import { brand } from "@/config/brand";
 import FuraaFarmsView from "@/components/sections/FuraaFarmsView";
 
 export const metadata: Metadata = {
-  title: `FURAA Farms — Five Agrarian Learning Categories | ${brand.name}`,
+  title: `FURAA Farms — Ten Experiential Learning Pillars | ${brand.name}`,
   description:
-    "Explore the five distinct FURAA Farm categories: Rural Farms, Commercial Farms, Agro-Forests, Animal Farms, and Nutri Gardens. Hands-on school learning beyond classrooms.",
+    "Explore the ten distinct FURAA Farm categories: Rural Farms, Commercial Farms, Agro-Forests, Animal Farms, Nutri Gardens, Ornamental Gardens, Urban & Terrace Gardens, Art & Folk, Precision Machinery, and Wellness & Adventure.",
 };
 
 export default function FuraaFarmsPage() {

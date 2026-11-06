@@ -315,21 +315,32 @@ export default function GalleryView() {
             </div>
             <div>
               <h4 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Educational Publication and Media Consent Notice
+                Content Usage and Media Rights Notice
               </h4>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed mt-1 max-w-3xl">
-                All photographs in this gallery are taken during supervised FURAA educational modules, farm day visits, and seasonal camps in accordance with school partnership protocols and parental media permissions. Photographs are optimized for web educational documentation. Unapproved commercial redistribution or unauthorized external duplication is strictly prohibited.
+                Images, videos, text, and other original content published on this website are provided for authorized viewing and informational purposes. Unauthorized commercial reproduction, redistribution, impersonation, or misuse may infringe applicable rights. FURAA reserves the right to pursue appropriate remedies under applicable law.
+              </p>
+              <p className="text-[11px] text-[var(--color-green-700)] mt-1.5 leading-relaxed max-w-3xl">
+                Disputes relating to these terms may be subject to the jurisdiction of competent courts in Bengaluru, Karnataka, India, subject to applicable law.
               </p>
             </div>
           </div>
-          <Button
-            href="/contact?subject=Gallery%20and%20Media%20Inquiry"
-            variant="outline"
-            size="sm"
-            className="shrink-0"
-          >
-            Media Inquiries
-          </Button>
+          <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+            <Button
+              href="/terms"
+              variant="outline"
+              size="sm"
+            >
+              Terms &amp; Content Usage
+            </Button>
+            <Button
+              href="/contact?subject=Gallery%20and%20Media%20Inquiry"
+              variant="ghost"
+              size="sm"
+            >
+              Media Inquiries
+            </Button>
+          </div>
         </div>
       </div>
 

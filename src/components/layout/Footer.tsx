@@ -145,11 +145,16 @@ export default function Footer() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
         >
           <p>
-            &copy; {currentYear} {brand.legal.officialLegalName}. All rights reserved.
+            &copy; {currentYear} {brand.legal.copyrightName}. All rights reserved.
           </p>
-          <p>
-            Future Ready Agriculture Academy — Hands-On Agricultural and Ecological Education for Schools.
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/terms"
+              className="text-xs opacity-80 hover:opacity-100 hover:text-white underline-offset-4 hover:underline transition-all"
+            >
+              Terms and Content Usage
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

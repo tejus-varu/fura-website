@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
@@ -168,6 +168,22 @@ export default function FuraaFarmsView() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      {/* ─── Responsible Safety & Activity Planning ─────────────────────── */}
+      <section className="py-12 bg-emerald-50/50 border-t border-b border-emerald-900/10">
+        <div className="container-xl max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-[var(--color-green-900)] text-xs font-semibold mb-3">
+            <ShieldCheck size={14} className="text-emerald-700" />
+            <span>Activity Planning and Care</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-display font-bold text-[var(--color-green-950)] mb-3">
+            Responsible Safety and Activity Planning
+          </h2>
+          <p className="text-sm sm:text-base text-[var(--color-green-800)] leading-relaxed">
+            FURAA plans its educational activities with consideration for the age of participants, the nature of each activity, and the facilities available. Relevant farm-specific protocols, precautions, supervision arrangements, and applicable safety guidelines are incorporated into the learning experience.
+          </p>
         </div>
       </section>
 

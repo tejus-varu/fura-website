@@ -51,4 +51,5 @@ export const navLinks: NavLink[] = [
 export const footerSecondaryLinks: NavLink[] = [
   { label: "FURAA Farms", href: "/programs/furaa-farms" },
   { label: "Contact and Inquiries", href: "/contact" },
+  { label: "Terms and Content Usage", href: "/terms" },
 ];

@@ -821,8 +821,8 @@ export const furaaFarmCategories: FarmCategory[] = [
     ageAppropriateness:
       "Low balance challenges and gentle nature walks for Classes 1–4; advanced obstacle traverses, orienteering, and tentcraft for Classes 5–10.",
     safetyProtocols: [
-      "All rope and obstacle course apparatus is maintained under certified European/BIS safety standards with padded fall zones.",
-      "Certified adventure facilitators oversee every station with mandatory helmet and harness protocols where elevated.",
+      "Rope and low-obstacle courses are routinely inspected with structured supervision and impact-absorbing zones.",
+      "Trained adventure facilitators oversee every station with appropriate safety equipment where elevated.",
       "No medical, therapeutic, or clinical psychological claims are made; focus is purely educational recreation and fitness.",
     ],
     facilityNote:

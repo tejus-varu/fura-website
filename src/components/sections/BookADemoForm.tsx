@@ -426,7 +426,7 @@ export default function BookADemoForm() {
         {/* 3. Cohort & Logistics Parameters */}
         <div className="pt-2 border-t border-gray-100 space-y-4">
           <label className="block text-xs font-bold text-[var(--color-green-900)] uppercase tracking-wider">
-            3. Scope and Logistics
+            3. Scope and Program Details
           </label>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -466,15 +466,15 @@ export default function BookADemoForm() {
 
             <div>
               <label className="block text-xs font-semibold text-gray-700 mb-1">
-                Turnkey Transport Needed?
+                Transport Assistance Needed?
               </label>
               <select
                 value={transportRequired}
                 onChange={(e) => setTransportRequired(e.target.value as "yes" | "no" | "undecided")}
                 className="w-full px-3 py-2.5 text-xs rounded-xl border border-gray-200 bg-white"
               >
-                <option value="yes">Yes, FURAA turnkey transport</option>
-                <option value="no">No, School-managed transport</option>
+                <option value="yes">Yes, request transport coordination</option>
+                <option value="no">No, school/cohort will arrange transport</option>
                 <option value="undecided">To be decided later</option>
               </select>
             </div>

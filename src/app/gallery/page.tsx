@@ -31,7 +31,7 @@ export default function GalleryPage() {
           <CtaBlock
             title="Bring Your Students to Experience FURAA in Person"
             description="We arrange guided preview tours and demo sessions for school principals, academic trustees, and science department coordinators."
-            buttonText="Book a Demo Campus Tour"
+            buttonText="Plan a Campus Preview Tour"
             href="/contact?subject=Book%20a%20Demo%20Tour"
           />
         </div>

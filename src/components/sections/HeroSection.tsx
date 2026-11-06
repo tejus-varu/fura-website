@@ -136,7 +136,7 @@ export default function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mt-2">
               <Button href="/contact" variant="primary" size="lg">
-                Book a School Partnership Demo
+                {brand.cta.primary}
                 <ArrowRight size={18} />
               </Button>
               <Button
@@ -145,7 +145,7 @@ export default function HeroSection() {
                 size="lg"
                 className="!border-white/30 !text-white hover:!bg-white/10"
               >
-                Explore Programs
+                {brand.cta.secondary}
               </Button>
             </div>
           </div>

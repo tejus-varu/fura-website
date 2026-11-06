@@ -10,7 +10,7 @@ export default function CtaSection() {
       style={{
         background: "linear-gradient(135deg, var(--color-green-900) 0%, var(--color-brown-900) 100%)",
       }}
-      aria-label="Call to action — book a demo"
+      aria-label="Call to action — plan your FURAA experience"
     >
       <div className="container-xl">
         <div className="text-center max-w-2xl mx-auto flex flex-col items-center gap-6">
@@ -61,7 +61,7 @@ export default function CtaSection() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mt-2">
             <Button href="/contact" variant="primary" size="lg">
-              Book a School Partnership Demo
+              {brand.cta.primary}
               <ArrowRight size={18} />
             </Button>
             <Button
@@ -70,7 +70,7 @@ export default function CtaSection() {
               size="lg"
               className="!border-white/30 !text-white hover:!bg-white/10"
             >
-              View All Programs
+              {brand.cta.secondary}
             </Button>
           </div>
         </div>

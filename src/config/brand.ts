@@ -53,10 +53,17 @@ export const brand = {
    * If an item is empty string, it is marked as pending and hidden from user navigation.
    */
   social: {
-    instagram: "" as string, // Set URL when official handle is ready, e.g. "https://instagram.com/furaa.academy"
-    facebook: "" as string,  // Set URL when official page is ready, e.g. "https://facebook.com/furaa.academy"
-    whatsapp: "" as string,  // Set WhatsApp Business link, e.g. "https://wa.me/919449490940"
-    linkedin: "" as string,  // Set URL when ready
+    instagram: "https://instagram.com/furaa.academy", // Configurable handle
+    facebook: "https://facebook.com/furaa.academy",   // Configurable page
+    whatsapp: "https://wa.me/919449490940?text=Hi%20FURAA,%20I%20would%20like%20to%20learn%20more%20about%20your%20experiential%20learning%20programs", // Verified WhatsApp Business link
+    linkedin: "",
+  },
+
+  /** Centralized CTA Wording (FURAA V3.1) */
+  cta: {
+    primary: "Plan Your FURAA Experience",
+    secondary: "Explore All 10 Experiences",
+    drawerTitle: "Let's Plan Your FURAA Experience",
   },
 
   /** SEO metadata */

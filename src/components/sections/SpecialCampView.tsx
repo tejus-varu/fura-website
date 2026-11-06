@@ -81,7 +81,7 @@ export default function SpecialCampView({ camp }: SpecialCampViewProps) {
                   variant="primary"
                   size="md"
                 >
-                  Book a Demo / Camp Inquiry
+                  Plan Your Camp Experience
                   <ArrowRight size={16} />
                 </Button>
                 <Button href="#schedule" variant="outline" size="md">
@@ -306,7 +306,7 @@ export default function SpecialCampView({ camp }: SpecialCampViewProps) {
           <CtaBlock
             title={`Enroll in ${camp.title} with FURAA`}
             description="Whether you are an interested parent or a school leader looking to host an exclusive cohort batch, connect with our camp coordinators."
-            buttonText="Book a Demo / Camp Inquiry"
+            buttonText="Plan Your Camp Experience"
             href={`/contact?subject=${encodeURIComponent(camp.ctaSubject)}`}
           />
         </div>

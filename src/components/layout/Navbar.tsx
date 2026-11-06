@@ -247,7 +247,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right Header Area: Compact Social Icons (replaces Book a Demo button) */}
-          <div className="hidden lg:flex items-center gap-2 shrink-0">
+          <div className="hidden lg:flex items-center gap-1.5 shrink-0 pl-3 border-l border-white/15">
             <SocialLinks light={true} iconClassName="w-4 h-4" />
           </div>
 
@@ -290,7 +290,7 @@ export default function Navbar() {
                 className="w-full justify-center"
                 onClick={() => setMenuOpen(false)}
               >
-                Book a Demo
+                {brand.cta.primary}
               </Button>
 
               {/* Mobile Social Links Footer */}

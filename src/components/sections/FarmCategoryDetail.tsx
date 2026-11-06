@@ -182,7 +182,7 @@ export default function FarmCategoryDetail({
                 variant="primary"
                 size="md"
               >
-                Book a Demo for {category.shortTitle}
+                Plan Your FURAA Experience — {category.shortTitle}
                 <ArrowRight size={16} />
               </Button>
               <Link
@@ -247,7 +247,7 @@ export default function FarmCategoryDetail({
                 </div>
                 <div className="p-2.5 rounded-xl bg-[var(--color-green-50)]">
                   <dt className="text-[var(--color-green-700)] font-medium mb-0.5">Verification</dt>
-                  <dd className="font-bold text-[var(--color-green-950)]">Safety Certified</dd>
+                  <dd className="font-bold text-[var(--color-green-950)]">Verified Protocols</dd>
                 </div>
               </dl>
             </div>

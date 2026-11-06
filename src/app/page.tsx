@@ -2,6 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import StatsSection from "@/components/sections/StatsSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import ProgramPillarsSection from "@/components/sections/ProgramPillarsSection";
+import ExperienceFinderTeaser from "@/components/sections/ExperienceFinderTeaser";
 import WeeklyModelSection from "@/components/sections/WeeklyModelSection";
 import SunburstSection from "@/components/sections/SunburstSection";
 import LearningModulesSection from "@/components/sections/LearningModulesSection";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <StatsSection />
       <HowItWorksSection />
       <ProgramPillarsSection />
+      <ExperienceFinderTeaser />
       <WeeklyModelSection />
       <SunburstSection />
       <LearningModulesSection />

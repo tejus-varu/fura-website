@@ -9,6 +9,7 @@ interface PageHeroProps {
   children?: ReactNode;
   bgImage?: string;
   bgPosition?: string;
+  compact?: boolean;
 }
 
 export default function PageHero({
@@ -19,10 +20,13 @@ export default function PageHero({
   children,
   bgImage,
   bgPosition = "center",
+  compact = false,
 }: PageHeroProps) {
   return (
     <section
-      className="relative pt-32 pb-20 gradient-hero overflow-hidden"
+      className={`relative gradient-hero overflow-hidden ${
+        compact ? "pt-28 pb-12 sm:pb-14" : "pt-32 pb-20"
+      }`}
       aria-label="Page Header"
     >
       {/* Background image with high-contrast gradient overlay */}

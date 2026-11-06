@@ -43,3 +43,8 @@ next-env.d.ts
 # cloudflare wrangler
 .wrangler/
 
+# qa testing & temporary test scripts
+scripts/test-*.js
+scripts/snap-*.js
+public/images/founders/
+

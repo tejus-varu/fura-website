@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Calendar, X, Sparkles } from "lucide-react";
+import { brand } from "@/config/brand";
 import BookADemoForm from "@/components/sections/BookADemoForm";
 
 /**
@@ -55,7 +56,7 @@ export default function FloatingInquiryCTA() {
         <button
           onClick={handleClick}
           type="button"
-          aria-label="Book a Demo or Inquire"
+          aria-label={brand.cta.primary}
           aria-haspopup="dialog"
           aria-expanded={isOpen}
           className="group relative flex items-center gap-2.5 px-4 py-2.5 sm:px-5 sm:py-3 rounded-full text-white text-xs sm:text-sm font-bold shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-gold-400)]"
@@ -73,7 +74,7 @@ export default function FloatingInquiryCTA() {
 
           <Calendar size={16} className="text-[var(--color-gold-400)] shrink-0 transition-transform duration-200 group-hover:rotate-12" />
 
-          <span className="tracking-wide">Book a Demo</span>
+          <span className="tracking-wide">{brand.cta.primary}</span>
 
           <Sparkles size={13} className="text-[var(--color-gold-300)] opacity-70 group-hover:opacity-100 transition-opacity" />
         </button>
@@ -116,7 +117,7 @@ export default function FloatingInquiryCTA() {
                   School Partnership Inquiry
                 </div>
                 <h2 id="inquiry-drawer-title" className="text-xl sm:text-2xl font-bold font-display text-white">
-                  Book a Demo or Inquiry
+                  {brand.cta.drawerTitle}
                 </h2>
                 <p className="text-xs sm:text-sm text-green-100/90 mt-1">
                   Schedule an experiential learning demonstration or curriculum dialogue.

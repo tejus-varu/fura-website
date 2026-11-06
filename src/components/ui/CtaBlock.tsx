@@ -13,7 +13,7 @@ interface CtaBlockProps {
 export default function CtaBlock({
   title = `Ready to Bring ${brand.shortName} to Your School?`,
   description = "Schedule a free 30-minute partnership demo. We will walk you through the program structure, safety protocols, and curriculum alignment tailored for your school's grade levels.",
-  buttonText = "Book a Demo",
+  buttonText = brand.cta.primary,
   href = "/contact",
   className = "",
 }: CtaBlockProps) {

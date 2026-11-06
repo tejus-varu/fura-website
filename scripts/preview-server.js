@@ -41,7 +41,11 @@ const server = http.createServer((req, res) => {
       'Content-Type': contentType,
       'Cache-Control': 'no-cache',
     });
-    fs.createReadStream(filePath).pipe(res);
+    if (req.method === 'HEAD') {
+      res.end();
+    } else {
+      fs.createReadStream(filePath).pipe(res);
+    }
   } else {
     // 404 fallback
     const notFoundPage = path.join(OUT_DIR, '404.html');

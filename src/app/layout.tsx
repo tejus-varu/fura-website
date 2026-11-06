@@ -3,6 +3,7 @@ import "./globals.css";
 import { brand } from "@/config/brand";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FloatingInquiryCTA from "@/components/ui/FloatingInquiryCTA";
 
 export const metadata: Metadata = {
   title: brand.seo.defaultTitle,
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingInquiryCTA />
       </body>
     </html>
   );

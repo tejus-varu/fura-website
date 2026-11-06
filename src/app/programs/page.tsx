@@ -9,6 +9,7 @@ import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import CtaBlock from "@/components/ui/CtaBlock";
 import LearningModulesSection from "@/components/sections/LearningModulesSection";
+import RedirectToFarms from "@/components/ui/RedirectToFarms";
 
 export const metadata: Metadata = {
   title: `Our Programs | ${brand.name}`,
@@ -110,6 +111,7 @@ const programs = [
 export default function ProgramsPage() {
   return (
     <>
+      <RedirectToFarms />
       <PageHero
         badge="Our Offerings"
         badgeVariant="green"

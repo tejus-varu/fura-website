@@ -15,11 +15,26 @@ import SocialLinks from "@/components/ui/SocialLinks";
 function NavDropdown({ link }: { link: NavLink }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   const isActive =
     pathname === link.href ||
     link.children?.some((c) => pathname === c.href);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpen(false);
+    }, 150);
+  };
 
   // Close on click-outside
   useEffect(() => {
@@ -29,7 +44,10 @@ function NavDropdown({ link }: { link: NavLink }) {
       }
     };
     document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, []);
 
   // Close on Escape
@@ -40,12 +58,13 @@ function NavDropdown({ link }: { link: NavLink }) {
   return (
     <div
       ref={ref}
-      className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      className="relative group"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onKeyDown={onKeyDown}
     >
       <button
+        type="button"
         className={`flex items-center gap-1 px-2.5 xl:px-3 py-1.5 xl:py-2 text-[13px] xl:text-sm font-medium rounded-lg transition-colors duration-150 whitespace-nowrap ${
           isActive
             ? "text-white bg-white/15"
@@ -55,45 +74,48 @@ function NavDropdown({ link }: { link: NavLink }) {
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
       >
-        {link.label}
+        <span>{link.label}</span>
         <ChevronDown
           size={13}
           className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
 
-      {/* Dropdown panel */}
+      {/* Dropdown panel with seamless hover bridge (pt-2) */}
       <div
-        className={`absolute left-0 top-full mt-1.5 z-50 min-w-[240px] rounded-2xl shadow-2xl overflow-hidden transition-all duration-200 ${
+        className={`absolute left-0 top-full pt-2 z-50 min-w-[250px] transition-all duration-200 ${
           open
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
-        style={{
-          background: "var(--color-green-950)",
-          border: "1px solid rgba(255,255,255,0.12)",
-          backdropFilter: "blur(12px)",
-        }}
-        role="menu"
       >
-        {link.children?.map((child) => {
-          const isChildActive = pathname === child.href;
-          return (
-            <Link
-              key={child.href}
-              href={child.href}
-              role="menuitem"
-              onClick={() => setOpen(false)}
-              className={`block px-4 py-3 text-sm transition-colors duration-150 ${
-                isChildActive
-                  ? "text-white bg-white/15 font-semibold"
-                  : "text-[var(--color-green-200)] hover:text-white hover:bg-white/10"
-              }`}
-            >
-              {child.label}
-            </Link>
-          );
-        })}
+        <div
+          className="rounded-2xl shadow-2xl overflow-hidden py-1 border border-white/15"
+          style={{
+            background: "var(--color-green-950)",
+            backdropFilter: "blur(16px)",
+          }}
+          role="menu"
+        >
+          {link.children?.map((child) => {
+            const isChildActive = pathname === child.href;
+            return (
+              <Link
+                key={child.href}
+                href={child.href}
+                role="menuitem"
+                onClick={() => setOpen(false)}
+                className={`block px-4 py-2.5 text-sm transition-colors duration-150 ${
+                  isChildActive
+                    ? "text-white bg-white/15 font-semibold"
+                    : "text-[var(--color-green-200)] hover:text-white hover:bg-white/10"
+                }`}
+              >
+                {child.label}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -107,8 +129,11 @@ function MobileNavItem({
   link: NavLink;
   onClose: () => void;
 }) {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const isChildActive = !!link.children?.some((c) => pathname === c.href);
+  const [userToggled, setUserToggled] = useState<boolean | null>(null);
+
+  const open = userToggled !== null ? userToggled : isChildActive;
 
   if (!link.children) {
     return (
@@ -129,11 +154,12 @@ function MobileNavItem({
   return (
     <div>
       <button
+        type="button"
         className="w-full flex items-center justify-between px-4 py-3 text-base font-medium rounded-xl text-[var(--color-green-200)] hover:text-white hover:bg-white/10 transition-colors"
         aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setUserToggled((prev) => (prev !== null ? !prev : !isChildActive))}
       >
-        {link.label}
+        <span>{link.label}</span>
         <ChevronDown
           size={16}
           className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
@@ -196,9 +222,9 @@ export default function Navbar() {
             className="focus-visible:outline-none shrink-0"
             aria-label={`${brand.name} — Home`}
           >
-            {/* Desktop: Horizontal lockup with circular emblem & wordmark */}
+            {/* Desktop: Horizontal lockup with prominent U-sprout emblem & typography */}
             <div className="hidden sm:block">
-              <Logo light={true} variant="horizontal" size="sm" />
+              <Logo light={true} variant="horizontal" size="md" />
             </div>
             {/* Mobile: Compact lockup */}
             <div className="sm:hidden">
@@ -220,15 +246,9 @@ export default function Navbar() {
             )}
           </nav>
 
-          {/* Right Header Area: Social Links + Book a Demo CTA */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
-            {/* Configurable Social Links */}
+          {/* Right Header Area: Compact Social Icons (replaces Book a Demo button) */}
+          <div className="hidden lg:flex items-center gap-2 shrink-0">
             <SocialLinks light={true} iconClassName="w-4 h-4" />
-
-            {/* Book a Demo CTA */}
-            <Button href="/contact" variant="primary" size="sm" className="whitespace-nowrap">
-              Book a Demo
-            </Button>
           </div>
 
           {/* Mobile Right Controls: Social Links (if configured) + Hamburger */}

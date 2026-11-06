@@ -140,7 +140,7 @@ export default function HeroSection() {
                 <ArrowRight size={18} />
               </Button>
               <Button
-                href="/programs"
+                href="/programs/furaa-farms"
                 variant="outline"
                 size="lg"
                 className="!border-white/30 !text-white hover:!bg-white/10"

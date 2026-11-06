@@ -1,27 +1,24 @@
 import type { NavLink } from "@/types";
 
 /**
- * Primary header navigation links for FURAA V2.
- * Exact order required:
+ * Primary header navigation links for FURAA V3.
+ * Exact structure required:
  * 1. Home
  * 2. About
- * 3. Explore Programs (Dropdown: Programs Overview, FURAA Farms)
+ * 3. Explore Programs (Dropdown: FURAA Farms ONLY)
  * 4. Modules (Dropdown: Foundation, Exploration, Specialization)
  * 5. Special Camps (Dropdown: Summer Camps, Monsoon Camps, Harvesting Camps)
  * 6. Our Partners
  * 7. Gallery
  * 8. Blogs
- *
- * Header CTA: "Book a Demo"
  */
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
     label: "Explore Programs",
-    href: "/programs",
+    href: "/programs/furaa-farms",
     children: [
-      { label: "Programs Overview", href: "/programs" },
       { label: "FURAA Farms", href: "/programs/furaa-farms" },
     ],
   },

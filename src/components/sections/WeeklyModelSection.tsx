@@ -10,9 +10,9 @@ const phases = [
     bgColor: "var(--color-sky-100)",
     items: [
       "Agriculture and ecology concept session",
-      "Visual aids, worksheets, discussion",
+      "Visual aids, worksheets, and discussion",
       "Introduction to the upcoming practical activity",
-      "Student preparation and Q&A",
+      "Student preparation and guided inquiry",
     ],
   },
   {
@@ -22,19 +22,19 @@ const phases = [
     color: "var(--color-green-700)",
     bgColor: "var(--color-green-100)",
     items: [
-      "Welcome drink and farm costume",
-      "Hands-on farm activities and harvesting",
-      "Folk art, rural games, or cultural session",
-      "Nutrition tasting and reflection circle",
+      "Welcome orientation and protective attire",
+      "Hands-on farm activities and guided cultivation",
+      "Folk art, traditional skills, or ecology trail",
+      "Healthy food exploration and reflection circle",
     ],
   },
 ];
 
 const logistics = [
-  { label: "Pickup and Drop", detail: "Transport arranged where opted, responsibility from school gate" },
-  { label: "Farm Costume", detail: "Mandatory entry dress for all students — builds farm identity" },
-  { label: "Trained Mentors", detail: `Trained ${brand.shortName} volunteers supervise all activity zones` },
-  { label: "Class Groups", detail: "Small, age-appropriate batches for focused engagement" },
+  { label: "Academic Integration", detail: "Sessions coordinated with each school calendar to align with curriculum priorities" },
+  { label: "Farm Attire", detail: "Protective apron or attire for all students to build farm identity" },
+  { label: "Trained Mentors", detail: `Trained ${brand.shortName} facilitators supervise all activity zones` },
+  { label: "Class Groups", detail: "Small, age-appropriate batches for focused, safe engagement" },
 ];
 
 export default function WeeklyModelSection() {

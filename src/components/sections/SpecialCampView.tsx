@@ -1,19 +1,26 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
 import {
+  Clock,
+  Sparkles,
+  ArrowRight,
+  AlertTriangle,
   Sun,
   CloudRain,
   Wheat,
-  ShieldCheck,
-  CheckCircle2,
-  AlertTriangle,
-  ArrowRight,
-  Sparkles,
 } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import CtaBlock from "@/components/ui/CtaBlock";
-import { SpecialCampData, specialCampsData, SpecialCampId } from "@/config/specialCamps";
+import {
+  SpecialCampData,
+  specialCampsData,
+  SpecialCampId,
+  campDurationOptions,
+} from "@/config/specialCamps";
 
 interface SpecialCampViewProps {
   camp: SpecialCampData;
@@ -25,56 +32,57 @@ const iconMap: Record<SpecialCampId, React.ElementType> = {
   "harvesting-camps": Wheat,
 };
 
-const badgeColorMap: Record<SpecialCampId, string> = {
-  "summer-camps": "bg-amber-100 text-amber-900 border-amber-300",
-  "monsoon-camps": "bg-sky-100 text-sky-900 border-sky-300",
-  "harvesting-camps": "bg-emerald-100 text-emerald-900 border-emerald-300",
-};
-
 export default function SpecialCampView({ camp }: SpecialCampViewProps) {
   const CampIcon = iconMap[camp.id] || Sparkles;
 
-  // Other camps for cross-navigation
-  const allCampIds: SpecialCampId[] = ["summer-camps", "monsoon-camps", "harvesting-camps"];
-  const otherCamps = allCampIds
+  // Other two seasonal camps for contextual footer navigation
+  const otherCamps = (
+    Object.keys(specialCampsData) as SpecialCampId[]
+  )
     .filter((id) => id !== camp.id)
     .map((id) => specialCampsData[id]);
 
   return (
     <>
+      {/* Hero Section */}
       <PageHero
         badge={camp.seasonTag}
+        badgeVariant="gold"
         title={camp.title}
         description={camp.tagline}
         bgImage={camp.heroBgImage}
-      />
+        bgPosition="center 40%"
+      >
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-semibold">
+            <CampIcon size={16} className="text-[var(--color-gold-400)]" />
+            <span>Season Window: {camp.seasonMonths}</span>
+          </div>
+        </div>
+      </PageHero>
 
-      {/* Overview & Suitable Class Bands */}
+      {/* Camp Overview & Details Strip */}
       <section className="section-pad bg-white">
         <div className="container-xl">
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
             <div className="lg:w-1/2 flex flex-col gap-5">
-              <div
-                className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-semibold w-fit ${
-                  badgeColorMap[camp.id]
-                }`}
-              >
-                <CampIcon size={14} />
-                <span>{camp.seasonMonths}</span>
-              </div>
+              <span className="text-xs uppercase font-bold tracking-widest text-[var(--color-gold-600)]">
+                Seasonal Program Overview
+              </span>
               <h2 className="text-h2 text-[var(--color-green-900)]">
-                {camp.shortDescription}
+                {camp.tagline}
               </h2>
-              <p className="text-sm sm:text-base text-[var(--color-green-800)] leading-relaxed">
+              <p className="text-base text-[var(--color-green-800)] leading-relaxed">
                 {camp.fullOverview}
               </p>
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Button
                   href={`/contact?subject=${encodeURIComponent(camp.ctaSubject)}`}
                   variant="primary"
                   size="md"
                 >
                   Book a Demo / Camp Inquiry
+                  <ArrowRight size={16} />
                 </Button>
                 <Button href="#schedule" variant="outline" size="md">
                   View Daily Schedule
@@ -97,36 +105,40 @@ export default function SpecialCampView({ camp }: SpecialCampViewProps) {
             </div>
           </div>
 
-          {/* Suitable Class Bands */}
+          {/* Configurable Flexible Camp Formats & Durations */}
           <div className="mb-8">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs uppercase font-bold tracking-widest text-[var(--color-gold-600)]">
-                Developmental Alignment
+                Flexible Formats
               </span>
               <h3 className="font-display text-2xl font-bold text-[var(--color-green-900)] mt-1">
-                Suitable Class Bands
+                Camp Duration Options
               </h3>
               <p className="text-xs sm:text-sm text-[var(--color-green-700)] mt-1">
-                Every seasonal camp program is structured with age-appropriate rigor, tool safety, and supervised autonomy.
+                Flexible cohort structures calibrated for school vacation batches, weekend modules, or full seasonal immersions.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {camp.suitableClassBands.map((band) => (
+              {campDurationOptions.map((opt) => (
                 <div
-                  key={band.band}
+                  key={opt.id}
                   className="card-base p-6 bg-[var(--color-cream)] border border-emerald-900/10 rounded-2xl flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-xs px-2.5 py-1 rounded-full bg-white border border-gray-200 text-emerald-800 font-bold inline-block mb-3">
-                      {band.band}
+                    <span className="text-xs px-2.5 py-1 rounded-full bg-white border border-gray-200 text-emerald-800 font-bold inline-flex items-center gap-1.5 mb-3">
+                      <Clock size={12} />
+                      {opt.label}
                     </span>
                     <h4 className="font-display text-lg font-bold text-[var(--color-green-900)] mb-2">
-                      {band.title}
+                      {opt.durationRange}
                     </h4>
-                    <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
-                      {band.focus}
+                    <p className="text-xs text-[var(--color-green-800)] leading-relaxed mb-3">
+                      {opt.description}
                     </p>
+                  </div>
+                  <div className="pt-3 border-t border-emerald-900/10 text-[11px] font-semibold text-emerald-800">
+                    <strong>Focus:</strong> {opt.idealFor}
                   </div>
                 </div>
               ))}
@@ -224,42 +236,13 @@ export default function SpecialCampView({ camp }: SpecialCampViewProps) {
         </div>
       </section>
 
-      {/* Safety Considerations & Season/Weather Disclaimer */}
+      {/* Seasonal & Weather Operational Disclaimer */}
       <section className="section-pad bg-[var(--color-cream)] border-t border-gray-100">
-        <div className="container-xl max-w-4xl mx-auto flex flex-col gap-8">
-          <div className="card-base p-8 bg-white border border-emerald-900/10 rounded-3xl shadow-sm">
-            <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-100">
-              <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-800 flex items-center justify-center">
-                <ShieldCheck size={20} />
-              </div>
-              <div>
-                <h3 className="font-display text-xl font-bold text-[var(--color-green-900)]">
-                  Safety and Supervision Standards
-                </h3>
-                <p className="text-xs text-[var(--color-green-700)]">
-                  Specialized health and weather precautions calibrated for this seasonal track.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {camp.safetyConsiderations.map((safety, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-2.5 text-xs text-[var(--color-green-800)] leading-relaxed p-3 rounded-xl bg-[var(--color-green-50)]"
-                >
-                  <CheckCircle2 size={16} className="text-emerald-700 shrink-0 mt-0.5" />
-                  <span>{safety}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mandatory Season & Weather Non-Guarantee Disclaimer */}
-          <div className="p-6 rounded-2xl bg-amber-50 border border-amber-200/90 flex items-start gap-4">
-            <AlertTriangle size={20} className="text-amber-800 shrink-0 mt-1" />
+        <div className="container-xl max-w-4xl mx-auto">
+          <div className="p-6 sm:p-8 rounded-3xl bg-amber-50/90 border border-amber-200/90 flex items-start gap-4">
+            <AlertTriangle size={24} className="text-amber-800 shrink-0 mt-1" />
             <div className="text-xs text-amber-900 leading-relaxed">
-              <strong className="block text-sm font-semibold mb-1">
+              <strong className="block text-sm font-semibold mb-1 text-amber-950">
                 Seasonal and Operational Notice
               </strong>
               Outdoor agricultural activities, seasonal planting, and harvesting sessions depend on geographic location, prevailing weather, crop maturity, facility availability, and safety clearance. FURAA prioritizes camper well-being and does not guarantee a particular crop harvest or specific outdoor activity on fixed dates if outdoor conditions are unfavorable. Alternative covered workshops are conducted during extreme rain or heat.

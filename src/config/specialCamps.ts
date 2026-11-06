@@ -12,11 +12,42 @@ export interface CampScheduleItem {
 }
 
 export interface CampClassBandInfo {
-  band: "Classes 1–4" | "Classes 5–8" | "Classes 9–10";
+  band: "Classes 1–4" | "Classes 5–8" | "Classes 9–10" | string;
   title: string;
   focus: string;
 }
 
+export interface CampDurationOption {
+  id: string;
+  label: string;
+  durationRange: string;
+  description: string;
+  idealFor: string;
+}
+
+export const campDurationOptions: CampDurationOption[] = [
+  {
+    id: "up-to-7",
+    label: "Up to 7 Days",
+    durationRange: "3-7 Days",
+    description: "Compact immersion designed for introductory school cohorts, scout troops, or focused vacation workshops.",
+    idealFor: "Introductory farm exposure and foundational folk crafts",
+  },
+  {
+    id: "8-to-14",
+    label: "8-14 Days",
+    durationRange: "8-14 Days",
+    description: "Comprehensive multi-phase camp allowing students to track germination cycles, complete pottery projects, and master teamwork trails.",
+    idealFor: "In-depth agronomy projects, rural arts mastery, and adventure challenges",
+  },
+  {
+    id: "15-to-21",
+    label: "15-21 Days",
+    durationRange: "15-21 Days",
+    description: "Full seasonal immersion where participants witness rapid crop growth, post-harvest processing, living community leadership, and outdoor expedition craft.",
+    idealFor: "Advanced leadership, ecological research portfolios, and complete seasonal cycle understanding",
+  },
+];
 export interface CampImage {
   src: string;
   alt: string;
@@ -48,7 +79,7 @@ export const specialCampsData: Record<SpecialCampId, SpecialCampData> = {
     slug: "/summer-camps",
     title: "Summer Camps",
     seasonTag: "Vacation Immersion",
-    seasonMonths: "March — May",
+    seasonMonths: "March – May",
     tagline: "Farming, Folk Arts, Rural Games and Sustainable Creativity",
     shortDescription:
       "Transform summer holidays into an active, screen-free farm immersion where students learn organic soil cultivation, pottery, rural games, and sustainable crafts in protected natural surroundings.",
@@ -100,32 +131,32 @@ export const specialCampsData: Record<SpecialCampId, SpecialCampData> = {
     ],
     sampleSchedule: [
       {
-        timeOrPhase: "08:30 AM — 09:15 AM",
+        timeOrPhase: "08:30 AM  09:15 AM",
         title: "Farm Assembly and Morning Vitality",
         description: "Warm-up stretches, safety orientation, weather briefing, and morning hydration check.",
       },
       {
-        timeOrPhase: "09:15 AM — 11:00 AM",
+        timeOrPhase: "09:15 AM  11:00 AM",
         title: "Field Agriculture and Soil Practice",
         description: "Cool-morning open field farming: bed preparation, organic weeding, and guided sowing.",
       },
       {
-        timeOrPhase: "11:00 AM — 11:30 AM",
+        timeOrPhase: "11:00 AM  11:30 AM",
         title: "Shaded Hydration and Fruit Snack",
         description: "Rest period under tree canopies with tender coconut water or seasonal fresh fruit.",
       },
       {
-        timeOrPhase: "11:30 AM — 01:00 PM",
+        timeOrPhase: "11:30 AM  01:00 PM",
         title: "Shaded Workshops: Pottery and Folk Crafts",
         description: "Hands-on pottery wheel lessons, terracotta shaping, and traditional artisanal crafts in shaded pavilions.",
       },
       {
-        timeOrPhase: "01:00 PM — 02:00 PM",
+        timeOrPhase: "01:00 PM  02:00 PM",
         title: "Nutritious Farm Lunch",
         description: "Wholesome, millet-enriched vegetarian lunch prepared with fresh regional farm produce.",
       },
       {
-        timeOrPhase: "02:00 PM — 03:30 PM",
+        timeOrPhase: "02:00 PM  03:30 PM",
         title: "Traditional Games and Cohort Debrief",
         description: "Spirited traditional rural games followed by daily learning journals and circle reflections.",
       },
@@ -134,7 +165,7 @@ export const specialCampsData: Record<SpecialCampId, SpecialCampData> = {
       "Midday heat avoidance: open-field activities cease by 11:00 AM; afternoon sessions occur in shaded open-air halls.",
       "Hydration protocol: mandatory water breaks every 30 minutes with continuous access to purified drinking water.",
       "Sun protection: wide-brim FURAA caps and organic sunscreen lotion advisories for all outdoor periods.",
-      "High mentor ratio: dedicated adult mentor for every 8–10 campers to ensure vigilant oversight.",
+      "High mentor ratio: dedicated adult mentor for every 810 campers to ensure vigilant oversight.",
     ],
     photos: [
       {
@@ -170,7 +201,7 @@ export const specialCampsData: Record<SpecialCampId, SpecialCampData> = {
     slug: "/monsoon-camps",
     title: "Monsoon Camps",
     seasonTag: "Living Hydrology Track",
-    seasonMonths: "July — September",
+    seasonMonths: "July – September",
     tagline: "Seasonal Crops, Water Conservation, Soil Observation and Rain Ecology",
     shortDescription:
       "Experience the invigorating rhythm of the Indian monsoon through living hydrology: barefoot paddy puddling, rainwater percolation science, stream biodiversity, and seasonal wetland sowing.",
@@ -222,32 +253,32 @@ export const specialCampsData: Record<SpecialCampId, SpecialCampData> = {
     ],
     sampleSchedule: [
       {
-        timeOrPhase: "09:00 AM — 09:30 AM",
+        timeOrPhase: "09:00 AM  09:30 AM",
         title: "Weather Briefing and Rain Gear Check",
         description: "Reviewing ground saturation, boot inspection, safety boundaries, and warm herbal tea.",
       },
       {
-        timeOrPhase: "09:30 AM — 11:30 AM",
+        timeOrPhase: "09:30 AM  11:30 AM",
         title: "Wetland Paddy Transplantation Experience",
         description: "Supervised barefoot field activity: leveling wet soil beds, puddling, and sapling row transplantation.",
       },
       {
-        timeOrPhase: "11:30 AM — 12:15 PM",
+        timeOrPhase: "11:30 AM  12:15 PM",
         title: "Footwash, Warm Clean-up and Snack",
         description: "Designated warm water washing stations, dry costume change, and hot jaggery ginger drink.",
       },
       {
-        timeOrPhase: "12:15 PM — 01:15 PM",
+        timeOrPhase: "12:15 PM  01:15 PM",
         title: "Hydrology and Soil Percolation Lab",
         description: "Interactive science session under covered rain pavilion analyzing soil infiltration and rain gauges.",
       },
       {
-        timeOrPhase: "01:15 PM — 02:15 PM",
+        timeOrPhase: "01:15 PM  02:15 PM",
         title: "Warm Farm Feast",
         description: "Hot, freshly cooked country meals featuring piping hot rasam, red rice, and steamed native pulses.",
       },
       {
-        timeOrPhase: "02:15 PM — 03:30 PM",
+        timeOrPhase: "02:15 PM  03:30 PM",
         title: "Ecology Trail and Monsoon Reflections",
         description: "Guided canal trail observing bird nesting and frog biodiversity, followed by nature journal entries.",
       },
@@ -292,7 +323,7 @@ export const specialCampsData: Record<SpecialCampId, SpecialCampData> = {
     slug: "/harvesting-camps",
     title: "Harvesting Camps",
     seasonTag: "Culmination and Abundance Track",
-    seasonMonths: "November — January",
+    seasonMonths: "November  January",
     tagline: "Crop Harvesting, Post-Harvest Processes, Farm-to-Food and Rural Festivals",
     shortDescription:
       "Celebrate the culmination of the agrarian cycle: hand-harvesting seasonal produce, winnowing grains, understanding post-harvest storage, and participating in traditional harvest celebrations.",
@@ -344,32 +375,32 @@ export const specialCampsData: Record<SpecialCampId, SpecialCampData> = {
     ],
     sampleSchedule: [
       {
-        timeOrPhase: "09:00 AM — 09:30 AM",
+        timeOrPhase: "09:00 AM  09:30 AM",
         title: "Harvest Briefing and Tool Safety Demonstration",
         description: "Demonstration of safe harvest techniques, distribution of canvas work gloves, and plot allocations.",
       },
       {
-        timeOrPhase: "09:30 AM — 11:30 AM",
+        timeOrPhase: "09:30 AM  11:30 AM",
         title: "Field Harvest and Vegetable Picking",
         description: "Guided harvesting in designated crop rows; collecting produce into woven bamboo baskets.",
       },
       {
-        timeOrPhase: "11:30 AM — 12:30 PM",
+        timeOrPhase: "11:30 AM  12:30 PM",
         title: "Sugarcane Crushing and Fresh Cane Tasting",
         description: "Fresh sugarcane chewing and observation of traditional farm-scale jaggery preparation.",
       },
       {
-        timeOrPhase: "12:30 PM — 01:30 PM",
+        timeOrPhase: "12:30 PM  01:30 PM",
         title: "Traditional Winnowing and Seed Saving",
         description: "Separating grain, practicing winnowing with natural airflow, and preparing seed packets to take home.",
       },
       {
-        timeOrPhase: "01:30 PM — 02:30 PM",
+        timeOrPhase: "01:30 PM  02:30 PM",
         title: "Celebratory Harvest Feast",
         description: "Traditional festival lunch served on banana leaves with freshly harvested farm ingredients.",
       },
       {
-        timeOrPhase: "02:30 PM — 03:30 PM",
+        timeOrPhase: "02:30 PM  03:30 PM",
         title: "Harvest Folk Songs and Farmer Gratitude",
         description: "Campers express gratitude to resident farmers, pack their harvested produce bags, and share reflections.",
       },

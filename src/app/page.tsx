@@ -3,7 +3,6 @@ import StatsSection from "@/components/sections/StatsSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import ProgramPillarsSection from "@/components/sections/ProgramPillarsSection";
 import WeeklyModelSection from "@/components/sections/WeeklyModelSection";
-import ClassBandSection from "@/components/sections/ClassBandSection";
 import SunburstSection from "@/components/sections/SunburstSection";
 import LearningModulesSection from "@/components/sections/LearningModulesSection";
 import GalleryPreviewSection from "@/components/sections/GalleryPreviewSection";
@@ -18,7 +17,6 @@ export default function HomePage() {
       <HowItWorksSection />
       <ProgramPillarsSection />
       <WeeklyModelSection />
-      <ClassBandSection />
       <SunburstSection />
       <LearningModulesSection />
       <GalleryPreviewSection />

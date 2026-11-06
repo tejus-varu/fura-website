@@ -283,8 +283,8 @@ export default function BlogsView() {
               Looking for our structured nutrition curriculum matrices, farm-to-plate tasting modules, and school nutri-garden designs? Explore the dedicated nutrition framework preserved across all class bands.
             </p>
           </div>
-          <Button href="/nutrition" variant="outline" size="md" className="shrink-0">
-            View Nutrition Curriculum
+          <Button href="/programs/furaa-farms#nutri-gardens" variant="outline" size="md" className="shrink-0">
+            Explore Nutri Gardens
           </Button>
         </div>
       </div>

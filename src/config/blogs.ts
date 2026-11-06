@@ -136,7 +136,7 @@ export const seedBlogPosts: BlogPost[] = [
     coverImage: {
       src: "/images/modules/NAD06650.JPG",
       alt: "Students actively transplanting paddy saplings in wet field with farm mentors",
-      caption: "Supervised paddy puddling and wetland rice sapling transplantation at Neralu Farms.",
+      caption: "Supervised paddy puddling and wetland rice sapling transplantation at FURAA Partner Farm.",
     },
     excerpt:
       "Step into the wet mud: how wetland rice cultivation teaches children the true value of water, ecological interdependence, and the sheer effort required to produce every grain of rice.",

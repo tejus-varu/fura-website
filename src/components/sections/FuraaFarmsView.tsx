@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
-import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import { furaaFarmCategories } from "@/config/furaaFarms";
 import FarmCategoryNav from "@/components/sections/FarmCategoryNav";
@@ -25,7 +24,7 @@ export default function FuraaFarmsView() {
         badge="Experiential Field Centers"
         badgeVariant="gold"
         title="Explore FURAA Farms"
-        description="Five distinct living farm categories designed to turn classroom biology, ecology, and heritage into hands-on discovery across Classes 1–10."
+        description="Ten distinct agrarian learning categories designed to turn classroom biology, ecology, culture and science into hands-on discovery across Classes 1–10."
         bgImage="/images/hero/NAD06383.JPG"
         bgPosition="center 35%"
       >
@@ -34,8 +33,8 @@ export default function FuraaFarmsView() {
             Book a School Demo
             <ArrowRight size={18} />
           </Button>
-          <Button href="/programs" variant="secondary" size="lg">
-            View Curriculum Overview
+          <Button href="#rural-farms" variant="secondary" size="lg">
+            Explore All 10 Experiences
           </Button>
         </div>
       </PageHero>
@@ -55,7 +54,7 @@ export default function FuraaFarmsView() {
         }}
       />
 
-      {/* ─── The Five Alternating Farm Category Sections ─────────────── */}
+      {/* ─── The Ten Alternating Farm Category Sections ─────────────── */}
       <div className="flex flex-col">
         {filteredCategories.map((category, index) => (
           <FarmCategoryDetail
@@ -76,10 +75,10 @@ export default function FuraaFarmsView() {
           />
 
           <div className="mt-12 overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[640px]">
+            <table className="w-full text-left border-collapse min-w-[760px]">
               <thead>
                 <tr className="border-b-2 border-[var(--color-green-200)] text-xs uppercase font-bold text-[var(--color-green-900)]">
-                  <th className="py-4 px-4 bg-[var(--color-cream)] rounded-tl-xl">Farm Category</th>
+                  <th className="py-4 px-4 bg-[var(--color-cream)] rounded-tl-xl">Farm Experience</th>
                   <th className="py-4 px-4 bg-[var(--color-cream)]">Foundation (Classes 1–4)</th>
                   <th className="py-4 px-4 bg-[var(--color-cream)]">Exploration (Classes 5–8)</th>
                   <th className="py-4 px-4 bg-[var(--color-cream)] rounded-tr-xl">Specialization (Classes 9–10)</th>
@@ -90,7 +89,7 @@ export default function FuraaFarmsView() {
                   <td className="py-4 px-4 font-bold text-[var(--color-green-950)] bg-white">
                     FURAA Rural Farms
                   </td>
-                  <td className="py-4 px-4">Mud play, seed sowing, folk storytelling</td>
+                  <td className="py-4 px-4">Mud puddling, seed sowing, folk storytelling</td>
                   <td className="py-4 px-4">Paddy transplanting, canal hydrology, team plots</td>
                   <td className="py-4 px-4">Soil physics, agronomy economics, agrarian history</td>
                 </tr>
@@ -122,48 +121,52 @@ export default function FuraaFarmsView() {
                   <td className="py-4 px-4 font-bold text-[var(--color-green-950)] bg-white">
                     FURAA Nutri Gardens
                   </td>
-                  <td className="py-4 px-4">Microgreens sprouting, rainbow meal charts</td>
-                  <td className="py-4 px-4">Millet harvesting, fireless cooking, seed saving</td>
-                  <td className="py-4 px-4">Nutrient chemistry, dietary metabolism, food sovereignty</td>
+                  <td className="py-4 px-4">Microgreens sprouting, rainbow vegetables</td>
+                  <td className="py-4 px-4">Millet harvesting, culinary herbs, seed saving</td>
+                  <td className="py-4 px-4">Nutrient chemistry, whole food literacy, crop resilience</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-4 font-bold text-[var(--color-green-950)] bg-white">
+                    FURAA Ornamental Gardens
+                  </td>
+                  <td className="py-4 px-4">Sensory flower potting, color discovery</td>
+                  <td className="py-4 px-4">Stem cutting propagation, landscape beds</td>
+                  <td className="py-4 px-4">Horticultural design, pruning geometry, green spaces</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-4 font-bold text-[var(--color-green-950)] bg-white">
+                    FURAA Urban & Terrace Gardens
+                  </td>
+                  <td className="py-4 px-4">Grow-bag sowing, windowsill seedling care</td>
+                  <td className="py-4 px-4">Vertical farming, micro-drip setups, hydroponics</td>
+                  <td className="py-4 px-4">Urban food resilience, space-smart yield analytics</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-4 font-bold text-[var(--color-green-950)] bg-white">
+                    FURAA Art and Folk Centre
+                  </td>
+                  <td className="py-4 px-4">Clay pinch-pots, leaf prints, village songs</td>
+                  <td className="py-4 px-4">Potter&apos;s wheel, Warli tribal art, waste upcycling</td>
+                  <td className="py-4 px-4">Rural craft preservation, eco-design, folk history</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-4 font-bold text-[var(--color-green-950)] bg-white">
+                    FURAA Farm Machinery & Precision Agri
+                  </td>
+                  <td className="py-4 px-4">Tractor walkthroughs, tool classification</td>
+                  <td className="py-4 px-4">Mechanical transplanters, water drone flight demos</td>
+                  <td className="py-4 px-4">Telemetry sensors, robotics, agricultural engineering</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-4 font-bold text-[var(--color-green-950)] bg-white">
+                    FURAA Wellness & Adventure Centre
+                  </td>
+                  <td className="py-4 px-4">Gentle balance trails, mindful canopy breathing</td>
+                  <td className="py-4 px-4">Low-rope obstacle traverses, cooperative games</td>
+                  <td className="py-4 px-4">Outdoor expedition skills, tentcraft, orientation trails</td>
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Safety and Operational Standards Banner ──────────────────── */}
-      <section className="section-pad bg-[var(--color-cream)] border-t border-[var(--color-green-100)]">
-        <div className="container-xl max-w-5xl mx-auto">
-          <div className="bg-white p-8 md:p-12 rounded-3xl border border-[var(--color-green-200)] shadow-md">
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
-                <ShieldCheck size={32} />
-              </div>
-              <div className="flex flex-col gap-3">
-                <Badge variant="green">Safety First Standard</Badge>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-green-950)]">
-                  Rigorous Operational Protocols Across All Farm Centers
-                </h3>
-                <p className="text-sm md:text-base text-[var(--color-green-800)]/85 leading-relaxed">
-                  Every activity across our five farm categories is structured under strict mentor-to-student supervision (1:8), verified safety boundaries, shaded hydration stops, and on-site first-aid readiness. High-risk activities like beekeeping, cane crushing, and livestock milking are conducted exclusively as supervised or mentor-led demonstrations.
-                </p>
-                <div className="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-[var(--color-green-900)]">
-                  <span className="flex items-center gap-1.5">
-                    <CheckCircle2 size={15} className="text-emerald-600" />
-                    Verified Partner Facilities
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <CheckCircle2 size={15} className="text-emerald-600" />
-                    Certified Agrarian Facilitators
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <CheckCircle2 size={15} className="text-emerald-600" />
-                    Gate-to-Gate Transport Oversight
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -184,8 +187,8 @@ export default function FuraaFarmsView() {
             <Button href="/contact" variant="primary" size="lg">
               Book a School Demo
             </Button>
-            <Button href="/partnership#schools" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-              Review Partnership Guide
+            <Button href="/partnership" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+              Our Partners
             </Button>
           </div>
         </div>

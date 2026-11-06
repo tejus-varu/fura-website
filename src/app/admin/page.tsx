@@ -137,7 +137,7 @@ export default function AdminPage() {
   const [galleryFormData, setGalleryFormData] = useState({
     title: "",
     category: "Farming Activities",
-    location: "Neralu Farms, Bengaluru Region",
+    location: "FURAA Partner Farm, Bengaluru Region",
     description: "",
     cover_image: "/images/modules/NAD06650.JPG",
     status: "published",
@@ -1136,7 +1136,7 @@ export default function AdminPage() {
                             />
                             <div>
                               <h4 className="font-bold text-xs text-[var(--color-green-950)]">{event.title}</h4>
-                              <p className="text-[10px] text-gray-500">{event.category} · {event.location || "Neralu Farms"}</p>
+                              <p className="text-[10px] text-gray-500">{event.category} · {event.location || "FURAA Partner Farm"}</p>
                             </div>
                           </div>
                           <div className="flex items-center gap-3">

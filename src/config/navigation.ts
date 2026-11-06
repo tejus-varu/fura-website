@@ -46,10 +46,9 @@ export const navLinks: NavLink[] = [
 ];
 
 /**
- * Secondary / footer links to preserve all operational and specialized pages.
+ * Secondary / footer links.
  */
 export const footerSecondaryLinks: NavLink[] = [
-  { label: "Safety and Operations", href: "/safety" },
-  { label: "Nutrition and Food Education", href: "/nutrition" },
-  { label: "Contact and Visits", href: "/contact" },
+  { label: "FURAA Farms", href: "/programs/furaa-farms" },
+  { label: "Contact and Inquiries", href: "/contact" },
 ];

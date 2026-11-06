@@ -100,7 +100,7 @@ export default function ExplorationModulePage() {
                 Hydroponics and Modern Tech
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
-                Demonstration of nutrient solutions, pH measurement, vertical growing towers, and water conservation principles.
+                Compare soil vs soilless media, monitor water flow dynamics, and record basic nutrient parameters.
               </p>
             </div>
 
@@ -109,10 +109,10 @@ export default function ExplorationModulePage() {
                 <Palette size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Folk Arts and Upcycling
+                Cultural Heritage Arts
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
-                Warli geometric art, pottery wheel introduction, and creating functional art from agricultural byproducts.
+                Traditional Indian folk arts, natural dye extraction from plants, pottery shaping, and regional folklore study.
               </p>
             </div>
 
@@ -121,10 +121,10 @@ export default function ExplorationModulePage() {
                 <Wheat size={20} />
               </div>
               <h3 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                Millet and Food Literacy
+                Farm-to-Plate Literacy
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
-                Nutritional profiling of traditional millets (Ragi, Jowar), exploring gut health, and discussing processed food realities.
+                Tracing food systems, recognizing indigenous millets, and experiencing healthy traditional culinary methods.
               </p>
             </div>
           </div>
@@ -135,25 +135,25 @@ export default function ExplorationModulePage() {
       <section className="section-pad bg-white">
         <div className="container-xl">
           <ProcessTimeline
-            title="The Exploration Learning Methodology"
+            title="Learning Methodology for Classes 5–8"
             steps={[
               {
                 step: "Phase 1",
-                title: "Classroom Concept Briefing",
+                title: "Classroom Inquiry",
                 description:
-                  "Theory session at school covering scientific principles, diagrammatic workflows, and activity hypotheses.",
+                  "40-minute interactive sessions where scientific hypotheses are framed using worksheets and soil/crop samples.",
               },
               {
                 step: "Phase 2",
-                title: "Applied Farm Investigation",
+                title: "Practical Agronomy",
                 description:
-                  "Students execute experiments in small teams — testing soil, managing growing rows, and observing living fauna.",
+                  "Active fieldwork — planting, weeding, and water testing — organized in peer squads under certified mentor supervision.",
               },
               {
                 step: "Phase 3",
-                title: "Data Logging & Discussion",
+                title: "Analytical Reflection",
                 description:
-                  "Teams record observations in field journals, compare crop outcomes, and present findings to their peer group.",
+                  "Students record crop measurements, compare test beds, and discuss agricultural trade-offs in structured circles.",
               },
               {
                 step: "Phase 4",
@@ -166,68 +166,44 @@ export default function ExplorationModulePage() {
         </div>
       </section>
 
-      {/* 4. Sample Learning Journey & Outcomes */}
+      {/* 4. Expected Educational Goals */}
       <section className="section-pad" style={{ background: "var(--color-green-50)" }}>
-        <div className="container-xl max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="card-base p-8 bg-white">
-            <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-gold-600)]">
-              Sample 4-Week Journey
-            </span>
-            <h3 className="text-h3 text-[var(--color-green-900)] mt-1 mb-4">
-              A Month in the Exploration Module
-            </h3>
-            <ul className="flex flex-col gap-3 text-sm text-[var(--color-green-800)]">
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W1:</span>
-                <span>Soil Dynamics: Soil texture tests in school + raised bed preparation on the farm.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W2:</span>
-                <span>Hydroponics vs Soil: Measuring pH levels + setting up seedling transplant rows.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W3:</span>
-                <span>Heritage and Culture: Warli wall canvas workshop + team strategy in rural Lagori.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W4:</span>
-                <span>Millet Harvest: Crop yield evaluation + tasting traditional Ragi preparation.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-4">
+        <div className="container-xl max-w-4xl mx-auto">
+          <div className="text-center mb-8">
             <h3 className="text-h3 text-[var(--color-green-900)]">
               Expected Educational Goals
             </h3>
-            <p className="text-sm text-[var(--color-green-700)] leading-relaxed">
+            <p className="text-sm text-[var(--color-green-700)] leading-relaxed mt-2">
               Program goals are framed as learning objectives and developmental milestones:
             </p>
-            <div className="space-y-3">
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Scientific Inquiry:</strong> Students articulate how soil composition, water, and sunlight interact to produce food.
-                </p>
-              </div>
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Collaborative Problem Solving:</strong> Teams allocate responsibilities and complete physical gardening tasks cooperatively.
-                </p>
-              </div>
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Ecological Responsibility:</strong> Awareness of water scarcity, chemical runoff, and practical benefits of organic compost.
-                </p>
-              </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Scientific Inquiry</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Students articulate how soil composition, water, and sunlight interact to produce food.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Collaborative Problem Solving</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Teams allocate responsibilities and complete physical gardening tasks cooperatively.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Ecological Responsibility</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Awareness of water scarcity, resource conservation, and practical benefits of organic compost.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. Age-Appropriate Safety Considerations */}
+      {/* 5. Age-Appropriate Safety & Environment Considerations */}
       <section className="section-pad bg-white">
         <div className="container-xl max-w-4xl mx-auto">
           <SafetyChecklist
@@ -244,14 +220,9 @@ export default function ExplorationModulePage() {
                   "Mandatory closed-toe footwear and protective farm over-shirts to shield from dust, vegetation prickles, and direct sun.",
               },
               {
-                title: "Controlled Chemical-Free Environment",
+                title: "Eco-Friendly Environment",
                 description:
-                  "All farming zones used by FURAA are strictly chemical-free and organic. No synthetic pesticides or chemical fertilizers are present.",
-              },
-              {
-                title: "First-Aid Ready Mentors",
-                description:
-                  "Every mentor group carries on-person first aid packs, and clear escalation protocols are defined with nearby medical centers.",
+                  "Learning activities are planned to encourage environmentally responsible practices, resource awareness and thoughtful interaction with nature.",
               },
             ]}
           />

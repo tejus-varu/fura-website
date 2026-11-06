@@ -190,16 +190,16 @@ export const siteImages = {
       badge: "School Partners",
       objectPosition: "center 25%",
     },
-    neraluFarms1: {
+    partnerFarms1: {
       src: "/images/hero/NAD06335.JPG",
-      alt: "Traditional ploughing and active growing plots at Neralu Farms",
-      caption: "Hands-on cultivation plots at Neralu Farms",
+      alt: "Traditional ploughing and active growing plots at FURAA Partner Farm",
+      caption: "Hands-on cultivation plots at FURAA Partner Farm",
       badge: "Plot View",
       objectPosition: "center 45%",
     },
-    neraluFarms2: {
+    partnerFarms2: {
       src: "/images/modules/NAD06650.JPG",
-      alt: "Students transplanting paddy in diverse agricultural wetlands at Neralu Farms",
+      alt: "Students transplanting paddy in diverse agricultural wetlands at FURAA Partner Farm",
       caption: "Diverse agrarian learning environment and wetland zones",
       badge: "Activity Zone",
       objectPosition: "center 45%",

@@ -125,7 +125,7 @@ export default function FoundationModulePage() {
                 Healthy Food Literacy
               </h3>
               <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
-                Natural herbal welcome drinks, tasting fresh garden veggies, and playful conversations about whole grains versus junk food.
+                Natural herbal welcome drinks, tasting fresh garden veggies, and playful conversations about whole grains.
               </p>
             </div>
           </div>
@@ -167,68 +167,44 @@ export default function FoundationModulePage() {
         </div>
       </section>
 
-      {/* 4. Sample Learning Journey & Outcomes */}
+      {/* 4. Expected Educational Goals */}
       <section className="section-pad" style={{ background: "var(--color-green-50)" }}>
-        <div className="container-xl max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="card-base p-8 bg-white">
-            <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-gold-600)]">
-              Sample 4-Week Journey
-            </span>
-            <h3 className="text-h3 text-[var(--color-green-900)] mt-1 mb-4">
-              A Month in the Foundation Module
-            </h3>
-            <ul className="flex flex-col gap-3 text-sm text-[var(--color-green-800)]">
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W1:</span>
-                <span>The Magic Seed: Story in class + sowing sunflower seeds at the farm.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W2:</span>
-                <span>Soil & Bugs: Clay touch workshop + garden butterfly observation.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W3:</span>
-                <span>Folk Colors: Natural leaf rubbing art + traditional outdoor village games.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W4:</span>
-                <span>Harvest and Feast: Gentle vegetable picking + traditional herbal welcome drink.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-4">
+        <div className="container-xl max-w-4xl mx-auto">
+          <div className="text-center mb-8">
             <h3 className="text-h3 text-[var(--color-green-900)]">
               Expected Educational Goals
             </h3>
-            <p className="text-sm text-[var(--color-green-700)] leading-relaxed">
+            <p className="text-sm text-[var(--color-green-700)] leading-relaxed mt-2">
               Our educational goals are framed as developmental milestones rather than rigid performance metrics:
             </p>
-            <div className="space-y-3">
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Enhanced Sensory Literacy:</strong> Children distinguish textures, natural scents, and seasonal changes with confidence.
-                </p>
-              </div>
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Food Appreciation:</strong> Children understand food comes from living plants and show open curiosity toward vegetables and grains.
-                </p>
-              </div>
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Gross and Fine Motor Coordination:</strong> Practiced through seed handling, clay manipulation, and traditional rural play.
-                </p>
-              </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Enhanced Sensory Literacy</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Children distinguish textures, natural scents, and seasonal changes with confidence.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Food Appreciation</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Children understand food comes from living plants and show open curiosity toward vegetables and grains.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Motor Coordination</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Gross and fine motor skills practiced through seed handling, clay manipulation, and traditional rural play.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. Age-Appropriate Safety Considerations */}
+      {/* 5. Concise Safety and Care */}
       <section className="section-pad bg-white">
         <div className="container-xl max-w-4xl mx-auto">
           <SafetyChecklist
@@ -259,7 +235,7 @@ export default function FoundationModulePage() {
         </div>
       </section>
 
-      {/* 6. Image Gallery Placeholders */}
+      {/* 6. Image Gallery */}
       <section className="section-pad" style={{ background: "var(--color-cream)" }}>
         <div className="container-xl">
           <div className="text-center max-w-xl mx-auto mb-10">

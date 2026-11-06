@@ -3,7 +3,6 @@ import { brand } from "@/config/brand";
 import PageHero from "@/components/layout/PageHero";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
-import SafetyChecklist from "@/components/ui/SafetyChecklist";
 import CtaBlock from "@/components/ui/CtaBlock";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { siteImages } from "@/config/images";
@@ -131,7 +130,7 @@ export default function SpecializationModulePage() {
         </div>
       </section>
 
-      {/* 3. The 3-Phase Learning Process */}
+      {/* 3. The 4-Phase Learning Process */}
       <section className="section-pad bg-white">
         <div className="container-xl">
           <ProcessTimeline
@@ -166,100 +165,45 @@ export default function SpecializationModulePage() {
         </div>
       </section>
 
-      {/* 4. Sample Learning Journey & Educational Goals */}
+      {/* 4. Expected Educational Goals */}
       <section className="section-pad" style={{ background: "var(--color-green-50)" }}>
-        <div className="container-xl max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="card-base p-8 bg-white">
-            <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-gold-600)]">
-              Sample 4-Week Journey
-            </span>
-            <h3 className="text-h3 text-[var(--color-green-900)] mt-1 mb-4">
-              A Month in the Specialization Module
-            </h3>
-            <ul className="flex flex-col gap-3 text-sm text-[var(--color-green-800)]">
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W1:</span>
-                <span>System Architecture: Nitrogen cycle theory + soil organic matter profiling.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W2:</span>
-                <span>Precision Agronomy: Formulating hydroponic solutions and checking EC/pH balances.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W3:</span>
-                <span>Ecological Surveying: Biodiversity transect logging in organic vs conventional rows.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="font-bold text-[var(--color-green-700)] shrink-0">W4:</span>
-                <span>Project Colloquium: Presenting urban terrace micro-farm prototypes to faculty.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-4">
+        <div className="container-xl max-w-4xl mx-auto">
+          <div className="text-center mb-8">
             <h3 className="text-h3 text-[var(--color-green-900)]">
               Expected Educational Goals
             </h3>
-            <p className="text-sm text-[var(--color-green-700)] leading-relaxed">
+            <p className="text-sm text-[var(--color-green-700)] leading-relaxed mt-2">
               Program goals are framed as learning objectives and developmental milestones:
             </p>
-            <div className="space-y-3">
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Systems Thinking:</strong> Students articulate how environmental, chemical, and economic variables influence agricultural sustainability.
-                </p>
-              </div>
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Quantitative Scientific Literacy:</strong> Confidence in formulating hypotheses, logging data points, and documenting real-world evidence.
-                </p>
-              </div>
-              <div className="p-3.5 rounded-xl bg-white border border-green-100 flex items-start gap-3">
-                <Sparkles size={18} className="text-emerald-600 shrink-0 mt-0.5" />
-                <p className="text-xs text-[var(--color-green-800)]">
-                  <strong>Interdisciplinary Problem Solving:</strong> Connecting biology, technology, and economic awareness to address modern food security challenges.
-                </p>
-              </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Systems Thinking</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Students articulate how environmental, chemical, and economic variables influence agricultural sustainability.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Quantitative Scientific Literacy</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Confidence in formulating hypotheses, logging data points, and documenting real-world evidence.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white border border-green-100 flex flex-col gap-2 shadow-xs">
+              <Sparkles size={20} className="text-emerald-600" />
+              <h4 className="font-bold text-sm text-[var(--color-green-900)]">Interdisciplinary Problem Solving</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Connecting biology, technology, and economic awareness to address modern food security challenges.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. Age-Appropriate Safety Considerations */}
+      {/* 5. Image Gallery */}
       <section className="section-pad bg-white">
-        <div className="container-xl max-w-4xl mx-auto">
-          <SafetyChecklist
-            title="Safety and Professional Protocols for Classes 9–10"
-            items={[
-              {
-                title: "Laboratory and Chemical Safety",
-                description:
-                  "Handling of pH testing reagents and nutrient salts is strictly conducted under instructor oversight with protective eyewear and gloves.",
-              },
-              {
-                title: "Electrical and Water Separation",
-                description:
-                  "Hydroponic submersible pumps and aeration equipment adhere to strict IP-rated safety enclosures and GFCI circuit protection.",
-              },
-              {
-                title: "Field Sun and Heat Management",
-                description:
-                  "Outdoor agricultural fieldwork is scheduled during optimal morning hours to prevent dehydration and excessive heat exposure.",
-              },
-              {
-                title: "Trained First-Aid Facilitators",
-                description:
-                  "On-site facilitators maintain current emergency first-aid credentials and maintain direct communication with school coordinators.",
-              },
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* 6. Image Gallery Placeholders */}
-      <section className="section-pad" style={{ background: "var(--color-cream)" }}>
         <div className="container-xl">
           <div className="text-center max-w-xl mx-auto mb-10">
             <h2 className="text-h2 text-[var(--color-green-900)]">
@@ -299,12 +243,12 @@ export default function SpecializationModulePage() {
         </div>
       </section>
 
-      {/* 7. CTA */}
-      <section className="section-pad pt-0 bg-[var(--color-cream)]">
+      {/* 6. CTA */}
+      <section className="section-pad pt-0 bg-white">
         <div className="container-xl">
           <CtaBlock
-            title="Integrate Applied Agri-Science in Your High School"
-            description="Discuss how the Specialization Module complements your CBSE, ICSE, or International curriculum standards with practical STEM enrichment."
+            title="Integrate the Specialization Module"
+            description="Consult with our senior science educators to align our applied agri-science experiments with your high school biology, physics, and chemistry practicals."
             buttonText="Book Specialization Demo"
             href="/contact"
           />

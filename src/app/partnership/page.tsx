@@ -3,35 +3,28 @@ import { brand } from "@/config/brand";
 import {
   farmPartners,
   corporateProgram,
+  institutionPartners,
 } from "@/config/partnerships";
 import {
   GraduationCap,
   Trees,
   Landmark,
   Briefcase,
-  CalendarDays,
-  Clock,
-  Handshake,
-  Bus,
   MapPin,
   CheckCircle2,
-  ShieldCheck,
   TrendingUp,
   Users,
   Sprout,
   ArrowRight,
   Info,
-  Building2,
   FileCheck2,
 } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
-import SafetyChecklist from "@/components/ui/SafetyChecklist";
 import CtaBlock from "@/components/ui/CtaBlock";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
-import CorporateOperationsGuide from "@/components/sections/CorporateOperationsGuide";
 import { siteImages } from "@/config/images";
 
 export const metadata: Metadata = {
@@ -45,19 +38,19 @@ const partnershipPillars = [
     icon: GraduationCap,
     title: "Schools",
     href: "#schools",
-    description: "Curriculum-linked modules, turnkey logistics, and student experiential programs.",
+    description: "Curriculum-linked modules, structured calendars, and student experiential programs.",
   },
   {
     icon: Trees,
     title: "Farms",
     href: "#farms",
-    description: "Verified outdoor agrarian learning environments like Neralu Farms.",
+    description: "Verified outdoor agrarian learning environments and cultivation spaces.",
   },
   {
     icon: Landmark,
     title: "Farm Universities",
     href: "#farm-universities",
-    description: "Academic guidance and scientific grounding for agricultural curriculum.",
+    description: "Knowledge frameworks and research references for agricultural education.",
   },
   {
     icon: Briefcase,
@@ -69,6 +62,7 @@ const partnershipPillars = [
 
 export default function PartnershipPage() {
   const primaryFarm = farmPartners[0];
+  const academicAdvisory = institutionPartners[0];
 
   return (
     <>
@@ -100,24 +94,23 @@ export default function PartnershipPage() {
               <a
                 key={pillar.title}
                 href={pillar.href}
-                className="card-base p-6 bg-white hover:border-emerald-300 transition-all duration-200 flex flex-col gap-3 group"
+                className="card-base p-6 bg-[var(--color-cream)] hover:bg-white border border-transparent hover:border-emerald-300 transition-all flex flex-col justify-between group shadow-xs"
               >
-                <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
-                  style={{ background: "var(--color-green-100)" }}
-                >
-                  <pillar.icon size={20} style={{ color: "var(--color-green-700)" }} />
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-emerald-800 shadow-xs mb-4 group-hover:bg-emerald-800 group-hover:text-white transition-colors">
+                    <pillar.icon size={22} />
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-[var(--color-green-900)] mb-1">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
+                    {pillar.description}
+                  </p>
                 </div>
-                <h3 className="font-display text-base font-bold text-[var(--color-green-900)] flex items-center justify-between">
-                  {pillar.title}
-                  <ArrowRight
-                    size={14}
-                    className="opacity-0 group-hover:opacity-100 transition-opacity text-[var(--color-green-600)]"
-                  />
-                </h3>
-                <p className="text-xs text-[var(--color-green-700)] leading-relaxed">
-                  {pillar.description}
-                </p>
+                <div className="mt-4 pt-3 border-t border-emerald-900/10 flex items-center gap-1 text-xs font-bold text-emerald-800 group-hover:translate-x-1 transition-transform">
+                  <span>Explore Track</span>
+                  <ArrowRight size={13} />
+                </div>
               </a>
             ))}
           </div>
@@ -129,26 +122,23 @@ export default function PartnershipPage() {
         <div className="container-xl">
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
             <div className="lg:w-1/2 flex flex-col gap-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-800 w-fit">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold w-fit">
                 <GraduationCap size={14} />
                 <span>Category 1 · Schools</span>
               </div>
               <h2 className="text-h2 text-[var(--color-green-900)]">
-                Integrating Experiential Agri-Education Into School Life
+                School Partnerships: Experiential Learning for Every Student
               </h2>
               <p className="text-base text-[var(--color-green-800)] leading-relaxed">
-                FURAA collaborates directly with school management, academic coordinators, and trustees to embed agriculture, nature learning, folk art, and nutrition awareness into existing CBSE, ICSE, and State Board curricula or structured extracurricular clubs.
+                FURAA partners with schools to deliver structured, curriculum-linked experiential programs. We handle program delivery, trained mentor facilitation, learning materials, and farm coordination — so schools can offer meaningful experiential education with minimal administrative load.
               </p>
-              <p className="text-sm text-[var(--color-green-700)] leading-relaxed">
-                We handle instructional delivery and operational logistics — bringing trained educators into your classrooms for theory, and providing supervised, turnkey practical farm experiences on agreed dates.
-              </p>
-
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Button href="/contact?subject=School%20Partnership" variant="primary" size="md">
-                  Discuss a School Partnership
+                  Initiate School Partnership
+                  <ArrowRight size={16} />
                 </Button>
-                <Button href="/programs" variant="outline" size="md">
-                  Explore Grade Modules
+                <Button href="#integration-process" variant="outline" size="md">
+                  View Onboarding Steps
                 </Button>
               </div>
             </div>
@@ -159,84 +149,57 @@ export default function PartnershipPage() {
                 alt={siteImages.partnerships.schools.alt}
                 caption={siteImages.partnerships.schools.caption}
                 badge={siteImages.partnerships.schools.badge}
-                aspectRatio="4/3"
+                aspectRatio="16/9"
                 objectPosition={siteImages.partnerships.schools.objectPosition}
               />
             </div>
           </div>
 
-          {/* School Partner Grid / Tasteful Empty State */}
-          <div className="mb-16">
-            <div className="p-8 sm:p-10 rounded-3xl bg-[var(--color-cream)] border border-emerald-900/10 flex flex-col md:flex-row gap-8 items-center justify-between">
-              <div className="md:w-2/3 flex flex-col gap-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gray-200 text-xs font-semibold text-[var(--color-green-800)] w-fit">
-                  <Building2 size={13} />
-                  <span>Partnerships in Development</span>
-                </div>
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-[var(--color-green-900)]">
-                  Active School Admissions and Pilot Cohorts
-                </h3>
-                <p className="text-sm text-[var(--color-green-800)] leading-relaxed">
-                  Partner school emblems and co-curricular program announcements are displayed upon completion of onboarding and mutual accreditation. We are currently accepting school partnership applications for upcoming academic terms.
-                </p>
-              </div>
-              <div className="shrink-0">
-                <Button
-                  href="/contact?subject=School%20Partnership%20Inquiry"
-                  variant="outline"
-                  size="md"
-                >
-                  Register Your School
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Integration Formats Grid */}
+          {/* School Partnership Framework Cards */}
           <div className="mb-16">
             <FeatureGrid
-              title="Flexible Integration Formats"
-              subtitle="Choose the model that aligns with your school's calendar and academic objectives."
+              title="What FURAA Delivers to Schools"
+              subtitle="A complete end-to-end framework tailored to your academic calendar."
               cols={3}
               features={[
                 {
-                  icon: CalendarDays,
-                  title: "Annual Module",
+                  icon: Sprout,
+                  title: "Curriculum Integration",
                   description:
-                    "Our flagship academic offering spanning the school year. Regular alternating theory and practical sessions building deep, cumulative life habits.",
+                    "Aligned with CBSE, ICSE, and state board science, ecology, and social science topics.",
                 },
                 {
-                  icon: Clock,
-                  title: "Term Module",
+                  icon: Users,
+                  title: "Trained Facilitator Delivery",
                   description:
-                    "A focused 3-to-4 month module ideal for one semester or seasonal curriculum themes in science and environmental education.",
+                    "Certified mentors supervise students through both classroom theory and hands-on outdoor fieldwork.",
                 },
                 {
-                  icon: Handshake,
-                  title: "Intensive Workshop",
+                  icon: TrendingUp,
+                  title: "Student Progress Documentation",
                   description:
-                    "Multi-day intensive workshops and single-topic immersions designed for experiential week, science festivals, or school breaks.",
+                    "Engagement logs, portfolio assessments, and project documentation provided to faculty and parents.",
                 },
               ]}
             />
           </div>
 
-          {/* Model Flow: Classroom Learning, Then Farm Practical */}
-          <div className="mb-16 p-8 md:p-12 rounded-3xl bg-[var(--color-cream)] border border-emerald-900/10">
+          {/* 4-Step School Integration Process */}
+          <div id="integration-process" className="mb-8">
             <ProcessTimeline
-              title="How the School Integration Operates"
+              title="How Schools Partner with FURAA"
               steps={[
                 {
                   step: "Step 1",
-                  title: "Calendar Alignment",
+                  title: "Curriculum Alignment",
                   description:
-                    "We map session topics directly to your term timetable, utilizing existing EVS, Science, or activity periods.",
+                    "We review your school calendar and identify the best-fit grade cohorts and learning modules.",
                 },
                 {
                   step: "Step 2",
-                  title: "Classroom Learning",
+                  title: "Classroom Foundation",
                   description:
-                    "Our trained educator conducts an interactive, curriculum-linked theory session in your school classroom.",
+                    "Interactive theory sessions introduce students to core agricultural and environmental concepts.",
                 },
                 {
                   step: "Step 3",
@@ -253,70 +216,6 @@ export default function PartnershipPage() {
               ]}
             />
           </div>
-
-          {/* Transport and Logistics Options */}
-          <div className="max-w-5xl mx-auto">
-            <h3 className="text-h3 text-center mb-8 text-[var(--color-green-900)]">
-              Turnkey Logistics and Transportation
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <SafetyChecklist
-                title="With FURAA Transport (Turnkey)"
-                items={[
-                  {
-                    title: "School Gate-to-Gate Oversight",
-                    description:
-                      "We coordinate student pickup directly from school premises and drop-off back at the school gate.",
-                  },
-                  {
-                    title: "Vetted Vehicle Partners",
-                    description:
-                      "Audited, commercially licensed school buses adhering to regional passenger safety compliance.",
-                  },
-                  {
-                    title: "En-Route Mentor Supervision",
-                    description:
-                      "FURAA mentors accompany students on the bus during the journey to maintain discipline and safety.",
-                  },
-                ]}
-              />
-
-              <div className="card-base p-8 bg-[var(--color-sky-50)] border border-sky-100 flex flex-col justify-between">
-                <div>
-                  <h4 className="text-h3 mb-6 text-[var(--color-sky-900)]">
-                    Without Transport (School Managed)
-                  </h4>
-                  <ul className="flex flex-col gap-5">
-                    <li className="flex gap-4 items-start">
-                      <Bus size={20} className="mt-0.5 shrink-0 text-sky-600" />
-                      <div>
-                        <p className="font-semibold text-sm mb-1 text-sky-900">
-                          Utilize School Fleet
-                        </p>
-                        <p className="text-sm text-sky-800 leading-relaxed">
-                          Schools can utilize their existing transport fleet and staff to transfer students to our partner farm.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex gap-4 items-start">
-                      <MapPin size={20} className="mt-0.5 shrink-0 text-sky-600" />
-                      <div>
-                        <p className="font-semibold text-sm mb-1 text-sky-900">
-                          Gate Handover Protocol
-                        </p>
-                        <p className="text-sm text-sky-800 leading-relaxed">
-                          Our on-site mentors assume full supervision responsibility from the moment students disembark at the farm entrance.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div className="mt-6 p-4 rounded-xl bg-white/80 border border-sky-100 text-xs text-sky-800">
-                  Both options follow identical rigorous safety protocols once inside the farm.
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -329,14 +228,14 @@ export default function PartnershipPage() {
               <span>Category 2 · Farms</span>
             </div>
             <h2 className="text-h2 mt-1 text-[var(--color-green-900)]">
-              Verified Outdoor Learning Centers
+              Partner Farm Lands and Agrarian Learning Spaces
             </h2>
             <p className="text-sm text-[var(--color-green-700)] mt-2">
-              FURAA partners with established working farms to host our educational sessions. Farms are vetted for child safety, agricultural diversity, and accessibility.
+              FURAA collaborates with verified agrarian lands, working family farms, and open rural spaces suited to structured, safe experiential learning.
             </p>
           </div>
 
-          {/* Confirmed Farm Partner Card: Neralu Farms */}
+          {/* Confirmed Farm Partner Card: General Partner Farms */}
           {primaryFarm && (
             <div className="card-base p-8 lg:p-12 bg-white border border-emerald-900/10 shadow-sm flex flex-col gap-8 mb-8">
               {/* Header */}
@@ -344,7 +243,7 @@ export default function PartnershipPage() {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-semibold">
-                      Primary Partner Farm · Confirmed
+                      Verified Field Centers · Active
                     </span>
                     {primaryFarm.location && (
                       <span className="text-xs text-[var(--color-green-600)] flex items-center gap-1">
@@ -356,113 +255,73 @@ export default function PartnershipPage() {
                     {primaryFarm.name}
                   </h3>
                 </div>
-                <Button href="/contact?subject=Neralu%20Farms%20Visit" variant="outline" size="sm">
-                  Inquire About Farm Visits
+                <Button href="/contact?subject=Farm%20Partner%20Inquiry" variant="outline" size="sm">
+                  Inquire About Farm Lands
                 </Button>
               </div>
 
-              {/* Overview & Dual Images */}
+              {/* Overview & Images */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div className="flex flex-col gap-4">
-                  <h4 className="font-display text-base font-bold text-[var(--color-green-900)]">
-                    Farm Learning Environment
-                  </h4>
-                  <p className="text-sm text-[var(--color-green-800)] leading-relaxed">
+                <div>
+                  <p className="text-base text-[var(--color-green-800)] leading-relaxed mb-6">
                     {primaryFarm.overview}
                   </p>
-
-                  <div className="mt-2">
-                    <h5 className="text-xs uppercase font-bold tracking-wider text-[var(--color-gold-600)] mb-2">
-                      Farming Plots and Learning Spaces:
-                    </h5>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {primaryFarm.learningAreas.map((area) => (
-                        <li
-                          key={area}
-                          className="flex items-start gap-2 text-xs text-[var(--color-green-800)]"
-                        >
-                          <CheckCircle2 size={14} className="text-emerald-600 shrink-0 mt-0.5" />
-                          <span>{area}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Real Farm Photos */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <ImagePlaceholder
-                    src={primaryFarm.images[0]?.src}
-                    alt={primaryFarm.images[0]?.alt || `${primaryFarm.name} educational activities`}
-                    caption={primaryFarm.images[0]?.caption}
-                    badge="Plot View"
-                    aspectRatio="4/3"
-                  />
-                  <ImagePlaceholder
-                    src={primaryFarm.images[1]?.src}
-                    alt={primaryFarm.images[1]?.alt || `${primaryFarm.name} learning zones`}
-                    caption={primaryFarm.images[1]?.caption}
-                    badge="Activity Zone"
-                    aspectRatio="4/3"
-                  />
-                </div>
-              </div>
-
-              {/* Educational Activities & Safety */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-gray-100">
-                <div className="p-5 rounded-2xl bg-[var(--color-green-50)]">
-                  <h5 className="font-display text-sm font-bold text-[var(--color-green-900)] mb-3 flex items-center gap-2">
-                    <Sprout size={16} className="text-emerald-700" />
-                    Student Educational Activities at {primaryFarm.name}
-                  </h5>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {primaryFarm.activities.map((act) => (
+                  <h4 className="text-xs uppercase font-bold tracking-wider text-[var(--color-gold-600)] mb-3">
+                    Available Learning Environments:
+                  </h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {primaryFarm.learningAreas.map((area) => (
                       <li
-                        key={act}
-                        className="text-xs text-[var(--color-green-800)] flex items-center gap-1.5"
+                        key={area}
+                        className="flex items-center gap-2 text-xs font-semibold text-[var(--color-green-900)]"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
-                        <span>{act}</span>
+                        <CheckCircle2 size={15} className="text-emerald-700 shrink-0" />
+                        <span>{area}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-sky-50/70 border border-sky-100">
-                  <h5 className="font-display text-sm font-bold text-sky-900 mb-2 flex items-center gap-2">
-                    <ShieldCheck size={16} className="text-sky-700" />
-                    Safety and Supervision Assurance
-                  </h5>
-                  <p className="text-xs text-sky-800 leading-relaxed">
-                    {primaryFarm.safetyNote}
-                  </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {primaryFarm.images.map((img, idx) => (
+                    <ImagePlaceholder
+                      key={idx}
+                      src={img.src}
+                      alt={img.alt}
+                      caption={img.caption}
+                      badge="Agrarian Space"
+                      aspectRatio="4/3"
+                    />
+                  ))}
                 </div>
+              </div>
+
+              {/* Activities Grid */}
+              <div className="border-t border-gray-100 pt-6">
+                <h4 className="text-xs uppercase font-bold tracking-wider text-[var(--color-gold-600)] mb-4">
+                  Field Practice Tracks:
+                </h4>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                  {primaryFarm.activities.map((act) => (
+                    <div
+                      key={act}
+                      className="p-3.5 rounded-xl bg-[var(--color-green-50)] text-center text-xs font-semibold text-[var(--color-green-900)] flex items-center justify-center border border-[var(--color-green-100)]"
+                    >
+                      {act}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Operational Supervision Note */}
+              <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-200/60 flex items-start gap-3">
+                <Info size={16} className="text-amber-800 shrink-0 mt-0.5" />
+                <p className="text-xs text-amber-900 leading-relaxed">
+                  {primaryFarm.safetyNote}
+                </p>
               </div>
             </div>
           )}
-
-          {/* Farm Network Expansion Info */}
-          <div className="p-8 rounded-3xl bg-white border border-emerald-900/10 flex flex-col md:flex-row gap-6 items-center justify-between">
-            <div className="md:w-2/3 flex flex-col gap-2">
-              <span className="text-xs uppercase font-bold tracking-wider text-[var(--color-gold-600)]">
-                Farm Network Expansion
-              </span>
-              <h4 className="font-display text-lg font-bold text-[var(--color-green-900)]">
-                Partner as a Farm Host
-              </h4>
-              <p className="text-xs sm:text-sm text-[var(--color-green-800)] leading-relaxed">
-                Do you manage agricultural land, orchards, polyhouses, or agro-forests? FURAA conducts safety audits to qualify prospective partner farms for guided school visits.
-              </p>
-            </div>
-            <Button
-              href="/contact?subject=Farm%20Host%20Partnership"
-              variant="outline"
-              size="md"
-              className="shrink-0"
-            >
-              Partner as a Farm Host
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -475,27 +334,27 @@ export default function PartnershipPage() {
               <span>Category 3 · Farm Universities</span>
             </div>
             <h2 className="text-h2 mt-1 text-[var(--color-green-900)]">
-              Scientific Grounding and Academic Advisory
+              Agricultural Knowledge and Academic Linkages
             </h2>
             <p className="text-sm text-[var(--color-green-700)] mt-2">
-              FURAA seeks to anchor its educational curriculum in authentic agricultural science by collaborating with respected farm universities, agricultural researchers, and soil scientists.
+              FURAA seeks to anchor its educational curriculum in authentic agricultural science through ongoing dialogue with agricultural research frameworks and university extensions.
             </p>
           </div>
 
-          {/* Academic Advisory / Partnerships in Development Card */}
+          {/* Academic Advisory Card */}
           <div className="card-base p-8 lg:p-10 border border-emerald-900/15 shadow-sm bg-white rounded-3xl">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-900 mb-2">
                     <Info size={13} />
-                    <span>Academic Advisory in Development</span>
+                    <span>Academic Guidance & Research Reference</span>
                   </div>
                   <h3 className="font-display text-2xl font-bold text-[var(--color-green-900)]">
-                    Farm Universities Knowledge Framework
+                    {academicAdvisory.name}
                   </h3>
                   <p className="text-xs text-[var(--color-green-600)] mt-0.5">
-                    Bengaluru and Karnataka State Agricultural Research Guidance
+                    {academicAdvisory.location}
                   </p>
                 </div>
                 <Button
@@ -508,21 +367,15 @@ export default function PartnershipPage() {
               </div>
 
               <p className="text-sm text-[var(--color-green-800)] leading-relaxed">
-                FURAA draws upon established research publications and scientific extension frameworks of agricultural research universities in Karnataka and across India to strengthen the scientific foundation of our educational programs.
+                {academicAdvisory.overview}
               </p>
 
               <div>
                 <h4 className="text-xs uppercase font-bold tracking-wider text-[var(--color-gold-600)] mb-3">
-                  Intended Areas of Academic Advisory:
+                  Areas of Academic Dialogue:
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {[
-                    "Curriculum grounding in soil biology and crop cycles",
-                    "Scientific understanding of soil health, native flora, and water stewardship",
-                    "Practical agrarian learning methodologies for school-age students",
-                    "Exposure to modern agronomy and agricultural research for senior grades",
-                    "Educator orientation perspectives from agricultural scientists",
-                  ].map((area) => (
+                  {academicAdvisory.collaborationAreas.map((area) => (
                     <div
                       key={area}
                       className="flex items-start gap-2.5 p-3 rounded-xl bg-[var(--color-green-50)] text-xs text-[var(--color-green-900)] leading-relaxed"
@@ -538,7 +391,10 @@ export default function PartnershipPage() {
               <div className="p-4 rounded-2xl bg-amber-50/90 border border-amber-200 flex items-start gap-3">
                 <Info size={16} className="text-amber-800 shrink-0 mt-0.5" />
                 <div className="text-xs text-amber-900 leading-relaxed">
-                  <strong>Academic Collaboration Notice:</strong> Formal university seals and institutional affiliations will be presented following finalization of academic MoUs. FURAA maintains strict transparency: collaborative discussions are ongoing, and no formal university endorsement or institutional accreditation is currently claimed.
+                  <strong className="block text-xs font-semibold mb-0.5 text-amber-950">
+                    Collaborative Context
+                  </strong>
+                  {academicAdvisory.statusNote}
                 </div>
               </div>
             </div>
@@ -546,7 +402,7 @@ export default function PartnershipPage() {
         </div>
       </section>
 
-      {/* ─── 4. CORPORATES ───────────────────────────────────────────────────── */}
+      {/* ─── 4. CORPORATES ──────────────────────────────────────────────────── */}
       <section id="corporates" className="section-pad" style={{ background: "var(--color-cream)" }}>
         <div className="container-xl">
           <div className="flex flex-col lg:flex-row gap-12 items-center mb-12">
@@ -604,8 +460,8 @@ export default function PartnershipPage() {
             ))}
           </div>
 
-          {/* Corporate Partnerships in Development Status Card */}
-          <div className="mb-14 p-6 sm:p-8 rounded-3xl bg-white border border-emerald-900/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Corporate Partnerships Pipeline Card */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-white border border-emerald-900/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
             <div className="md:w-2/3 flex flex-col gap-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold w-fit">
                 <FileCheck2 size={13} />
@@ -627,53 +483,58 @@ export default function PartnershipPage() {
               Plan a Corporate Outing
             </Button>
           </div>
-
-          {/* ─── CORPORATE OPERATIONS, SUPERVISION & SAFETY GUIDE ─── */}
-          <div className="mt-8">
-            <CorporateOperationsGuide />
-          </div>
         </div>
       </section>
 
       {/* Educational Value Proposition for Schools */}
       <section className="section-pad bg-white border-t border-gray-100">
         <div className="container-xl">
-          <FeatureGrid
-            title="The Educational Value Proposition"
-            subtitle="Why schools, students, and parents consistently rate FURAA modules highly."
-            cols={3}
-            features={[
-              {
-                icon: TrendingUp,
-                title: "For School Management",
-                description:
-                  "Offers a powerful differentiator for admissions. Enhances institutional prestige as a progressive, holistic school without operational headaches.",
-              },
-              {
-                icon: Users,
-                title: "For Parents",
-                description:
-                  "Parents witness their children learning essential life skills, stepping away from screen dependency, and developing conscious food habits.",
-              },
-              {
-                icon: Sprout,
-                title: "For Students",
-                description:
-                  "Breaks classroom monotony. Children display measurably higher engagement, joy, and emotional grounding through physical nature contact.",
-              },
-            ]}
-          />
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <span className="text-xs uppercase font-bold tracking-widest text-[var(--color-gold-600)]">
+              Why Schools Choose FURAA
+            </span>
+            <h3 className="font-display text-2xl sm:text-3xl font-bold text-[var(--color-green-900)] mt-1">
+              Building Enduring Agricultural Connections
+            </h3>
+            <p className="text-xs sm:text-sm text-[var(--color-green-700)] mt-2 leading-relaxed">
+              We complement academic schooling with practical soil awareness, environmental empathy, and cultural vitality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="p-6 rounded-2xl bg-[var(--color-cream)] border border-emerald-900/10 flex flex-col gap-3">
+              <span className="text-2xl font-bold text-emerald-800 font-display">01</span>
+              <h4 className="font-bold text-base text-[var(--color-green-900)]">Zero Administrative Burden</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                From lesson worksheets and farming tools to certified facilitators, FURAA manages the entire operational lifecycle of the experience.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-[var(--color-cream)] border border-emerald-900/10 flex flex-col gap-3">
+              <span className="text-2xl font-bold text-emerald-800 font-display">02</span>
+              <h4 className="font-bold text-base text-[var(--color-green-900)]">Holistic Curricular Growth</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Science, history, art, and ecology are brought together under one living, tactile roof — enhancing classroom recall and retention.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-[var(--color-cream)] border border-emerald-900/10 flex flex-col gap-3">
+              <span className="text-2xl font-bold text-emerald-800 font-display">03</span>
+              <h4 className="font-bold text-base text-[var(--color-green-900)]">Safe, Supervised Discovery</h4>
+              <p className="text-xs text-[var(--color-green-800)] leading-relaxed">
+                Activities are tailored to student age bands with strict mentor supervision ratios, perimeter safety, and trained field guides.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Final Call to Action */}
+      {/* Book a Demo CTA */}
       <section className="section-pad pt-0 bg-white">
         <div className="container-xl">
           <CtaBlock
-            title="Ready to Partner with FURAA?"
-            description="Whether you represent a school, an agricultural landowner, an academic institution, or a corporate organization, let's discuss how we can collaborate."
+            title="Grow Together with FURAA"
+            description="Whether you are an educator, farm owner, researcher, or corporate leader, explore how a collaboration with FURAA creates lasting value."
             buttonText="Initiate Partnership Dialogue"
-            href="/contact"
+            href="/contact?subject=General%20Partnership%20Dialogue"
           />
         </div>
       </section>

@@ -1,19 +1,17 @@
 import { Metadata } from "next";
 import { brand } from "@/config/brand";
 import { siteImages } from "@/config/images";
-import { teamMembers } from "@/config/team";
 import {
   BookOpen,
   Sprout,
   Compass,
   ArrowRight,
-  ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import Button from "@/components/ui/Button";
-import ProfileCard from "@/components/ui/ProfileCard";
 import SectionHeader from "@/components/ui/SectionHeader";
+import TeamSection from "@/components/sections/TeamSection";
 
 export const metadata: Metadata = {
   title: `About Us | ${brand.name}`,
@@ -175,30 +173,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ─── People Behind FURAA ──────────────────────────────────────── */}
-      <section id="people-behind-furaa" className="section-pad bg-white border-b border-[var(--color-green-100)]">
-        <div className="container-xl">
-          <SectionHeader
-            badge="Leadership and Advisory"
-            title="People Behind FURAA"
-            subtitle="Our multidisciplinary team brings together agricultural educators, school curriculum coordinators, and experienced field practitioners."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {teamMembers.map((member) => (
-              <ProfileCard key={member.id} member={member} />
-            ))}
-          </div>
-
-          {/* Operational Planning Assurance Footnote */}
-          <div className="mt-12 p-4 sm:p-5 rounded-2xl bg-[var(--color-cream)] border border-emerald-900/10 max-w-3xl mx-auto flex items-center justify-center gap-3 text-xs text-[var(--color-green-800)] text-center">
-            <ShieldCheck size={16} className="text-emerald-700 shrink-0" />
-            <span>
-              All field sessions are facilitated by educators trained in age-appropriate outdoor pedagogy and proactive student care.
-            </span>
-          </div>
-        </div>
-      </section>
+      {/* ─── The People Behind FURAA (Interactive Team Section) ───────── */}
+      <TeamSection />
 
       {/* ─── About Page Conversion CTA ───────────────────────────────── */}
       <section className="section-pad bg-[var(--color-green-950)] text-white">

@@ -17,6 +17,12 @@ export const metadata: Metadata = {
   title: `About Us | ${brand.name}`,
   description:
     "Learn about FURAA's philosophy of experiential learning, connecting agriculture, nature, folk culture, and practical skills with school education.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/about",
+  },
 };
 
 export default function AboutPage() {

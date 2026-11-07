@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   title: `Exploration Module (Classes 5–8) | ${brand.name}`,
   description:
     "Discovery, experimentation, soil science, hydroponics introduction, and ecosystem learning for middle school students in Classes 5 to 8.",
+  alternates: {
+    canonical: "/modules/exploration",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/modules/exploration",
+  },
 };
 
 export default function ExplorationModulePage() {

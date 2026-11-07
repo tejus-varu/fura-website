@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   title: `Specialization Module (Classes 9–10) | ${brand.name}`,
   description:
     "Applied agricultural science, advanced hydroponics, sustainable technology, research projects, and urban agriculture for high school students in Classes 9 and 10.",
+  alternates: {
+    canonical: "/modules/specialization",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/modules/specialization",
+  },
 };
 
 export default function SpecializationModulePage() {

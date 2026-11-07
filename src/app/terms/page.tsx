@@ -19,6 +19,12 @@ export const metadata: Metadata = {
   title: `Terms and Content Usage | ${brand.name}`,
   description:
     "Terms of use, content ownership, media usage policies, and intellectual property guidelines for the Future Ready Agriculture Academy (FURAA).",
+  alternates: {
+    canonical: "/terms",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/terms",
+  },
 };
 
 export default function TermsPage() {

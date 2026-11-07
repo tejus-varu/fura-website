@@ -14,6 +14,10 @@ export const brand = {
   description:
     "FURAA partners with schools to deliver experiential education programs that combine agriculture, folk arts, rural culture, nature science, and healthy food awareness — for students from Class 1 to Class 10.",
 
+  /** Production Website URL */
+  url: "https://myfuraa.com",
+  canonicalDomain: "myfuraa.com",
+
   /**
    * Legal company configuration.
    * "Pvt. Ltd." is only displayed in official legal/copyright positions once incorporation is officially verified.
@@ -68,6 +72,7 @@ export const brand = {
 
   /** SEO metadata */
   seo: {
+    siteUrl: "https://myfuraa.com",
     siteName: "FURAA — Future Ready Agriculture Academy",
     defaultTitle: "FURAA | Future-Ready Agriculture and Nature Education for Schools",
     defaultDescription:

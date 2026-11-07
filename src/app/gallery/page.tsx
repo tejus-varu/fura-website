@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: `Public Learning Gallery | ${brand.name}`,
   description:
     "Explore real moments from FURAA's school agriculture programs, rural experiences, nature trails, folk crafts, and seasonal camps across our verified agrarian learning centers.",
+  alternates: {
+    canonical: "/gallery",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/gallery",
+  },
 };
 
 export default function GalleryPage() {

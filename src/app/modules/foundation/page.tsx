@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   title: `Foundation Module (Classes 1–4) | ${brand.name}`,
   description:
     "Early sensory learning, playful discovery, seed sowing, and safe supervised farm experiences for young students in Classes 1 to 4.",
+  alternates: {
+    canonical: "/modules/foundation",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/modules/foundation",
+  },
 };
 
 export default function FoundationModulePage() {

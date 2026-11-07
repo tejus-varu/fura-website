@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: `Harvesting Camps | ${brand.name}`,
   description:
     "Celebrate the harvest: seasonal hand-harvesting, traditional threshing and winnowing, seed saving, sugarcane crushing, and farm-to-food gratitude feasts.",
+  alternates: {
+    canonical: "/harvesting-camps",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/harvesting-camps",
+  },
 };
 
 export default function HarvestingCampsPage() {

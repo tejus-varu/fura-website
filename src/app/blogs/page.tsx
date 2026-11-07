@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: `Educational Blogs and Insights | ${brand.name}`,
   description:
     "Thoughtful pedagogical articles, curriculum frameworks, and seasonal farming perspectives from FURAA educators and agricultural mentors.",
+  alternates: {
+    canonical: "/blogs",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/blogs",
+  },
 };
 
 export default function BlogsPage() {

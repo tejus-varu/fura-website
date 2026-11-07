@@ -31,6 +31,12 @@ export const metadata: Metadata = {
   title: `Our Partners | ${brand.name}`,
   description:
     "Growing Together Through Education, Agriculture, Nature and Collaboration. Explore FURAA's partner network across Schools, Farms, Farm Universities, and Corporates.",
+  alternates: {
+    canonical: "/partnership",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/partnership",
+  },
 };
 
 const partnershipPillars = [

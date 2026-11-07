@@ -1,0 +1,4 @@
+# Cloudflare Pages Redirects
+# Permanently redirect www.myfuraa.com to apex domain https://myfuraa.com
+https://www.myfuraa.com/* https://myfuraa.com/:splat 301!
+http://www.myfuraa.com/* https://myfuraa.com/:splat 301!

@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: `Summer Camps | ${brand.name}`,
   description:
     "Transform school vacation into an active, screen-free farm immersion with hands-on agriculture, pottery, nature exploration, rural games, and sustainable creativity.",
+  alternates: {
+    canonical: "/summer-camps",
+  },
+  openGraph: {
+    url: "https://myfuraa.com/summer-camps",
+  },
 };
 
 export default function SummerCampsPage() {

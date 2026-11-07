@@ -29,11 +29,15 @@ export async function generateMetadata({
   return {
     title: `${post.title} | ${brand.name}`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blogs/${slug}`,
+    },
     openGraph: {
+      url: `https://myfuraa.com/blogs/${slug}`,
       title: post.title,
       description: post.excerpt,
       images: [post.coverImage.src],
-    },
+        },
   };
 }
 
